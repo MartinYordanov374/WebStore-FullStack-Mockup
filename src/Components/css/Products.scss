@@ -5,13 +5,14 @@ $categoryButtonColorHover: rgb(73, 149, 208);
 body, html{
     width: 100%; 
     height: 100%;
-    background-color: rgb(238, 238, 238);
+    background-color: white;
+    overflow-x: hidden;
 }
 @mixin CategoriesBackground{
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    background-color: orange;
+    background-color: #F2EDD7FF;
 }
 @mixin CategoriesButton{
     background-color: $categoryButtonColor;
@@ -25,40 +26,13 @@ body, html{
         background-color: $categoryButtonColorHover;
     }
 }
-.product{
-    width: 45%;
-    margin-left: 25%;
-    border-radius: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-top: 1%;
-    border-style: solid;
-    border-color: black;
-    background-color: white;
-    opacity: 0.9;
-    .productPrice{
-        color: black;
-    }
-    .productName{
-        font-size: 30px;
-    }
-    .productImage{
-        width: 35%;
-    }  
-    .productDescription{
-        font-size: 15px;
-    }
-    .productDescriptionContainer{
-        opacity: 0;
-        display: none;
-    }
-}
+
 img{
     width: 50%;
 }
 .Categories{
     display: inline-flex;
-    margin-top: 10px;
+    margin-top: 1%;
     .Hoodies{
         @include CategoriesBackground();
         width: 50%;
@@ -66,6 +40,7 @@ img{
         margin-right: 10px;
         .goToHoodiesButton{
             @include CategoriesButton();
+            margin-top: 11.8%;
         }
     }
     .Masks{
