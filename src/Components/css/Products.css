@@ -59,6 +59,21 @@ img {
   margin-right: 10px;
 }
 
+.Categories .Hoodies .goToHoodiesButton {
+  background-color: #59b3f8;
+  color: black;
+  border-color: #59b3f8;
+  width: 50%;
+}
+
+.Categories .Hoodies .goToHoodiesButton:focus {
+  background-color: #4995d0;
+}
+
+.Categories .Hoodies .goToHoodiesButton:hover {
+  background-color: #4995d0;
+}
+
 .Categories .Masks {
   border-style: solid;
   border-width: 1px;
@@ -67,5 +82,21 @@ img {
   width: 50%;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.Categories .Masks .goToMasksButton {
+  margin-top: 11.8%;
+  background-color: #59b3f8;
+  color: black;
+  border-color: #59b3f8;
+  width: 50%;
+}
+
+.Categories .Masks .goToMasksButton:focus {
+  background-color: #4995d0;
+}
+
+.Categories .Masks .goToMasksButton:hover {
+  background-color: #4995d0;
 }
 /*# sourceMappingURL=Products.css.map */

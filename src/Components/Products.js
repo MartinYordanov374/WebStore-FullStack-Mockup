@@ -4,7 +4,7 @@ import './css/Products.css'
 import $ from 'jquery'
 import Hoodie from '../Components/Images/Hoodies.png'
 import Mask from '../Components/Images/Masks.png'
-
+import {Button} from 'react-bootstrap'
 class Products extends Component {
     render() {
         let {products} = this.props
@@ -26,9 +26,13 @@ class Products extends Component {
             <div className='Categories'>
                 <div className='Hoodies'>
                     <img src={Hoodie}></img>
+                    <br></br>
+                    <Button className='goToHoodiesButton'><strong>Go To The Hoodies Page</strong></Button>
                 </div>
                 <div className='Masks'>
                     <img src={Mask}></img>
+                    <br></br>
+                    <Button className='goToMasksButton'><strong>Go To The Masks Page</strong></Button>
                 </div>
             </div>
         )
