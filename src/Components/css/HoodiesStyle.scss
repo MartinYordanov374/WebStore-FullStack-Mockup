@@ -1,0 +1,79 @@
+$backgroundColor:  #F2EDD7FF;
+$hoodieWrapperBackgroundColor: gray;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@mixin hoodieWrapperStyle{
+    background-color: $backgroundColor;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 25px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;  
+    border-color: black;
+    margin-right: 5%;
+    font-family: 'Roboto Slab', serif;
+}
+.products
+{   
+    background-color: white;
+    .hoodieWrapper{
+       @include hoodieWrapperStyle();
+               .hoodieImage{
+            filter: drop-shadow(5px 5px 5px black);
+
+        }  
+        border-radius: 5px;
+        .addFaves{
+            float: left;
+            margin-left: 10px;
+            color: white;
+            filter: drop-shadow(0.5px 0.5px 0.5px black);
+            &:hover{
+                color: rgb(216, 216, 216);
+                opacity: 1;
+            }
+
+        }
+        .hoodieName{
+            margin-top: 5px;
+        }
+       margin-top: 5%;
+        .buyHoodieButton{
+            width: 45%;
+            margin-bottom: 4px;
+            background-color: white;
+            border-color: black;
+            border-radius: 10px;
+            &:hover{
+                background-color: $backgroundColor;
+                box-shadow: 2px 2px 0px  black;
+            }
+            .buyIcon{
+                color: green;
+                opacity: 1;
+                
+            }
+        }
+        .faveHoodieButton{
+            width: 45%;
+            background-color: white;
+            border-color: black;
+            border-radius: 10px;
+            &:hover{
+                background-color: $backgroundColor;
+            }
+            .faveIcon{
+                color: purple;
+                opacity: 1;
+            }
+        }
+        .priceCents{
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+    }
+}
+img{
+    width: 50%;
+}

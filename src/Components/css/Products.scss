@@ -1,6 +1,6 @@
 $backgroundColorProduct: #ffcc00;
-$categoryButtonColor: rgb(89, 179, 248);
-$categoryButtonColorHover: rgb(73, 149, 208);
+$categoryButtonColor: orange;
+$categoryButtonColorHover: rgb(216, 141, 2);
 
 body, html{
     width: 100%; 
@@ -19,9 +19,6 @@ body, html{
     color: black;
     border-color: $categoryButtonColor;
     width: 50%;
-    &:focus{
-        background-color: $categoryButtonColorHover;
-    }
     &:hover{
         background-color: $categoryButtonColorHover;
     }

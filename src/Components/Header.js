@@ -7,16 +7,16 @@ export default function Header() {
     return (
         <div>
             <Navbar variant='light'>
-                <NavbarBrand href='#'>Home</NavbarBrand>
+                <NavbarBrand href='/Home'>Home</NavbarBrand>
 
                 <NavbarBrand className='navbarBrand'>Aurora</NavbarBrand>
                 <Nav className='ml-auto'>
                     <NavItem>
                         <NavLink>
-                            <FaHeart size={20}></FaHeart>
+                            <FaHeart className='wishlistIcon'size={20}></FaHeart>
                         </NavLink>
                         <NavLink>
-                            <FaShoppingCart size={20}></FaShoppingCart>
+                            <FaShoppingCart className='shoppingCartIcon'size={20}></FaShoppingCart>
                         </NavLink>
                     </NavItem>
                 </Nav>

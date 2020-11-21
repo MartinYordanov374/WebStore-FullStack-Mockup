@@ -1,4 +1,4 @@
-$backgroundColorNavbar: white;
+$backgroundColorNavbar: #F2EDD7FF;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
@@ -26,4 +26,20 @@ $backgroundColorNavbar: white;
         margin-left: 40.35%;
         font-size: 25px;
         }
+}
+.shoppingCartIcon{
+    color: yellowgreen;
+    &:hover{
+        color: rgb(118, 158, 38);
+
+    }
+}
+.wishlistIcon{
+    color: white;
+    filter: drop-shadow(0.5px 0.5px 0.5px black);
+
+    &:hover{
+        color: rgb(106, 2, 106);
+
+    }
 }
