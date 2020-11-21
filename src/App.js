@@ -1,21 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './Components/Header'
+
 import Products from './Components/Products'
-import Footer from './Components/Footer'
+import HoodiesPage from './Components/HoodiesPage'
+import MasksPage from './Components/MasksPage'
 
 import {store} from './Components/store'
-
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Provider} from 'react-redux'
 function App() {
   return (
-    <Provider store={store}>
       <div className="App">
-        <Navbar></Navbar>
-        <Products></Products>
-        <Footer></Footer>
+      <Provider store={store}>
+        <Router> 
+          <Switch>
+              <Route exact path='/Home' component={Products}/>
+
+              <Route path='/Hoodies' component={HoodiesPage}/>
+              <Route path='/Masks' component={MasksPage}/>
+
+          </Switch>
+        </Router>
+      </Provider>
+
       </div>
-    </Provider>
   );
 }
 
