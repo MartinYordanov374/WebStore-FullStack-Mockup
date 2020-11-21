@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .nav-link {
   -webkit-transition: linear 0.6s;
   transition: linear 0.6s;
   color: black;
   font-size: 18px;
+  display: inline;
 }
 
 .nav-link:hover {
@@ -11,8 +13,14 @@
 }
 
 .navbar {
-  background-color: #f7d50a;
+  background-color: white;
   -webkit-box-shadow: 0px 1px 0px 0px black;
           box-shadow: 0px 1px 0px 0px black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar .navbarBrand {
+  margin-left: 37%;
+  font-size: 25px;
 }
 /*# sourceMappingURL=Header.css.map */

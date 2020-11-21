@@ -1,8 +1,18 @@
-$backgroundColorNavbar: #f7d50a;
+$backgroundColorNavbar: white;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@mixin textProps{
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
 .nav-link{
     transition: linear 0.6s;
     color: black;
     font-size: 18px;
+    display: inline;
     &:hover{
         transition: linear 0.6s;
     }
@@ -10,4 +20,10 @@ $backgroundColorNavbar: #f7d50a;
 .navbar{
     background-color: $backgroundColorNavbar;
     box-shadow: 0px 1px 0px 0px black;
+    @include textProps();
+    .navbarBrand{
+
+        margin-left: 37%;
+        font-size: 25px;
+        }
 }
