@@ -6,7 +6,6 @@ const reducer=(state={productsInWishList:[{}] }, action)=>{
             return{
                 ...state,
                 productsInWishList: [...state.productsInWishList, {id:action.id}]
-
             }
         default:
             return state

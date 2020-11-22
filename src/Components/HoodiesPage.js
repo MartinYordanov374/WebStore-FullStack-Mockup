@@ -12,7 +12,7 @@ import {store} from './store'
 import {connect} from 'react-redux'
 class HoodiesPage extends Component {
     render(){
-    let {wishList} = this.props;
+    let {productsInWishList} = this.props;
     const hoodiesList=[
         {
             name: 'Game Hoodie - Фортнайт',
@@ -38,7 +38,7 @@ class HoodiesPage extends Component {
             <div className='products'>
                 {hoodiesList.map((hoodie, index)=>
                 <div className='hoodieWrapper'>
-                    <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index)}size={25}></FaHeart><strong>{hoodie.name}</strong> </p>     
+                    <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index)}size={25}/><strong>{hoodie.name}</strong> </p>     
                     <img className='hoodieImage' src={hoodie.image}></img>
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price}.<span className='priceCents'>{hoodie.cents}</span> лв.</strong></p>
