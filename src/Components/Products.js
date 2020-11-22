@@ -30,9 +30,10 @@ class Products extends Component {
         )
     }
 }
-const mapStateToProps=(state={products:[{}]})=>{
+const mapStateToProps=(state={products:[{}], productsInCart:[{}]})=>{
     return{
-        products: state.products
+        products: state.products,
+        productsInCart: state.productsInCart
     }
 }
 export default connect(mapStateToProps)(Products)

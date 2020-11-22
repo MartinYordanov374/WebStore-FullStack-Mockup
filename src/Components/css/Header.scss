@@ -1,6 +1,7 @@
 $backgroundColorNavbar: #F2EDD7FF;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 @mixin textProps{
     font-family: 'Poppins', sans-serif;
@@ -42,4 +43,16 @@ $backgroundColorNavbar: #F2EDD7FF;
         color: rgb(106, 2, 106);
 
     }
+}
+.wishListIndex{
+    color: purple;
+    font-size: 17px;
+    margin-left: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+.cartIndex{
+    color: yellowgreen;
+    font-size: 17px;
+    margin-left: 5px;
+    font-family: 'Open Sans', sans-serif;
 }

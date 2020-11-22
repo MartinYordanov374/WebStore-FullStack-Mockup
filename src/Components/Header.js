@@ -7,6 +7,7 @@ import {FaHeart, FaShoppingCart} from 'react-icons/fa'
 class Header extends Component {
     render() { 
         const {productsInWishList} = this.props;
+        const {productsInCart} = this.props;
     return (
         <div>
             <Navbar variant='light'>
@@ -16,10 +17,10 @@ class Header extends Component {
                 <Nav className='ml-auto'>
                     <NavItem>
                         <NavLink>
-                            <FaHeart className='wishlistIcon'size={20}></FaHeart>{productsInWishList.length}
+                            <FaHeart className='wishlistIcon'size={20}></FaHeart><span className='wishListIndex'>{productsInWishList.length}</span>
                         </NavLink>
                         <NavLink>
-                            <FaShoppingCart className='shoppingCartIcon'size={20}></FaShoppingCart>
+                            <FaShoppingCart className='shoppingCartIcon'size={20}></FaShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
                         </NavLink>
                     </NavItem>
                 </Nav>
@@ -29,9 +30,10 @@ class Header extends Component {
     )
 }
 }
-const mapStateToProps=(state={productsInWishList:[{}]})=>{
+const mapStateToProps=(state={productsInWishList:[{}],productsInCart:[{}]})=>{
     return{
-        productsInWishList: state.productsInWishList
+        productsInWishList: state.productsInWishList,
+        productsInCart: state.productsInCart
     }
 }
 export default connect(mapStateToProps)(Header)

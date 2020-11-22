@@ -13,6 +13,7 @@ import {connect} from 'react-redux'
 class HoodiesPage extends Component {
     render(){
     let {productsInWishList} = this.props;
+    let {productsInCart} = this.props;
     const hoodiesList=[
         {
             name: 'Game Hoodie - Фортнайт',
@@ -30,7 +31,9 @@ class HoodiesPage extends Component {
     const addToWishlist=(id)=>{
         store.dispatch({type: 'addToFavorites', id: id})
         $('#'+id).css('color', 'purple')
-        
+    }
+    const addToCart=(id)=>{
+        store.dispatch({type: 'addToCart', id:id})
     }
     return (
         <div>
@@ -42,7 +45,7 @@ class HoodiesPage extends Component {
                     <img className='hoodieImage' src={hoodie.image}></img>
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price}.<span className='priceCents'>{hoodie.cents}</span> лв.</strong></p>
-                        <Button className='buyHoodieButton' variant='warning'><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
+                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(index)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
                         {/* <br></br> */}
                         {/* <Button className='faveHoodieButton' variant='warning'><span className='faveIcon'><FaHeart></FaHeart></span> <strong>Добави в любими</strong></Button> */}
                     </div> 
@@ -53,9 +56,10 @@ class HoodiesPage extends Component {
     )
 }
 }
-const mapStateToProps=(state={productsInWishList:[{}]})=>{
+const mapStateToProps=(state={productsInWishList:[{}], productsInCart:[{}]})=>{
     return{
-        productsInWishList: state.productsInWishList
+        productsInWishList: state.productsInWishList,
+        productsInCart: state.productsInCart
     }
 }
 export default connect(mapStateToProps)(HoodiesPage)

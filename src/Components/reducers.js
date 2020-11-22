@@ -1,4 +1,4 @@
-const reducer=(state={productsInWishList:[{}] }, action)=>{
+const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
     switch(action.type)
     {
         case 'addToFavorites':
@@ -6,6 +6,12 @@ const reducer=(state={productsInWishList:[{}] }, action)=>{
             return{
                 ...state,
                 productsInWishList: [...state.productsInWishList, {id:action.id}]
+            }
+        case 'addToCart':
+            return{
+                ...state,
+                productsInCart: [...state.productsInCart, {id: action.id}]
+
             }
         default:
             return state
