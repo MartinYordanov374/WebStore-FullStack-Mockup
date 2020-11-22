@@ -5,8 +5,6 @@ $backgroundColorNavbar: #F2EDD7FF;
 
 @mixin textProps{
     font-family: 'Poppins', sans-serif;
-
-
 }
 
 .nav-link{
@@ -18,6 +16,7 @@ $backgroundColorNavbar: #F2EDD7FF;
         transition: linear 0.6s;
     }
 }
+
 .navbar{
     background-color: $backgroundColorNavbar;
     box-shadow: 0px 1px 0px 0px black;
@@ -26,7 +25,11 @@ $backgroundColorNavbar: #F2EDD7FF;
 
         margin-left: 40.35%;
         font-size: 25px;
+        &:hover{
         }
+
+        
+    }
 }
 .shoppingCartIcon{
     color: white;

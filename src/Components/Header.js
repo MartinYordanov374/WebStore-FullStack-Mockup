@@ -11,16 +11,15 @@ class Header extends Component {
     return (
         <div>
             <Navbar variant='light'>
-                <NavbarBrand href='/Home'>Home</NavbarBrand>
-
-                <NavbarBrand className='navbarBrand'>Aurora</NavbarBrand>
+                <NavbarBrand href='/Home' className='homeButton'>Начало</NavbarBrand>
+                <NavbarBrand className='navbarBrand' href='/Home'>Aurora</NavbarBrand>
                 <Nav className='ml-auto'>
                     <NavItem>
                         <NavLink>
-                            <FaHeart className='wishlistIcon'size={20}></FaHeart><span className='wishListIndex'>{productsInWishList.length}</span>
+                            <FaHeart className='wishlistIcon'size={30}></FaHeart><span className='wishListIndex'>{productsInWishList.length}</span>
                         </NavLink>
                         <NavLink>
-                            <FaShoppingCart className='shoppingCartIcon'size={20}></FaShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
+                            <FaShoppingCart className='shoppingCartIcon'size={30}></FaShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
                         </NavLink>
                     </NavItem>
                 </Nav>
