@@ -29,9 +29,11 @@ $backgroundColorNavbar: #F2EDD7FF;
         }
 }
 .shoppingCartIcon{
-    color: yellowgreen;
+    color: white;
+    filter: drop-shadow(0.5px 0.5px 0.5px black);
     &:hover{
-        color: rgb(118, 158, 38);
+        color:yellowgreen;
+
 
     }
 }
