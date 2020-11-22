@@ -32,12 +32,10 @@ $hoodieWrapperBackgroundColor: gray;
                 color: rgb(216, 216, 216);
                 opacity: 1;
             }
-
         }
         .hoodieName{
             margin-top: 5px;
         }
-       margin-top: 5%;
         .buyHoodieButton{
             width: 45%;
             margin-bottom: 4px;
@@ -47,7 +45,7 @@ $hoodieWrapperBackgroundColor: gray;
             &:hover{
                 background-color: $backgroundColor;
                 box-shadow: 2px 2px 0px  black;
-            }
+            } 
             .buyIcon{
                 color: green;
                 opacity: 1;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Navbar from './Header'
 import Footer from './Footer'
 
@@ -8,8 +8,11 @@ import './css/HoodiesStyle.css'
 import {Button} from 'react-bootstrap'
 import $ from 'jquery'
 import {FaShoppingCart, FaHeart} from 'react-icons/fa'
-
-export default function HoodiesPage() {
+import {store} from './store'
+import {connect} from 'react-redux'
+class HoodiesPage extends Component {
+    render(){
+    let {wishList} = this.props;
     const hoodiesList=[
         {
             name: 'Game Hoodie - Фортнайт',
@@ -24,16 +27,18 @@ export default function HoodiesPage() {
             cents: 94
         },
     ]
-    const addToWishlist=()=>{
-        $('.addFaves').css('color', 'purple')
+    const addToWishlist=(id)=>{
+        store.dispatch({type: 'addToFavorites', id: id})
+        $('#'+id).css('color', 'purple')
+        
     }
     return (
         <div>
             <Navbar></Navbar>
             <div className='products'>
-                {hoodiesList.map(hoodie=>
+                {hoodiesList.map((hoodie, index)=>
                 <div className='hoodieWrapper'>
-                    <p className='hoodieName'><FaHeart className='addFaves' onClick={()=>addToWishlist()}size={25}></FaHeart><strong>{hoodie.name}</strong> </p>     
+                    <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index)}size={25}></FaHeart><strong>{hoodie.name}</strong> </p>     
                     <img className='hoodieImage' src={hoodie.image}></img>
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price}.<span className='priceCents'>{hoodie.cents}</span> лв.</strong></p>
@@ -47,3 +52,10 @@ export default function HoodiesPage() {
         </div>
     )
 }
+}
+const mapStateToProps=(state={productsInWishList:[{}]})=>{
+    return{
+        productsInWishList: state.productsInWishList
+    }
+}
+export default connect(mapStateToProps)(HoodiesPage)

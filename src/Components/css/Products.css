@@ -21,21 +21,26 @@ img {
   border-width: 1px;
   border-color: black;
   background-color: #F2EDD7FF;
+  border-radius: 10px;
   width: 50%;
   margin-left: 10px;
   margin-right: 10px;
 }
 
 .Categories .Hoodies .goToHoodiesButton {
-  background-color: orange;
+  background-color: white;
   color: black;
-  border-color: orange;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
   width: 50%;
   margin-top: 11.8%;
 }
 
 .Categories .Hoodies .goToHoodiesButton:hover {
-  background-color: #d88d02;
+  background-color: #F2EDD7FF;
+  -webkit-box-shadow: 2px 2px 0px  black;
+          box-shadow: 2px 2px 0px  black;
 }
 
 .Categories .Masks {
@@ -43,6 +48,7 @@ img {
   border-width: 1px;
   border-color: black;
   background-color: #F2EDD7FF;
+  border-radius: 10px;
   width: 50%;
   margin-left: 10px;
   margin-right: 10px;
@@ -50,13 +56,17 @@ img {
 
 .Categories .Masks .goToMasksButton {
   margin-top: 11.8%;
-  background-color: orange;
+  background-color: white;
   color: black;
-  border-color: orange;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
   width: 50%;
 }
 
 .Categories .Masks .goToMasksButton:hover {
-  background-color: #d88d02;
+  background-color: #F2EDD7FF;
+  -webkit-box-shadow: 2px 2px 0px  black;
+          box-shadow: 2px 2px 0px  black;
 }
 /*# sourceMappingURL=Products.css.map */

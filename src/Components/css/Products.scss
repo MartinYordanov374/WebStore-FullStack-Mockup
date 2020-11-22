@@ -1,7 +1,7 @@
 $backgroundColorProduct: #ffcc00;
-$categoryButtonColor: orange;
-$categoryButtonColorHover: rgb(216, 141, 2);
 
+$categoryButtonColor: white;
+$categoryButtonColorHover: #F2EDD7FF;
 body, html{
     width: 100%; 
     height: 100%;
@@ -13,14 +13,18 @@ body, html{
     border-width: 1px;
     border-color: black;
     background-color: #F2EDD7FF;
+    border-radius: 10px;
 }
 @mixin CategoriesButton{
     background-color: $categoryButtonColor;
     color: black;
-    border-color: $categoryButtonColor;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
     width: 50%;
     &:hover{
         background-color: $categoryButtonColorHover;
+        box-shadow: 2px 2px 0px  black;
     }
 }
 
