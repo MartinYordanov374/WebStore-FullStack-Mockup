@@ -1,0 +1,21 @@
+
+.productsWrapper{
+    padding: 0;
+    .productImage{
+        width: 10%;
+        margin-right: 80%;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+    }
+    .productName{
+        margin-right: 83%;
+        width: 20%;
+
+    }
+    .productPrice{
+        margin-top: 1%;
+        display: inline;
+
+    }
+}

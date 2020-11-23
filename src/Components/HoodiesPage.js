@@ -19,21 +19,23 @@ class HoodiesPage extends Component {
             name: 'Game Hoodie - Фортнайт',
             image: fortniteHoodie,
             price: 36,
-            cents: 96
+            cents: 96,
+            id: 0
         },
         {
             name: 'Anime Hoodie - Sword Art Online - Кирито',
             image: kiritoHoodie,
             price: 39,
-            cents: 94
+            cents: 94,
+            id:1
         },
     ]
-    const addToWishlist=(id)=>{
-        store.dispatch({type: 'addToFavorites', id: id})
+    const addToWishlist=(id, product)=>{
+        store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
         $('#'+id).css('color', 'purple')        
     }
-    const addToCart=(id)=>{
-        store.dispatch({type: 'addToCart', id:id})
+    const addToCart=(product)=>{
+        store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
     }
     return (
         <div>
@@ -41,13 +43,11 @@ class HoodiesPage extends Component {
             <div className='products'>
                 {hoodiesList.map((hoodie, index)=>
                 <div className='hoodieWrapper'>
-                    <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index)}size={25}/><strong>{hoodie.name}</strong> </p>     
+                    <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index, hoodie)}size={25}/><strong>{hoodie.name}</strong> </p>     
                     <img className='hoodieImage' src={hoodie.image}></img>
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price}.<span className='priceCents'>{hoodie.cents}</span> лв.</strong></p>
-                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(index)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
-                        {/* <br></br> */}
-                        {/* <Button className='faveHoodieButton' variant='warning'><span className='faveIcon'><FaHeart></FaHeart></span> <strong>Добави в любими</strong></Button> */}
+                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
                     </div> 
                 </div>)}
             </div>

@@ -1,0 +1,22 @@
+.productsWrapper {
+  padding: 0;
+}
+
+.productsWrapper .productImage {
+  width: 10%;
+  margin-right: 80%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.productsWrapper .productName {
+  margin-right: 83%;
+  width: 20%;
+}
+
+.productsWrapper .productPrice {
+  margin-top: 1%;
+  display: inline;
+}
+/*# sourceMappingURL=Cart.css.map */

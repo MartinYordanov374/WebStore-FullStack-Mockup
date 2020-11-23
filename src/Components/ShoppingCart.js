@@ -6,6 +6,8 @@ import Navbar from './Header'
 import Footer from './Footer'
 import {connect} from 'react-redux'
 
+import './css/Cart.css'
+
 class ShoppingCart extends Component {
     render() {
         const {productsInCart} = this.props;
@@ -13,10 +15,10 @@ class ShoppingCart extends Component {
             <div>
                 <Navbar></Navbar>
                 {productsInCart.map(product=>
-                <div>
-                    <h1>{product.name}</h1>
-                    <img src={product.image}/>
-                    <p>{product.price}.{product.cents}</p>
+                <div className='productsWrapper'>
+                    <p className='productName'>{product.name}</p>
+                    <img className='productImage' src={product.image}/>
+                    <p className='productPrice'>{product.price}.{product.cents}</p>
                 </div>)}
                 <Footer></Footer>
             </div>
