@@ -18,8 +18,8 @@ class Header extends Component {
                         <NavLink>
                             <FaHeart className='wishlistIcon'size={30}></FaHeart><span className='wishListIndex'>{productsInWishList.length}</span>
                         </NavLink>
-                        <NavLink>
-                            <FaShoppingCart className='shoppingCartIcon'size={30}></FaShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
+                        <NavLink href='/Cart'>
+                            <FaShoppingCart  className='shoppingCartIcon'size={30}></FaShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
                         </NavLink>
                     </NavItem>
                 </Nav>

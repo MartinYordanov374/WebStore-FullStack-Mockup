@@ -13,22 +13,24 @@ export default function MasksPage() {
             name: 'Game Mask - Фортнайт',
             image: MissingImage,
             price: 5,
-            cents: 50
+            cents: 50,
+            id: 0
         },
         {
             name: 'Anime Mask - Naruto - Sasuke',
             image: MissingImage,
             price: 3,
-            cents: 40
+            cents: 40,
+            id: 1
         },
     
     ]
-    const addToWishlist=(id)=>{
-        store.dispatch({type: 'addToFavorites', id: id})
+    const addToWishlist=(product, id)=>{
+        store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
         $('#'+id).css('color', 'purple')        
     }
-    const addToCart=(id)=>{
-        store.dispatch({type: 'addToCart', id:id})
+    const addToCart=(product)=>{
+        store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
     }
     return (
         
@@ -37,11 +39,11 @@ export default function MasksPage() {
             <div className='products'>
                 {masksList.map((mask, index)=>
                 <div className='hoodieWrapper'>
-                    <p className='hoodieName'><FaHeart onClick={()=>addToWishlist(index)}id={index} className='addFaves' size={25}/><strong>{mask.name}</strong> </p>     
+                    <p className='hoodieName'><FaHeart onClick={()=>addToWishlist(mask)}id={index} className='addFaves' size={25}/><strong>{mask.name}</strong> </p>     
                     <img className='hoodieImage' src={mask.image}></img>
                     <div className='purchaseField'>
                         <p><strong>{mask.price}.<span className='priceCents'>{mask.cents}</span> лв.</strong></p>
-                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(index)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
+                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(mask)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
                     </div> 
                 </div>)}
             </div>
