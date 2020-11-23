@@ -11,15 +11,21 @@ import './css/Cart.css'
 class ShoppingCart extends Component {
     render() {
         const {productsInCart} = this.props;
+        let totalSumDollars = 0;    
         return (
-            <div>
+            <div className='cartWrapper'>
                 <Navbar></Navbar>
                 {productsInCart.map(product=>
+                
                 <div className='productsWrapper'>
                     <p className='productName'>{product.name}</p>
                     <img className='productImage' src={product.image}/>
-                    <p className='productPrice'>{product.price}.{product.cents}</p>
-                </div>)}
+                    <p className='productPrice'>{product.price} лв.</p>
+                    <hr></hr>  
+                    <span className='calculateTotal'>{totalSumDollars+=product.price}</span>          
+                </div>)
+                }
+                <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
                 <Footer></Footer>
             </div>
         );

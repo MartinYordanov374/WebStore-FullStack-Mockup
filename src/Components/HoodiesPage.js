@@ -18,24 +18,22 @@ class HoodiesPage extends Component {
         {
             name: 'Game Hoodie - Фортнайт',
             image: fortniteHoodie,
-            price: 36,
-            cents: 96,
+            price: 36.96,
             id: 0
         },
         {
             name: 'Anime Hoodie - Sword Art Online - Кирито',
             image: kiritoHoodie,
-            price: 39,
-            cents: 94,
+            price: 39.94,
             id:1
         },
     ]
     const addToWishlist=(id, product)=>{
-        store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
+        store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, id: product.id})
         $('#'+id).css('color', 'purple')        
     }
     const addToCart=(product)=>{
-        store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
+        store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id})
     }
     return (
         <div>
@@ -46,7 +44,7 @@ class HoodiesPage extends Component {
                     <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index, hoodie)}size={25}/><strong>{hoodie.name}</strong> </p>     
                     <img className='hoodieImage' src={hoodie.image}></img>
                     <div className='purchaseField'>
-                        <p><strong>{hoodie.price}.<span className='priceCents'>{hoodie.cents}</span> лв.</strong></p>
+                        <p><strong>{hoodie.price} лв.</strong></p>
                         <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
                     </div> 
                 </div>)}

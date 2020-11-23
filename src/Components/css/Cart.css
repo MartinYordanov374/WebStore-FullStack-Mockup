@@ -1,22 +1,33 @@
-.productsWrapper {
+.cartWrapper .productsWrapper {
   padding: 0;
 }
 
-.productsWrapper .productImage {
+.cartWrapper .productsWrapper .productImage {
   width: 10%;
-  margin-right: 80%;
+  margin-right: 75%;
   border-style: solid;
   border-color: black;
   border-width: 1px;
+  background-color: #e6e6e6;
+  border-radius: 10px;
 }
 
-.productsWrapper .productName {
+.cartWrapper .productsWrapper .productName {
   margin-right: 83%;
   width: 20%;
 }
 
-.productsWrapper .productPrice {
+.cartWrapper .productsWrapper .productPrice {
   margin-top: 1%;
   display: inline;
+}
+
+.cartWrapper .productsWrapper .calculateTotal {
+  display: none;
+}
+
+.cartWrapper .showTotal {
+  margin-top: 2%;
+  margin-left: 70%;
 }
 /*# sourceMappingURL=Cart.css.map */

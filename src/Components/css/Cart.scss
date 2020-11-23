@@ -1,21 +1,34 @@
 
-.productsWrapper{
-    padding: 0;
-    .productImage{
-        width: 10%;
-        margin-right: 80%;
-        border-style: solid;
-        border-color: black;
-        border-width: 1px;
-    }
-    .productName{
-        margin-right: 83%;
-        width: 20%;
+.cartWrapper{
 
-    }
-    .productPrice{
-        margin-top: 1%;
-        display: inline;
 
+    .productsWrapper{
+        padding: 0;
+        .productImage{
+            width: 10%;
+            margin-right: 75%;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            background-color: rgb(230, 230, 230);
+            border-radius: 10px;
+        }
+        .productName{
+            margin-right: 83%;
+            width: 20%;
+
+        }
+        .productPrice{
+            margin-top: 1%;
+            display: inline;
+
+        }
+        .calculateTotal{
+            display: none;            
+        }
+    }
+    .showTotal{
+        margin-top: 2%;
+        margin-left: 70%;   
     }
 }

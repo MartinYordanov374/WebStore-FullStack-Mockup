@@ -4,13 +4,13 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
         case 'addToFavorites':
             return{
                 ...state,
-                productsInWishList: [...state.productsInWishList, {name: action.name, image: action.image, price: action.price, cents: action.cents}]
+                productsInWishList: [...state.productsInWishList, {name: action.name, image: action.image, price: action.price}]
             }
         case 'addToCart':
             console.log(state)
             return{
                 ...state,
-                productsInCart: [...state.productsInCart, {name: action.name, image: action.image, price: action.price, cents: action.cents}]
+                productsInCart: [...state.productsInCart, {name: action.name, image: action.image, price: action.price}]
 
             }
         default:
