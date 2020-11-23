@@ -18,8 +18,10 @@ class ShoppingCart extends Component {
         return (
             <div className='cartWrapper'>
                 <Navbar></Navbar>
-                {productsInCart.map(product=>
-                
+                {productsInCart.length==0 ?
+                <p>Вашата количка е празна!</p>
+                 : ""}
+                {productsInCart.map(product=>    
                 <div className='productsWrapper'>
                     <p className='productName'>{product.name}</p>
                     <img className='productImage' src={product.image}/>
@@ -30,7 +32,6 @@ class ShoppingCart extends Component {
                 </div>)
                 }
                 <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
-                <Footer></Footer>
             </div>
         );
     }
