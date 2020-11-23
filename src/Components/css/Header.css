@@ -6,9 +6,11 @@
   color: black;
   font-size: 18px;
   display: inline;
+  transition: linear 0.6s;
 }
 
 .nav-link:hover {
+  color: gray;
   -webkit-transition: linear 0.6s;
   transition: linear 0.6s;
 }
@@ -21,8 +23,17 @@
 }
 
 .navbar .navbarBrand {
-  margin-left: 40.35%;
+  margin-left: 26.5%;
   font-size: 25px;
+  -webkit-transition: linear 0.6s;
+  transition: linear 0.6s;
+  transition: linear 0.6s;
+}
+
+.navbar .navbarBrand:hover {
+  color: gray;
+  -webkit-transition: linear 0.6s;
+  transition: linear 0.6s;
 }
 
 .shoppingCartIcon {

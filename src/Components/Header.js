@@ -12,6 +12,14 @@ class Header extends Component {
         <div>
             <Navbar variant='light'>
                 <NavbarBrand href='/Home' className='homeButton'>Начало</NavbarBrand>
+                <NavItem>
+                    <NavLink className='nav-link' href='/Hoodies'>
+                        Худита
+                    </NavLink>
+                    <NavLink href='/Masks'>
+                        Маски
+                    </NavLink>
+                </NavItem>
                 <NavbarBrand className='navbarBrand' href='/Home'>Aurora</NavbarBrand>
                 <Nav className='ml-auto'>
                     <NavItem>
