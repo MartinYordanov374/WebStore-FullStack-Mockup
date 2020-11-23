@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {store} from './store'
 import {Button} from 'react-bootstrap'
-import {FaShoppingCart, FaHeart} from 'react-icons/fa'
+import {FaTrash} from 'react-icons/fa'
 import Navbar from './Header'
 import Footer from './Footer'
 import {connect} from 'react-redux'
@@ -12,6 +12,9 @@ class ShoppingCart extends Component {
     render() {
         const {productsInCart} = this.props;
         let totalSumDollars = 0;    
+        const removeFromCart=(product)=>{
+            store.dispatch({type:'removeFromCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
+        }
         return (
             <div className='cartWrapper'>
                 <Navbar></Navbar>
@@ -20,7 +23,8 @@ class ShoppingCart extends Component {
                 <div className='productsWrapper'>
                     <p className='productName'>{product.name}</p>
                     <img className='productImage' src={product.image}/>
-                    <p className='productPrice'>{product.price} лв.</p>
+                    <p className='productPrice'>Цена: {product.price} лв.</p>
+                    <FaTrash className='removeProduct' size={25} onClick={()=>removeFromCart(product)}></FaTrash>
                     <hr></hr>  
                     <span className='calculateTotal'>{totalSumDollars+=product.price}</span>          
                 </div>)

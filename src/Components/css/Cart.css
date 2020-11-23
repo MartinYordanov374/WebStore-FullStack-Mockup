@@ -4,7 +4,7 @@
 
 .cartWrapper .productsWrapper .productImage {
   width: 10%;
-  margin-right: 75%;
+  margin-right: 70%;
   border-style: solid;
   border-color: black;
   border-width: 1px;
@@ -29,5 +29,13 @@
 .cartWrapper .showTotal {
   margin-top: 2%;
   margin-left: 70%;
+}
+
+.cartWrapper .removeProduct {
+  margin-left: 1%;
+}
+
+.cartWrapper .removeProduct:hover {
+  color: red;
 }
 /*# sourceMappingURL=Cart.css.map */
