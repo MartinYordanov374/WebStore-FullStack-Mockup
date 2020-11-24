@@ -12,15 +12,15 @@ export default function MasksPage() {
         {
             name: 'Game Mask - Фортнайт',
             image: MissingImage,
-            price: 5,
-            cents: 50,
+            price: 5.50,
+            quantity: 1,
             id: 0
         },
         {
             name: 'Anime Mask - Naruto - Sasuke',
             image: MissingImage,
-            price: 3,
-            cents: 40,
+            price: 3.40,
+            quantity: 1,
             id: 1
         },
     

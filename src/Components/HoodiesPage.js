@@ -19,21 +19,23 @@ class HoodiesPage extends Component {
             name: 'Game Hoodie - Фортнайт',
             image: fortniteHoodie,
             price: 36.96,
+            quantity: 1,
             id: 0
         },
         {
             name: 'Anime Hoodie - Sword Art Online - Кирито',
             image: kiritoHoodie,
             price: 39.94,
+            quantity: 1,
             id:1
         },
     ]
     const addToWishlist=(id, product)=>{
-        store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, id: product.id})
+        store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
         $('#'+id).css('color', 'purple')        
     }
     const addToCart=(product)=>{
-        store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id})
+        store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
     }
     return (
         <div>
