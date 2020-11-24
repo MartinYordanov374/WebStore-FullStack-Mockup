@@ -4,13 +4,13 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
         case 'addToFavorites':
             return{
                 ...state,
-                productsInWishList: [...state.productsInWishList, {name: action.name, image: action.image, price: action.price, quantity: action.quantity}]
+                productsInWishList: [...state.productsInWishList, {name: action.name, image: action.image, price: action.price, quantity: action.quantity, id: action.id}]
             }
         case 'addToCart':
             console.log(state)
             return{
                 ...state,
-                productsInCart: [...state.productsInCart, {name: action.name, image: action.image, price: action.price, quantity: action.quantity}]
+                productsInCart: [...state.productsInCart, {name: action.name, image: action.image, price: action.price, quantity: action.quantity, id: action.id}]
 
             }
         case 'removeFromCart':
@@ -27,7 +27,7 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
 
         case 'increase':
             let tempCart =state.productsInCart.map(product=>{
-                if(product.id===action.id){
+                if(product.id===action.id && product.quantity>=1){
                     product={...product, quantity: product.quantity+1}
                 }
                 return product;
@@ -38,7 +38,7 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
             }
             case 'decrease':
                 let lowerCart =state.productsInCart.map(product=>{
-                    if(product.id===action.id){
+                    if(product.id===action.id && product.quantity>1){
                         product={...product, quantity: product.quantity-1}
                     }
                     return product;

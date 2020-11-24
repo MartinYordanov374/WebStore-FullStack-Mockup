@@ -17,11 +17,12 @@ class ShoppingCart extends Component {
             store.dispatch({type:'removeFromCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
         }
         const increaseQuantity=(product)=>{
-            store.dispatch({type:'increase'})
+            console.log('product id: '+product.id)
+            store.dispatch({type:'increase', id: product.id})
 
         }
         const decreaseQuantity=(product)=>{
-            store.dispatch({type:'decrease'})
+            store.dispatch({type:'decrease', id: product.id})
         }
         return (
             <div className='cartWrapper'>

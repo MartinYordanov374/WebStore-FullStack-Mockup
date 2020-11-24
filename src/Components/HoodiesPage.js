@@ -10,6 +10,7 @@ import $ from 'jquery'
 import {FaShoppingCart, FaHeart} from 'react-icons/fa'
 import {store} from './store'
 import {connect} from 'react-redux'
+import {v4} from 'uuid'
 class HoodiesPage extends Component {
     render(){
     let {productsInWishList} = this.props;
@@ -20,14 +21,14 @@ class HoodiesPage extends Component {
             image: fortniteHoodie,
             price: 36.96,
             quantity: 1,
-            id: 0
+            id: v4()
         },
         {
             name: 'Anime Hoodie - Sword Art Online - Кирито',
             image: kiritoHoodie,
             price: 39.94,
             quantity: 1,
-            id:1
+            id:v4()
         },
     ]
     const addToWishlist=(id, product)=>{
