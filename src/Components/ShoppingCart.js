@@ -17,8 +17,7 @@ class ShoppingCart extends Component {
             store.dispatch({type:'removeFromCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
         }
         const increaseQuantity=(product)=>{
-            product.quantity+=1;
-            alert(product.quantity)
+            store.dispatch({type:'increase'})
 
         }
         const decreaseQuantity=(product)=>{
@@ -57,7 +56,7 @@ class ShoppingCart extends Component {
                         </span> Цена: {product.price*product.quantity} лв.</p>
                     <FaTrash className='removeProduct' size={25} onClick={()=>removeFromCart(product)}></FaTrash>
                     <hr></hr>
-                    <span className='calculateTotal'>{totalSumDollars+=product.price}</span>       
+                    <span className='calculateTotal'>{totalSumDollars+=product.price*product.quantity}</span>       
                 </div>)
                 }
                 <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
