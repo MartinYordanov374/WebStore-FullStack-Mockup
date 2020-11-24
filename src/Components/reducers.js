@@ -24,6 +24,7 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
                 ...state,
                 productsInCart: updatedCart
             }
+
         case 'increase':
             let tempCart =state.productsInCart.map(product=>{
                 if(product.id===action.id){
@@ -35,7 +36,17 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
                 ...state,
                 productsInCart: tempCart
             }
-        
+            case 'decrease':
+                let lowerCart =state.productsInCart.map(product=>{
+                    if(product.id===action.id){
+                        product={...product, quantity: product.quantity-1}
+                    }
+                    return product;
+                })
+                return{
+                    ...state,
+                    productsInCart: lowerCart
+                }
         
         default:
             return state

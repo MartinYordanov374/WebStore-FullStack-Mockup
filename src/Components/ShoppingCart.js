@@ -21,14 +21,7 @@ class ShoppingCart extends Component {
 
         }
         const decreaseQuantity=(product)=>{
-            if(product.quantity<=1){
-               alert('ERROR')
-            }
-            if(product.quantity>=1){
-                product.quantity-=1;
-                alert(product.quantity)
-
-            }
+            store.dispatch({type:'decrease'})
         }
         return (
             <div className='cartWrapper'>
