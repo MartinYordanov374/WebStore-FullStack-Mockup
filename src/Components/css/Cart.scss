@@ -4,7 +4,7 @@
         
         .productImage{
             width: 10%;
-            margin-right: 65%;
+            margin-right: 60%;
             border-style: solid;
             border-color: black;
             border-width: 1px;
@@ -41,7 +41,7 @@
         border-width: 1px;
         border-style: solid;
         background-color: rgb(230, 230, 230);
-
+        margin-right: 6%;
         .decreaseQuantity{
             &:hover{
                 color:red;
@@ -61,15 +61,16 @@
     }
     .productGuideWrapper{
         .productIndexGuide{
+            margin-left: 1%;
             font-size: 20px;
         }
         .productQuantityGuide{
-            margin-left: 62%;
+            margin-left: 60%;
             font-size: 20px;
 
         }
         .productPriceGuide{
-            margin-left: 2%;
+            margin-left: 6%;
             margin-right: 6%;
             font-size: 20px;
 
