@@ -16,7 +16,6 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
         case 'removeFromCart':
             let updatedCart = [...state.productsInCart]
             let indexOf = updatedCart.indexOf(product=>product.id===action.id)
-            console.log(indexOf)
             if(indexOf<=-1){
                 updatedCart.splice(indexOf, 1)
             }
@@ -24,7 +23,16 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
                 ...state,
                 productsInCart: updatedCart
             }
-
+            case 'removeFromWishList':
+                let updatedWishList = [...state.productsInWishList]
+                let indexOfFavorite = updatedWishList.indexOf(product=>product.id===action.id)
+                if(indexOfFavorite<=-1){
+                    updatedWishList.splice(indexOfFavorite, 1)
+                }
+                return{
+                    ...state,
+                    productsInWishList: updatedWishList
+                }
         case 'increase':
             let tempCart =state.productsInCart.map(product=>{
                 if(product.id===action.id && product.quantity>=1){

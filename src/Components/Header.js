@@ -23,8 +23,8 @@ class Header extends Component {
                 <NavbarBrand className='navbarBrand' href='/Home'>Aurora</NavbarBrand>
                 <Nav className='ml-auto'>
                     <NavItem>
-                        <NavLink>
-                            <FaHeart className='wishlistIcon'size={30}></FaHeart><span className='wishListIndex'>{productsInWishList.length}</span>
+                        <NavLink href='/Wishlist'>
+                            <FaHeart className='wishlistIcon'size={30}/><span className='wishListIndex'>{productsInWishList.length}</span>
                         </NavLink>
                         <NavLink href='/Cart'>
                             <FaShoppingCart  className='shoppingCartIcon'size={30}></FaShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
