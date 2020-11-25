@@ -1,12 +1,9 @@
-$backgroundColor:  #F2EDD7FF;
+$backgroundColor:  rgb(255, 255, 255);
 .productsWishListWrapper{
     width: 30%;
     display: inline-block;
     float: left;
     margin-left: 2%;
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
     margin-top: 10px;
     background-color: $backgroundColor;
 }
@@ -30,4 +27,12 @@ $backgroundColor:  #F2EDD7FF;
     .addProductIcon{
         color: green;
     }
+}
+.promocode{
+    width: 20%;
+    margin-left: 75%;
+}
+.activateCodeButton{
+    margin-top: 1%;
+    margin-left: 76.5%;
 }

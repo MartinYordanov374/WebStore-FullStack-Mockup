@@ -3,11 +3,8 @@
   display: inline-block;
   float: left;
   margin-left: 2%;
-  border-style: solid;
-  border-color: black;
-  border-radius: 10px;
   margin-top: 10px;
-  background-color: #F2EDD7FF;
+  background-color: white;
 }
 
 .removeProduct {
@@ -26,7 +23,7 @@
 }
 
 .addProductButton:hover {
-  background-color: #F2EDD7FF;
+  background-color: white;
   border-color: black;
   -webkit-box-shadow: 2px 2px 0px black;
           box-shadow: 2px 2px 0px black;
@@ -35,5 +32,15 @@
 
 .addProductButton .addProductIcon {
   color: green;
+}
+
+.promocode {
+  width: 20%;
+  margin-left: 75%;
+}
+
+.activateCodeButton {
+  margin-top: 1%;
+  margin-left: 76.5%;
 }
 /*# sourceMappingURL=Wishlist.css.map */

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {store} from './store'
-import {Button} from 'react-bootstrap'
+import {Button, FormControl} from 'react-bootstrap'
 import {FaTrash, FaArrowLeft, FaArrowRight, FaTruck} from 'react-icons/fa'
 import Navbar from './Header'
 import Footer from './Footer'
@@ -24,6 +24,7 @@ class ShoppingCart extends Component {
         const decreaseQuantity=(product)=>{
             store.dispatch({type:'decrease', id: product.id})
         }
+
         return (
             <div className='cartWrapper'>
                 <Navbar></Navbar>
