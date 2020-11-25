@@ -28,8 +28,8 @@ class Wishlist extends Component {
                         </span>
                     </p>
                     <img className='productImage' src={product.image}/>
-                    <p className='productPrice'>Цена: {product.price} лв.</p>
-                    <Button><FaShoppingCart className='addProduct' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
+                    <p className='productPrice'> {product.price} лв. </p>
+                    <Button className='addProductButton'><FaShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
 
                 </div>)
                 }

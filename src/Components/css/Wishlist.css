@@ -7,6 +7,7 @@
   border-color: black;
   border-radius: 10px;
   margin-top: 10px;
+  background-color: #F2EDD7FF;
 }
 
 .removeProduct {
@@ -17,7 +18,22 @@
   color: red;
 }
 
-.addProduct:hover {
-  color: yellowgreen;
+.addProductButton {
+  background-color: white;
+  border-color: black;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.addProductButton:hover {
+  background-color: #F2EDD7FF;
+  border-color: black;
+  -webkit-box-shadow: 2px 2px 0px black;
+          box-shadow: 2px 2px 0px black;
+  color: black;
+}
+
+.addProductButton .addProductIcon {
+  color: green;
 }
 /*# sourceMappingURL=Wishlist.css.map */

@@ -1,3 +1,4 @@
+$backgroundColor:  #F2EDD7FF;
 .productsWishListWrapper{
     width: 30%;
     display: inline-block;
@@ -7,6 +8,7 @@
     border-color: black;
     border-radius: 10px;
     margin-top: 10px;
+    background-color: $backgroundColor;
 }
 .removeProduct{
     margin-left: 15px;
@@ -14,8 +16,18 @@
         color: red;
     }
 }
-.addProduct{
+.addProductButton{
+    background-color: white;
+    border-color: black;
+    color: black;
+    margin-bottom: 5px;
     &:hover{
-        color: yellowgreen;
+        background-color: $backgroundColor;
+        border-color: black;
+        box-shadow: 2px 2px 0px black;
+        color: black;
+    }
+    .addProductIcon{
+        color: green;
     }
 }
