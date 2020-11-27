@@ -1,0 +1,47 @@
+$backgroundColorForm:  #F2EDD7FF;
+.loginFormWrapper{
+
+
+}
+.loginForm{
+    background-color: $backgroundColorForm;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    .createSpace{
+        opacity: 0;
+        margin: 5%;
+    }
+
+    .enterUsername{
+        width: 40%;
+        margin-top: 5%;
+        margin-left: 30%;
+        filter: drop-shadow(2px 2px 2px black);
+    }
+    .enterEmail{
+        width: 40%;
+        margin-top: 10px;
+        margin-left: 30%;
+        filter: drop-shadow(2px 2px 2px black);
+
+
+    }
+    .enterPassword{
+        width: 40%;
+        margin-top: 10px;
+        margin-left: 30%;
+        filter: drop-shadow(2px 2px 2px black);
+
+    }
+    .submitLoginForm{
+        margin-top: 1%;
+        width: 40%;
+        filter: drop-shadow(2px 2px 2px black);
+
+    }
+}

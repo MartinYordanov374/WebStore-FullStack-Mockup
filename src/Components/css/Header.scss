@@ -68,3 +68,11 @@ $backgroundColorNavbar: #F2EDD7FF;
     margin-left: 5px;
     font-family: 'Open Sans', sans-serif;
 }
+.loginIcon{
+    color: white;
+    filter: drop-shadow(0.5px 0.5px 0.5px black);
+    margin-left: 5px;
+    &:hover{
+        color: orange;
+    }
+}

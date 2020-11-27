@@ -1,0 +1,47 @@
+.loginForm {
+  background-color: #F2EDD7FF;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 2%;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.loginForm .createSpace {
+  opacity: 0;
+  margin: 5%;
+}
+
+.loginForm .enterUsername {
+  width: 40%;
+  margin-top: 5%;
+  margin-left: 30%;
+  -webkit-filter: drop-shadow(2px 2px 2px black);
+          filter: drop-shadow(2px 2px 2px black);
+}
+
+.loginForm .enterEmail {
+  width: 40%;
+  margin-top: 10px;
+  margin-left: 30%;
+  -webkit-filter: drop-shadow(2px 2px 2px black);
+          filter: drop-shadow(2px 2px 2px black);
+}
+
+.loginForm .enterPassword {
+  width: 40%;
+  margin-top: 10px;
+  margin-left: 30%;
+  -webkit-filter: drop-shadow(2px 2px 2px black);
+          filter: drop-shadow(2px 2px 2px black);
+}
+
+.loginForm .submitLoginForm {
+  margin-top: 1%;
+  width: 40%;
+  -webkit-filter: drop-shadow(2px 2px 2px black);
+          filter: drop-shadow(2px 2px 2px black);
+}
+/*# sourceMappingURL=login.css.map */
