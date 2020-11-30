@@ -23,9 +23,6 @@ class Header extends Component {
                 <NavbarBrand className='navbarBrand' href='/Home'>Aurora</NavbarBrand>
                 <Nav className='ml-auto'>
                     <NavItem>
-                        <NavLink href='/Login'>
-                            <FaUser className='loginIcon' size={30}/>
-                        </NavLink>
                         <NavLink href='/Wishlist'>
                             <FaHeart className='wishlistIcon'size={30}/><span className='wishListIndex'>{productsInWishList.length}</span>
                         </NavLink>
