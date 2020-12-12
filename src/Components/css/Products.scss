@@ -22,6 +22,7 @@ body, html{
     border-style: solid;
     border-color: black;
     width: 50%;
+    word-wrap: break-word;
     &:hover{
         background-color: $categoryButtonColorHover;
         box-shadow: 2px 2px 0px  black;

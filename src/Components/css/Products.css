@@ -34,6 +34,7 @@ img {
   border-style: solid;
   border-color: black;
   width: 50%;
+  word-wrap: break-word;
   margin-top: 11.8%;
 }
 
@@ -62,6 +63,7 @@ img {
   border-style: solid;
   border-color: black;
   width: 50%;
+  word-wrap: break-word;
 }
 
 .Categories .Masks .goToMasksButton:hover {

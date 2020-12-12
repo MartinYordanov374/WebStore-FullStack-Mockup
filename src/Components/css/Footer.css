@@ -18,6 +18,19 @@
   font-family: 'Antic Slab', serif;
 }
 
+.socialMediaLink {
+  color: black;
+  -webkit-transition: linear 0.6s;
+  transition: linear 0.6s;
+}
+
+.socialMediaLink:hover {
+  text-decoration: none;
+  color: gray;
+  -webkit-transition: linear 0.6s;
+  transition: linear 0.6s;
+}
+
 .footerInstagramLink {
   font-size: 25px;
   font-family: 'Antic Slab', serif;
