@@ -54,11 +54,11 @@ class ShoppingCart extends Component {
                     <span className='calculateTotal'>{totalSumDollars+=product.price*product.quantity}</span>       
                 </div>)
                 }
-                <div className='anonymousOrder'>
+                {/* <div className='anonymousOrder'>
                     <FormControl placeholder='Въведи Имена'/>
                     <FormControl placeholder='Въведи Адрес'/>
                     <FormControl placeholder='Въведи Телефонен Номер'/>
-                </div>
+                </div> */}
                 <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
                 <Button variant='warning' className='finishOrderButton'>
                     <strong>
