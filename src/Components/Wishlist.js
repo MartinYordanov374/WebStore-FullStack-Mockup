@@ -24,7 +24,6 @@ class Wishlist extends Component {
                 ""}
                 {productsInWishList.map(product=>    
                 <div className='productsWishListWrapper'>
-                    <p>{product.id}</p>
                     <p className='productName'> <strong>{product.name}</strong>
                         <span>
                             <BsX className='removeProduct' size={25} onClick={()=>removeFromWishList(product)}/>
