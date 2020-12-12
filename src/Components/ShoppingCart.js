@@ -31,11 +31,13 @@ class ShoppingCart extends Component {
                 {productsInCart.length==0 ?
                 <p className='emptyCartAlert'>Вашата количка е празна!</p>
                  : ""}
-                    <span className='productGuideWrapper'>
-                        <span className='productIndexGuide'>Продукт</span>
-                        <span className='productQuantityGuide'>Количество</span>
-                        <span className='productPriceGuide'>Цена</span> 
-                    </span>
+                    {/* <span className='productGuideWrapper'>
+                        <span classname='row'>
+                        <span className='productIndexGuide col-sm-8 col-md-8 col-lg-8'>Продукт</span>
+                        <span className='productQuantityGuide col-sm-8 col-md-8 col-lg-8'>Количество</span>
+                        <span className='productPriceGuide col-sm-8 col-md-8 col-lg-8'>Цена</span> 
+                        </span>
+                    </span> */}
                     <hr></hr>
                 {productsInCart.map(product=>    
                 <div className='productsWrapper'>
