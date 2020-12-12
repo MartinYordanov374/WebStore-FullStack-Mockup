@@ -28,10 +28,6 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
                 let indexOfFavorite = updatedWishList.findIndex(product=>product.id==action.id)
                 if(indexOfFavorite> -1){
                     updatedWishList.splice(indexOfFavorite, 1)
-                    alert('found')
-                }
-                else{
-                    alert('not found')
                 }
                 return{
                     ...state,
