@@ -19,7 +19,14 @@ export default function Login() {
                 console.log(response)
             })
     }
-
+    const login=()=>{
+        Axios.post('http://localhost:3307/login',{
+                username: userReg,
+                password: passReg
+            }).then((response)=>{
+                console.log(response)
+            })
+    }
     return (
         <div className='loginFormWrapper'>
             <Navbar/>

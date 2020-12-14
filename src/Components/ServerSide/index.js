@@ -20,7 +20,23 @@ app.post('/register', (req, res)=>{
         console.log(err)
     })
 })
-
+app.post('/login', (req,res)=>{
+    const username = req.body.username;
+    const password = req.body.password;
+    db.query('SELECT * FROM users WHERE username=?', username, (err,res)=>{
+        if(err)
+        {
+            res.send({err: err})
+        }
+        if(res.length>0)
+        {
+           res.send({message: 'successfully logged in'})
+        }
+        else{
+            res.send({message: 'wrong username, try again.'})
+        }
+    })
+})
 app.listen(3307, ()=>{
     console.log('Running server')
 })
