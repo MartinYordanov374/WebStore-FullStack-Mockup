@@ -11,7 +11,7 @@ class Header extends Component {
     return (
         <div>
             <Navbar variant='light'>
-                <NavbarBrand href='/Home' className='homeButton'>Начало</NavbarBrand>
+                <NavbarBrand href='/Home' className='homeButton'><strong>Neon</strong></NavbarBrand>
                 <NavItem>
                     <NavLink className='nav-link' href='/Hoodies'>
                         Худита
@@ -20,7 +20,6 @@ class Header extends Component {
                         Маски
                     </NavLink>
                 </NavItem>
-                <NavbarBrand className='navbarBrand' href='/Home'>Aurora</NavbarBrand>
                 <Nav className='ml-auto'>
                     <NavItem>
                         <NavLink href='/Login'>
