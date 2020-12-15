@@ -28,7 +28,8 @@ export default function MasksPage() {
     ]
     const addToWishlist=(product, id)=>{
         store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
-        $('#'+id).css('color', 'purple')        
+ 
+        $('#'+id).css('color', 'purple')     
     }
     const addToCart=(product)=>{
         store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
@@ -40,7 +41,7 @@ export default function MasksPage() {
             <div className='products'>
                 {masksList.map((mask, index)=>
                 <div className='hoodieWrapper'>
-                    <p className='hoodieName'><FaHeart onClick={()=>addToWishlist(mask)} className='addFaves' size={25}/><strong>{mask.name}</strong> </p>     
+                    <p className='hoodieName'><FaHeart onClick={()=>addToWishlist(mask, index)} className='addFaves' id={index} size={25}/><strong>{mask.name}</strong> </p>     
                     <img className='hoodieImage' src={mask.image}></img>
                     <div className='purchaseField'>
                         <p><strong>{mask.price} лв.</strong></p>
