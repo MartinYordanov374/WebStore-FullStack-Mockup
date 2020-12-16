@@ -7,11 +7,12 @@ app = express()
 app.use(express.json())
 app.use(cors())
 
+//data removed for security reasons
 db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'loginsystem'
+    host: '',
+    user: '',
+    password: '',
+    database: ''
 })
 
 app.post('/register', (req, res)=>{
