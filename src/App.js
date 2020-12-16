@@ -5,6 +5,11 @@ import HoodiesPage from './Components/HoodiesPage'
 import MasksPage from './Components/MasksPage'
 import Wishlist from './Components/Wishlist'
 import ShoppingCart from './Components/ShoppingCart'
+
+import Login from './Components/Login'
+import Register from './Components/Register'
+
+
 import NotFoundPage from './Components/NotFoundPage';
 import {store} from './Components/store'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
@@ -21,6 +26,10 @@ function App() {
               <Route path='/Masks' component={MasksPage}/>
               <Route path='/Cart' component={ShoppingCart}/>
               <Route path='/Wishlist' component={Wishlist}/>
+
+              <Route path='/Login' component={Login}/>
+              <Route path='/Register' component={Register}/>
+
               <Route path="*" component={NotFoundPage} />
 
 

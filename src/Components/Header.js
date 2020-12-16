@@ -13,6 +13,7 @@ class Header extends Component {
             <Navbar variant='light'>
                 <NavbarBrand href='/Home' className='homeButton'><strong>Neon</strong></NavbarBrand>
                 <NavItem>
+                    
                     <NavLink className='nav-link' href='/Hoodies'>
                         Худита
                     </NavLink>
@@ -22,6 +23,9 @@ class Header extends Component {
                 </NavItem>
                 <Nav className='ml-auto'>
                     <NavItem>
+                        <NavLink href='/Login'>
+                            <FaUser className='loginLink' size={30}></FaUser>
+                        </NavLink>
                         <NavLink href='/Wishlist'>
                             <FaHeart className='wishlistIcon'size={30}/><span className='wishListIndex'>{productsInWishList.length}</span>
                         </NavLink>

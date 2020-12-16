@@ -56,6 +56,16 @@ $backgroundColorNavbar: #F2EDD7FF;
 
     }
 }
+.loginLink
+{
+    color: white;
+    filter: drop-shadow(0.5px 0.5px 0.5px black);
+
+    &:hover{
+        color: orange;
+
+    }
+}
 .wishListIndex{
     color: purple;
     font-size: 17px;

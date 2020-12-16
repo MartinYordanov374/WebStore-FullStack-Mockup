@@ -56,6 +56,16 @@
   color: #6a026a;
 }
 
+.loginLink {
+  color: white;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px black);
+          filter: drop-shadow(0.5px 0.5px 0.5px black);
+}
+
+.loginLink:hover {
+  color: orange;
+}
+
 .wishListIndex {
   color: purple;
   font-size: 17px;

@@ -12,6 +12,13 @@
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "mysql": "^2.18.1",
+
+    "bcrypt": "^5.0.0",
+    "bootstrap": "^4.5.3",
+    "cors": "^2.8.5",
+    "jquery": "^3.5.1",
+    "mysql": "^2.18.1",
+    "node": "^15.4.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
