@@ -15,7 +15,7 @@ export default function Register() {
         hideAlerts()
     },[])
     const register=()=>{
-            if($('.enterPassword').val().length>8)
+            if($('.enterPassword').val().length>8 && $('.enterUsername').val().length>3)
             {
                 Axios.post('http://localhost:3307/register',{
                          username: userReg,
@@ -60,7 +60,7 @@ export default function Register() {
             <div className='loginForm'>
                 <h2>Регистрация</h2>
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong>Регистрацията е успешна!</strong></Alert>
-                <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Въвели сте грешно име или парола !</strong></Alert>
+                <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Въвели сте невалидно име или парола !</strong></Alert>
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserReg(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassReg(e.target.value)} type='password' placeholder='Въведете парола'/>
