@@ -12,6 +12,16 @@ $backgroundColorForm:  #F2EDD7FF;
     border-color: black;
     border-style: solid;
     border-width: 1px;
+    .alert-success{
+        opacity: 0;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .alert-danger{
+        opacity: 0;
+        width: 50%;
+        margin-left: 25%;
+    }
     .createSpace{
         opacity: 0;
         margin: 5%;

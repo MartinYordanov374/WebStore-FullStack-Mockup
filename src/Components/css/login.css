@@ -9,6 +9,18 @@
   border-width: 1px;
 }
 
+.loginForm .alert-success {
+  opacity: 0;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.loginForm .alert-danger {
+  opacity: 0;
+  width: 50%;
+  margin-left: 25%;
+}
+
 .loginForm .createSpace {
   opacity: 0;
   margin: 5%;
