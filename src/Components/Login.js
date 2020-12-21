@@ -8,8 +8,8 @@ import Axios from 'axios'
 import $ from 'jquery'
 
 export default function Login() {
-    const [userReg, setUserReg] = useState('')
-    const [passReg, setPassReg] = useState('')
+    const [userLog, setUserLog] = useState('')
+    const [passLog, setPassLog] = useState('')
 
     useEffect(()=>{
         $('.alert-success').fadeOut()
@@ -18,13 +18,14 @@ export default function Login() {
 
     const login=()=>{
         Axios.post('http://localhost:3307/login',{
-                username: userReg,
-                password: passReg
+                usernameLogin: userLog,
+                passwordLogin: passLog
             }).then((response)=>{
-                console.log(response.data.message)
-                if(response.data.message=="User doesnt exist")
+                console.log(response)
+                if(response.data.message=="User doesnt exist" || response.data.message=="Wrong username/password combo")
                 {
                     showUserNotFoundAlert()
+
                 }
                 else{
                     showUserFoundAlert()
@@ -56,8 +57,8 @@ export default function Login() {
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Изглежда този потребител не съществува. </strong></Alert>
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си ! </strong></Alert>
 
-                <FormControl className='enterUsername' onChange={(e)=>setUserReg(e.target.value)} placeholder='Въведете никнейм'/>
-                <FormControl className='enterPassword'  onChange = {(e)=>setPassReg(e.target.value)} type='password' placeholder='Въведете парола'/>
+                <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
+                <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
                 <Button className='submitLoginForm' onClick ={login}><FaRegUser/> Влезте в профила си </Button>
                 <br></br>
                 <br></br>
