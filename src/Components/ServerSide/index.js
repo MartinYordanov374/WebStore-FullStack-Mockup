@@ -9,10 +9,10 @@ app.use(cors())
 
 //data removed for security reasons
 db = mysql.createConnection({
-    host: '',
-    user: '',
-    password: '',
-    database: ''
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'loginsystem'
 })
 
 app.post('/register', (req, res)=>{

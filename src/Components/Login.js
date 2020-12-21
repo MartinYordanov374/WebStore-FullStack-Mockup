@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './css/login.css'
 import Navbar from './Header'
 import Footer from './Footer'
-import {FormControl, Button} from 'react-bootstrap'
+import {FormControl, Button, Alert} from 'react-bootstrap'
 import {FaRegUser} from 'react-icons/fa'
 import Axios from 'axios'
 import $ from 'jquery'
@@ -11,19 +11,51 @@ export default function Login() {
     const [userReg, setUserReg] = useState('')
     const [passReg, setPassReg] = useState('')
 
+    useEffect(()=>{
+        $('.alert-success').fadeOut()
+        $('.alert-danger').fadeOut()
+    },[])
+
     const login=()=>{
         Axios.post('http://localhost:3307/login',{
                 username: userReg,
                 password: passReg
             }).then((response)=>{
-                console.log(response)
+                console.log(response.data.message)
+                if(response.data.message=="User doesnt exist")
+                {
+                    showUserNotFoundAlert()
+                }
+                else{
+                    showUserFoundAlert()
+                }
             })
     }
+    
+    const showUserNotFoundAlert=()=>{
+            $('.alert-danger').css('opacity', 1)
+            $('.alert-danger').fadeIn()
+            hideAlertSuccess()
+        }
+    const showUserFoundAlert=()=>{
+            $('.alert-success').css('opacity', 1)
+            $('.alert-success').fadeIn()
+            hideAlertFail()
+    }
+    const hideAlertFail=()=>{
+            $('.alert-danger').fadeOut()
+        }
+    const hideAlertSuccess=()=>{
+            $('.alert-success').fadeOut()
+        }
     return (
         <div className='loginFormWrapper'>
             <Navbar/>
             <div className='loginForm'>
                 <h2>Вход</h2>
+                <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Изглежда този потребител не съществува. </strong></Alert>
+                <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си ! </strong></Alert>
+
                 <FormControl className='enterUsername' onChange={(e)=>setUserReg(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassReg(e.target.value)} type='password' placeholder='Въведете парола'/>
                 <Button className='submitLoginForm' onClick ={login}><FaRegUser/> Влезте в профила си </Button>
