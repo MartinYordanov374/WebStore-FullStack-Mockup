@@ -16,15 +16,22 @@ export default function Register() {
         hideAlerts()
     },[])
     const register=()=>{
-            if($('.enterPassword').val().length>8 && $('.enterUsername').val().length>3)
+            if(userReg.length>3 && passReg.length>8)
             {
                 Axios.post('http://localhost:3307/register',{
                          username: userReg,
                          password: passReg
                      }).then((response)=>{
-                         console.log(response)
+                         if(response.data.message==='user already registered'){
+                            showAlertTaken()
+                         }
+                         else{
+                            showAlertSuccess()
+        
+                        }
+
                 })
-                showAlertSuccess();
+
             }
             else
             {
@@ -35,6 +42,7 @@ export default function Register() {
     const hideAlerts=()=>{
         $('.alert-success').fadeOut()
         $('.alert-danger').fadeOut()
+        $('.alert-warning').fadeOut()
 
     }
     const hideAlertSuccess=()=>{
@@ -53,7 +61,17 @@ export default function Register() {
         $('.alert-danger').css('opacity', 1)
         $('.alert-danger').fadeIn()
         hideAlertSuccess()
-
+    }
+    const showAlertTaken=()=>{
+        $('.alert-warning').css('opacity', 1)
+        $('.alert-warning').fadeIn()
+        hideAlertSuccess()
+        hideAlertFail()
+    }
+    const hideAlertTaken=()=>{
+        $('.alert-warning').fadeOut()
+        hideAlertSuccess()
+        hideAlertFail()
     }
     return (
         <div className='loginFormWrapper'>
@@ -62,6 +80,8 @@ export default function Register() {
                 <h2>Регистрация</h2>
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong>Регистрацията е успешна!</strong></Alert>
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Въвели сте невалидно име или парола !</strong></Alert>
+                <Alert className='alert-warning' onClick={hideAlertTaken}> <strong>Този потребител вече съществува!</strong></Alert>
+
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserReg(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassReg(e.target.value)} type='password' placeholder='Въведете парола'/>
