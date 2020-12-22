@@ -10,6 +10,7 @@ import $ from 'jquery'
 
 export default function ProfilePage() {
     let cookieUsername = document.cookie;
+
     return (
         <div className='profileWrapper'>
             <Navbar/>

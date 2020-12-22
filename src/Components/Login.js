@@ -38,6 +38,7 @@ export default function Login() {
                     showUserFoundAlert()
                     $('.usernameField').text(response.data[0].username)
                     createCookie(response.data[0].username)
+
                 }
             })
     }
@@ -45,7 +46,7 @@ export default function Login() {
         let date = new Date()
         let hour = 1
         date.setTime(date.getTime()+(hour*60*1000))
-        document.cookie=`${username}; expires=${date.toUTCString()}; path=/ProfilePage`
+        document.cookie=`${username}; expires=${date.toUTCString()}; path=./ProfilePage`
 
     }
     const showUserNotFoundAlert=()=>{
@@ -84,9 +85,7 @@ export default function Login() {
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Изглежда този потребител не съществува. </strong></Alert>
 
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си, <span className='usernameField'/>! </strong></Alert>
-
-                <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си ! </strong></Alert>
-                <Alert className='alert-warning' onClick={hideWrongPassAlert}> <strong>Грешна парола! </strong></Alert>
+                <Alert className='alert-warning' onClick={hideWrongPassAlert}> <strong>Грешна име или парола! </strong></Alert>
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
