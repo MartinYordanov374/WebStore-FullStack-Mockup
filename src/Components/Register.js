@@ -15,7 +15,7 @@ export default function Register() {
         hideAlerts()
     },[])
     const register=()=>{
-            if($('.enterPassword').val().length>8 && $('.enterUsername').val().length>3)
+            if(userReg.length>3 && passReg.length>8)
             {
                 Axios.post('http://localhost:3307/register',{
                          username: userReg,
