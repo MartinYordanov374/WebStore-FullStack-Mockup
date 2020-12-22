@@ -44,11 +44,13 @@ export default function Login() {
             $('.alert-danger').css('opacity', 1)
             $('.alert-danger').fadeIn()
             hideAlertSuccess()
+            hideWrongPassAlert()
         }
     const showUserFoundAlert=()=>{
             $('.alert-success').css('opacity', 1)
             $('.alert-success').fadeIn()
             hideAlertFail()
+            hideWrongPassAlert()
     }
     const hideAlertFail=()=>{
             $('.alert-danger').fadeOut()
