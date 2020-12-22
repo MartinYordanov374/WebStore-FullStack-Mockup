@@ -29,10 +29,18 @@ export default function Login() {
                 }
                 else{
                     showUserFoundAlert()
+                    $('.usernameField').text(response.data[0].username)
+                    createCookie(response.data[0].username)
                 }
             })
     }
-    
+    const createCookie=(username)=>{
+        let date = new Date()
+        let hour = 1
+        date.setTime(date.getTime()+(hour*60*1000))
+        document.cookie=`${username}; expires=${date.toUTCString()}; path=/ProfilePage`
+
+    }
     const showUserNotFoundAlert=()=>{
             $('.alert-danger').css('opacity', 1)
             $('.alert-danger').fadeIn()
@@ -55,8 +63,7 @@ export default function Login() {
             <div className='loginForm'>
                 <h2>Вход</h2>
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Изглежда този потребител не съществува. </strong></Alert>
-                <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си ! </strong></Alert>
-
+                <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си, <span className='usernameField'/>! </strong></Alert>
                 <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
                 <Button className='submitLoginForm' onClick ={login}><FaRegUser/> Влезте в профила си </Button>

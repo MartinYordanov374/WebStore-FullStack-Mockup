@@ -5,6 +5,7 @@ import Footer from './Footer'
 import {FormControl, Button, Alert} from 'react-bootstrap'
 import {FaRegUser, FaKey} from 'react-icons/fa'
 import Axios from 'axios'
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 import $ from 'jquery'
 
 export default function Register() {
@@ -23,7 +24,7 @@ export default function Register() {
                      }).then((response)=>{
                          console.log(response)
                 })
-                showAlertSuccess()
+                showAlertSuccess();
             }
             else
             {
