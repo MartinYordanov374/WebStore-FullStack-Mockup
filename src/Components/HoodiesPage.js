@@ -37,6 +37,11 @@ class HoodiesPage extends Component {
     }
     const addToCart=(product)=>{
         store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
+        storeInCookies()
+    }
+    const storeInCookies=()=>{
+        document.cookie=`products=${JSON.stringify(productsInCart)}; path=/Cart;`
+        
     }
     return (
         <div>

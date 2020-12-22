@@ -8,7 +8,7 @@ import ShoppingCart from './Components/ShoppingCart'
 
 import Login from './Components/Login'
 import Register from './Components/Register'
-
+import ProfilePage from './Components/ProfilePage'
 
 import NotFoundPage from './Components/NotFoundPage';
 import {store} from './Components/store'
@@ -29,6 +29,8 @@ function App() {
 
               <Route path='/Login' component={Login}/>
               <Route path='/Register' component={Register}/>
+              <Route path='/ProfilePage' component={ProfilePage}/>
+
 
               <Route path="*" component={NotFoundPage} />
 
