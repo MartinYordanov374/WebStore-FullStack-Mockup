@@ -14,6 +14,8 @@ export default function Login() {
     useEffect(()=>{
         $('.alert-success').fadeOut()
         $('.alert-danger').fadeOut()
+        $('.alert-warning').fadeOut()
+
     },[])
 
     const login=()=>{
@@ -22,9 +24,14 @@ export default function Login() {
                 passwordLogin: passLog
             }).then((response)=>{
                 console.log(response)
-                if(response.data.message=="User doesnt exist" || response.data.message=="Wrong username/password combo")
+                if(response.data.message=="User doesnt exist")
                 {
                     showUserNotFoundAlert()
+
+                }
+                else if(response.data.message=="Wrong username/password combo")
+                {
+                    showWrongPassAlert()
 
                 }
                 else{
@@ -49,6 +56,16 @@ export default function Login() {
     const hideAlertSuccess=()=>{
             $('.alert-success').fadeOut()
         }
+    const showWrongPassAlert=()=>{
+        $('.alert-warning').css('opacity', 1)
+        $('.alert-warning').fadeIn()
+        hideAlertFail()
+        hideAlertSuccess()
+    }
+    const hideWrongPassAlert=()=>{
+        $('.alert-warning').fadeOut()
+
+    }
     return (
         <div className='loginFormWrapper'>
             <Navbar/>
@@ -56,6 +73,7 @@ export default function Login() {
                 <h2>Вход</h2>
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Изглежда този потребител не съществува. </strong></Alert>
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си ! </strong></Alert>
+                <Alert className='alert-warning' onClick={hideWrongPassAlert}> <strong>Грешна парола! </strong></Alert>
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>

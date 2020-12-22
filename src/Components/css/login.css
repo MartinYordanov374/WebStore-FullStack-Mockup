@@ -21,6 +21,12 @@
   margin-left: 25%;
 }
 
+.loginForm .alert-warning {
+  opacity: 0;
+  width: 50%;
+  margin-left: 25%;
+}
+
 .loginForm .createSpace {
   opacity: 0;
   margin: 5%;

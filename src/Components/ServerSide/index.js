@@ -19,17 +19,31 @@ app.post('/register', (req, res)=>{
     const username = req.body.username;
     const password = req.body.password;
     const saltRounds = 10;
-    bcrypt.hash(password, saltRounds, (err,hash)=>
-    {
-        if(err)
+    db.query('SELECT 1 FROM users WHERE username=?', username, (err, result)=>{
+        if(result.length>0)
         {
-            console.log(err)
-        } 
-        db.query('INSERT INTO users (username, password) VALUES (?,?)', [username, hash], (err,res)=>{
-            console.log(res)
-    })
-    });
-   
+           res.send({message: 'user already registered'})
+        }
+        else{
+            bcrypt.hash(password, saltRounds, (err,hash)=>
+            {
+                if(err)
+                {
+                    console.log(err)
+                } 
+                db.query('INSERT INTO users (username, password) VALUES (?,?)', [username, hash], (err,res)=>{
+                    console.log(res)
+            })
+            });
+            res.send({message: 'user successfully registered'})
+
+        }
+    })    
+})
+app.post('/check', (req, res)=>{
+    const username = req.body.username;
+    const password = req.body.password;
+    
 })
 app.post('/login', (req,res)=>{
     const username = req.body.usernameLogin;
