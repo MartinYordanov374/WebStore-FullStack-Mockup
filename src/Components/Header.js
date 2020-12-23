@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Navbar, Nav, NavbarBrand, NavItem, NavLink} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Header.css'
-import {FaHeart, FaShoppingCart, FaUser} from 'react-icons/fa'
+import {FaHeart, FaShoppingCart, FaUserCircle} from 'react-icons/fa'
 class Header extends Component {
     render() { 
         const {productsInWishList} = this.props;
@@ -24,7 +24,7 @@ class Header extends Component {
                 <Nav className='ml-auto'>
                     <NavItem>
                         <NavLink href='/Login'>
-                            <FaUser className='loginLink' size={30}></FaUser>
+                            <FaUserCircle className='loginLink' size={32}></FaUserCircle>
                         </NavLink>
                         <NavLink href='/Wishlist'>
                             <FaHeart className='wishlistIcon'size={30}/><span className='wishListIndex'>{productsInWishList.length}</span>
