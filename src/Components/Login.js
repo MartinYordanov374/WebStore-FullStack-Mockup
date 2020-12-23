@@ -44,8 +44,8 @@ export default function Login() {
     }
     const createCookie=(username)=>{
         let date = new Date()
-        let hour = 1
-        date.setTime(date.getTime()+(hour*60*1000))
+        let hours = 1
+        date.setTime(date.getTime()+(hours*60*60*1000))
         document.cookie=`${username}; expires=${date.toUTCString()}; path=./ProfilePage`
 
     }
