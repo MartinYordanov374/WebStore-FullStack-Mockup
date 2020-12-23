@@ -33,4 +33,25 @@
 .profilePageWrapper .options .freeSpace {
   opacity: 0;
 }
+
+.profilePageWrapper .dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profilePageWrapper .dashboard .orderHistory {
+  width: 100%;
+  text-align: left;
+  border-left: 2px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-style: solid;
+}
+
+.profilePageWrapper .dashboard .orderHistoryTitle {
+  font-size: 20px;
+  margin-left: 1%;
+}
 /*# sourceMappingURL=profilepage.css.map */

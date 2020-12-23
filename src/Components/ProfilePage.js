@@ -1,15 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Component} from 'react'
 import './css/login.css'
 import Navbar from './Header'
 import Footer from './Footer'
 import {FormControl, Button, Alert} from 'react-bootstrap'
-import {FaCog, FaTrash, FaWrench} from 'react-icons/fa'
+import {FaCog, FaTrash, FaWrench, FaPaperPlane} from 'react-icons/fa'
 import Axios from 'axios'
 import $ from 'jquery'
 import './css/profilepage.css'
 
 
-export default function ProfilePage() {
+export default class ProfilePage extends Component {
+    render(){
     let cookieUsername = document.cookie;
     console.log(cookieUsername)
     return (
@@ -35,8 +36,10 @@ export default function ProfilePage() {
                     }
                     </p>
                     <hr className='borderLine'></hr>
-
-                    <div className='options'>
+                    
+                    <div className='dashboard'>
+                         <div className='options'>
+                   
                         <span className='optionsTitle'><strong><FaCog size={25}/> Настройки</strong>
                             </span>
                         <hr className='borderLine'></hr>
@@ -61,9 +64,19 @@ export default function ProfilePage() {
                         </Button>
 
                     </div>
+                        <div className='orderHistory'>
+                            <span className='orderHistoryTitle'>
+                                <FaPaperPlane size={20}/> <strong>История на поръчките</strong>
+                            </span>
+                            <hr className='borderLine'></hr>
+                            {}
+                        </div>
             </div>
+        </div>
 
             <Footer/>
         </div>
     )
 }
+}
+

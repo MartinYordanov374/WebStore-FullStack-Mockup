@@ -23,6 +23,7 @@
         border-width: 2px;
     }
     .options{
+
         .optionsTitle{
             font-size: 20px;
         }
@@ -34,6 +35,24 @@
         .deleteAccButton{
         }
         
+    }
+    .dashboard {
+        display: flex;
+        .orderHistory{
+
+            width: 100%;
+            text-align: left;
+            border-left: 2px;
+            border-right: 0px;
+            border-top: 0px;
+            border-bottom: 0px;
+            border-style: solid;
+
+        }
+        .orderHistoryTitle{
+            font-size: 20px;
+            margin-left: 1%;
+        }
     }
 
 }
