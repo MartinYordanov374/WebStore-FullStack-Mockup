@@ -1,0 +1,36 @@
+.profilePageWrapper .profileWrapper {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.profilePageWrapper .profileGreeting {
+  margin-top: 2%;
+  text-align: left;
+}
+
+.profilePageWrapper .notRegisteredAlert {
+  font-size: 20px;
+}
+
+.profilePageWrapper .greetUserField {
+  font-size: 20px;
+}
+
+.profilePageWrapper .borderLine {
+  border-color: black;
+  border-width: 2px;
+}
+
+.profilePageWrapper .options {
+  text-align: left;
+  width: 25%;
+}
+
+.profilePageWrapper .options .optionsTitle {
+  font-size: 20px;
+}
+
+.profilePageWrapper .options .freeSpace {
+  opacity: 0;
+}
+/*# sourceMappingURL=profilepage.css.map */

@@ -1,0 +1,39 @@
+.profilePageWrapper{
+    
+    .profileWrapper
+    {
+
+        width: 80%;
+        margin-left: 10%;
+    }
+    .profileGreeting{
+        margin-top: 2%;
+        text-align: left;
+    }
+    .notRegisteredAlert{
+        font-size: 20px;
+
+    }
+    .greetUserField
+    {
+        font-size: 20px;
+    }
+    .borderLine{
+        border-color: black;
+        border-width: 2px;
+    }
+    .options{
+        .optionsTitle{
+            font-size: 20px;
+        }
+        text-align: left;
+        width: 25%;
+        .freeSpace{
+            opacity:0;
+        }
+        .deleteAccButton{
+        }
+        
+    }
+
+}
