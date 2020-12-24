@@ -14,16 +14,27 @@ import NotFoundPage from './Components/NotFoundPage';
 import {store} from './Components/store'
 import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom'
 import {Provider} from 'react-redux'
-import {Component} from 'react'
+import {useState, useEffect} from 'react'
 
-class App extends Component {
-  render(){
+function App () {
+
     let cookie = document.cookie;
+    console.log("app cookie", cookie)
+    const [loginStatus, setLoginStatus] = useState('')
+    useEffect(()=>{
+      if(cookie.length>3)
+      {
+          setLoginStatus('logged in')
+      }
+      else
+      {
+        setLoginStatus('logged out')
+      }
+    },[])
     return (
         <div className="App">
         <Provider store={store}>
           <Router> 
-            
             <Switch>
                 <Route exact path='/Home' component={Products}/>
 
@@ -40,10 +51,9 @@ class App extends Component {
             </Switch>
           </Router>
         </Provider>
-        
+        {console.log(loginStatus)}
         </div>
     );
   }
-}
 
 export default App;

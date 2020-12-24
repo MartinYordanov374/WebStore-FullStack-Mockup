@@ -35,7 +35,6 @@ export default function Login() {
                     $('.usernameField').text(response.data[0].username)
                     createCookie(response.data[0].username)
 
-
                 }
             })
     }
@@ -43,7 +42,7 @@ export default function Login() {
         let date = new Date()
         let hours = 1
         date.setTime(date.getTime()+(hours*60*60*1000))
-        document.cookie=`${username}; expires=${date.toUTCString()}; path=/ProfilePage`
+        document.cookie=`${username}; expires=${date.toUTCString()}; path=./ProfilePage`
     }
 
     const showUserNotFoundAlert=()=>{

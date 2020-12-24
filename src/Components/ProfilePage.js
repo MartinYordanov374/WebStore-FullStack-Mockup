@@ -12,6 +12,7 @@ import './css/profilepage.css'
 
 export default function ProfilePage() {
     let cookieUsername = document.cookie;
+    console.log('profile cookie', cookieUsername)
     return (
         <div className='profilePageWrapper'>
             <Navbar/>
@@ -61,6 +62,8 @@ export default function ProfilePage() {
                                 <span className='freeSpace'>...</span>
                             </span>
                         </Button>
+                        
+
 
                     </div>
                         <div className='orderHistory'>
