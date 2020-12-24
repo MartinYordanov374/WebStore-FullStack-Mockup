@@ -11,7 +11,6 @@ import $ from 'jquery'
 export default function Register() {
     const [userReg, setUserReg] = useState('')
     const [passReg, setPassReg] = useState('')
-
     useEffect(()=>{
         hideAlerts()
     },[])

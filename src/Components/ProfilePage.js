@@ -2,6 +2,7 @@ import React, {useState, useEffect, Component} from 'react'
 import './css/login.css'
 import Navbar from './Header'
 import Footer from './Footer'
+import {connect} from 'react-redux'
 import {FormControl, Button, Alert} from 'react-bootstrap'
 import {FaCog, FaTrash, FaWrench, FaPaperPlane} from 'react-icons/fa'
 import Axios from 'axios'
@@ -9,10 +10,8 @@ import $ from 'jquery'
 import './css/profilepage.css'
 
 
-export default class ProfilePage extends Component {
-    render(){
+export default function ProfilePage() {
     let cookieUsername = document.cookie;
-    console.log(cookieUsername)
     return (
         <div className='profilePageWrapper'>
             <Navbar/>
@@ -29,7 +28,7 @@ export default class ProfilePage extends Component {
                     :
                         <span className='greetUserField'>
                             <strong>
-                                Добре Дошъл, <span className='greetingPlaceholder'>{cookieUsername} !</span>
+                                Добре Дошли, <span className='greetingPlaceholder'>{cookieUsername} !</span>
                             </strong>
                         </span>
 
@@ -78,5 +77,5 @@ export default class ProfilePage extends Component {
         </div>
     )
 }
-}
+
 

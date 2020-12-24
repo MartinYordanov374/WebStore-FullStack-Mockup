@@ -6,16 +6,13 @@ import {FormControl, Button, Alert} from 'react-bootstrap'
 import {FaRegUser} from 'react-icons/fa'
 import Axios from 'axios'
 import $ from 'jquery'
-
 export default function Login() {
     const [userLog, setUserLog] = useState('')
     const [passLog, setPassLog] = useState('')
-
     useEffect(()=>{
         $('.alert-success').fadeOut()
         $('.alert-danger').fadeOut()
         $('.alert-warning').fadeOut()
-
     },[])
 
     const login=()=>{
@@ -27,17 +24,17 @@ export default function Login() {
                 if(response.data.message=="User doesnt exist")
                 {
                     showUserNotFoundAlert()
-
+                    
                 }
                 else if(response.data.message=="Wrong username/password combo")
                 {
                     showWrongPassAlert()
-
                 }
                 else{
                     showUserFoundAlert()
                     $('.usernameField').text(response.data[0].username)
                     createCookie(response.data[0].username)
+
 
                 }
             })
@@ -46,9 +43,9 @@ export default function Login() {
         let date = new Date()
         let hours = 1
         date.setTime(date.getTime()+(hours*60*60*1000))
-        document.cookie=`${username}; expires=${date.toUTCString()}; path=./ProfilePage`
-
+        document.cookie=`${username}; expires=${date.toUTCString()}; path=/ProfilePage`
     }
+
     const showUserNotFoundAlert=()=>{
             $('.alert-danger').css('opacity', 1)
             $('.alert-danger').fadeIn()
