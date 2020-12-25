@@ -13,6 +13,9 @@ import './css/profilepage.css'
 export default function ProfilePage() {
     let cookieUsername = document.cookie;
     console.log('profile cookie', cookieUsername)
+    const logout=()=>{
+        document.cookie=`${cookieUsername}; expires=Thu, 01 Jan 1970 00:00:00 GMT;`
+    }
     return (
         <div className='profilePageWrapper'>
             <Navbar/>
@@ -62,7 +65,9 @@ export default function ProfilePage() {
                                 <span className='freeSpace'>...</span>
                             </span>
                         </Button>
-                        
+                        <Button className='btn-danger' onClick={logout}>
+                            Logout
+                        </Button>
 
 
                     </div>
