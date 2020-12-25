@@ -71,6 +71,17 @@ app.post('/login', (req,res)=>{
         }
     })
 })
+app.post('/delete', (req,res)=>{
+    const username=req.body.username;
+    db.query('DELETE FROM users WHERE username=?', username, (err, result)=>{
+        if(err){
+            res.send({err: err})
+        }
+        else{
+            res.send({message: 'successfully deleted user'})
+        }
+    })
+})
 app.listen(3307, ()=>{
     console.log('Running server')
 })

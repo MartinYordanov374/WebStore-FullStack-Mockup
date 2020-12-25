@@ -20,6 +20,16 @@ export default function ProfilePage() {
         document.cookie=`${cookieUsername}; expires=Thu, 01 Jan 1970 00:00:00 GMT;`;
         window.location='/login'
     }
+    const deleteProfile=()=>{
+        let usernameDelete = cookieUsername;
+        document.cookie=`${cookieUsername}; expires=Thu, 01 Jan 1970 00:00:00 GMT;`;
+        Axios.post('http://localhost:3307/delete', {
+            username: usernameDelete
+        }).then((response)=>{
+            console.log(response)
+        })
+        window.location='/Home'
+    }
     return (
         <div className='profilePageWrapper'>
             <Navbar/>
@@ -72,7 +82,7 @@ export default function ProfilePage() {
                         </Button>
                         <br></br>
                         <br></br>
-                        <Button className='btn-danger'>
+                        <Button className='btn-danger' onClick={deleteProfile}>
                             <span className='deleteAccButton'>
 
                                 <span className='freeSpace'>.</span>
