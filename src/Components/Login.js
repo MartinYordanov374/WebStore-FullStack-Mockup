@@ -34,6 +34,7 @@ export default function Login() {
                     showUserFoundAlert()
                     $('.usernameField').text(response.data[0].username)
                     createCookie(response.data[0].username)
+                    window.location='/profilepage'
 
                 }
             })

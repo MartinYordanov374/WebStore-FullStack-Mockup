@@ -8,13 +8,15 @@ import {FaCog, FaTrash, FaWrench, FaPaperPlane} from 'react-icons/fa'
 import Axios from 'axios'
 import $ from 'jquery'
 import './css/profilepage.css'
+import {BrowserRouter as Router, Redirect, Link} from 'react-router-dom'
 
 
 export default function ProfilePage() {
     let cookieUsername = document.cookie;
     console.log('profile cookie', cookieUsername)
     const logout=()=>{
-        document.cookie=`${cookieUsername}; expires=Thu, 01 Jan 1970 00:00:00 GMT;`
+        document.cookie=`${cookieUsername}; expires=Thu, 01 Jan 1970 00:00:00 GMT;`;
+        window.location='/login'
     }
     return (
         <div className='profilePageWrapper'>
@@ -65,9 +67,11 @@ export default function ProfilePage() {
                                 <span className='freeSpace'>...</span>
                             </span>
                         </Button>
-                        <Button className='btn-danger' onClick={logout}>
-                            Logout
-                        </Button>
+                        {cookieUsername.length>0?
+                                                <Button className='btn-danger' onClick={logout}>
+                                                Logout
+                                            </Button>:""}
+
 
 
                     </div>
