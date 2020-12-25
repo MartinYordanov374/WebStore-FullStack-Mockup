@@ -38,6 +38,10 @@
   display: flexbox;
 }
 
+.profilePageWrapper .inactiveButtons {
+  opacity: 0.5;
+}
+
 .profilePageWrapper .dashboard {
   display: -webkit-box;
   display: -ms-flexbox;

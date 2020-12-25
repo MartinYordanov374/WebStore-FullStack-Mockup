@@ -26,7 +26,7 @@ export default function Register() {
                          }
                          else{
                             showAlertSuccess()
-        
+                            window.location='/login'
                         }
 
                 })

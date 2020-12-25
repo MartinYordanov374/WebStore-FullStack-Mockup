@@ -50,6 +50,9 @@ export default function ProfilePage() {
                         <span className='optionsTitle'><strong><FaCog size={25}/> Настройки</strong>
                             </span>
                         <hr className='borderLine'></hr>
+
+                        {cookieUsername.length>0?
+                        <div>
                         <Button className='btn-warning'> 
                             <span className='changePassButton'>
                                 <FaWrench size={20}/>
@@ -58,7 +61,6 @@ export default function ProfilePage() {
                         </Button>
                         <br></br>
                         <br></br>
-
                         <Button className='btn-danger'>
                             <span className='deleteAccButton'>
                                 <span className='freeSpace'>..</span>
@@ -71,15 +73,45 @@ export default function ProfilePage() {
                         </Button>
                         <br></br>
                         <br></br>
-                        {cookieUsername.length>0?
-                        <Button className='btn-danger' onClick={logout}>
+                        <Button className='btn-info' onClick={logout}>
                         <span className='logOutButton'>
                                 <span className='freeSpace'>...</span>
                                 <AiOutlineLogout size={20}/> 
                                 <strong> Излез от профила си</strong>
                                 <span className='freeSpace'>...</span>
                         </span>
-                        </Button>:""}
+                        </Button>
+                        </div>:
+                        <div className='inactiveButtons'>
+                        <Button className='btn-dark'> 
+                            <span className='changePassButton'>
+                                <FaWrench size={20}/>
+                                <strong> Промени паролата си </strong>
+                            </span>
+                        </Button>
+                        <br></br>
+                        <br></br>
+                        <Button className='btn-dark deleteAccButtonInvisible'>
+                            <span className='deleteAccButton'>
+                                <span className='freeSpace'>..</span>
+
+                                <FaTrash size={20}/>
+                                <strong>  Изтрий профила си 
+                                </strong>
+                                <span className='freeSpace'>...</span>
+                            </span>
+                        </Button>
+                        <br></br>
+                        <br></br>
+                        <Button className='btn-dark logOutButtonInvisible'>
+                        <span className='Inactive'>
+                                <span className='freeSpace'>...</span>
+                                <AiOutlineLogout size={20}/> 
+                                <strong> Излез от профила си</strong>
+                                <span className='freeSpace'>...</span>
+                        </span>
+                        </Button>
+                        </div>}
 
 
 
