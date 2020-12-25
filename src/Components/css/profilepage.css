@@ -34,6 +34,10 @@
   opacity: 0;
 }
 
+.profilePageWrapper .options .logOutButton {
+  display: flexbox;
+}
+
 .profilePageWrapper .dashboard {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -5,6 +5,8 @@ import Footer from './Footer'
 import {connect} from 'react-redux'
 import {FormControl, Button, Alert} from 'react-bootstrap'
 import {FaCog, FaTrash, FaWrench, FaPaperPlane} from 'react-icons/fa'
+import {AiOutlineLogout} from 'react-icons/ai'
+
 import Axios from 'axios'
 import $ from 'jquery'
 import './css/profilepage.css'
@@ -67,10 +69,17 @@ export default function ProfilePage() {
                                 <span className='freeSpace'>...</span>
                             </span>
                         </Button>
+                        <br></br>
+                        <br></br>
                         {cookieUsername.length>0?
-                                                <Button className='btn-danger' onClick={logout}>
-                                                Logout
-                                            </Button>:""}
+                        <Button className='btn-danger' onClick={logout}>
+                        <span className='logOutButton'>
+                                <span className='freeSpace'>...</span>
+                                <AiOutlineLogout size={20}/> 
+                                <strong> Излез от профила си</strong>
+                                <span className='freeSpace'>...</span>
+                        </span>
+                        </Button>:""}
 
 
 
