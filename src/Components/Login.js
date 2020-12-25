@@ -3,7 +3,7 @@ import './css/login.css'
 import Navbar from './Header'
 import Footer from './Footer'
 import {FormControl, Button, Alert} from 'react-bootstrap'
-import {FaRegUser} from 'react-icons/fa'
+import {AiOutlineLogin} from 'react-icons/ai'
 import Axios from 'axios'
 import $ from 'jquery'
 export default function Login() {
@@ -86,7 +86,7 @@ export default function Login() {
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
-                <Button className='submitLoginForm' onClick ={login}><FaRegUser/> Влезте в профила си </Button>
+                <Button className='submitLoginForm' onClick ={login}> <strong><AiOutlineLogin size={20}/> Влезте в профила си</strong> </Button>
                 <br></br>
                 <br></br>
                 <a href='/register'>Нямате профил? Регистрирайте се тук!</a>
