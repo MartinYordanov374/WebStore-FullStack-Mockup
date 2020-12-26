@@ -85,7 +85,22 @@ export default function ChangePass() {
 
             </div>
                 :
-                <h1>You must be logged in</h1>}
+                <div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <h1>Изглежда не сте влезли в профила си</h1>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+
+                
+
+                </div>}
             <Footer/>
         </div>
     )
