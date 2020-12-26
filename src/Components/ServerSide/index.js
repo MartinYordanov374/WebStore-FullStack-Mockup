@@ -82,6 +82,21 @@ app.post('/delete', (req,res)=>{
         }
     })
 })
+app.post('/changePass', (req,res)=>{
+    const username =req.body.username;
+    const password = req.body.password;
+    bcrypt.hash(password, 10, (err,hash)=>{
+        db.query('UPDATE users SET password=? WHERE username=?', [hash, username], (err,result)=>{
+            if(err){
+                res.send({err: err})
+            }
+            else{
+                res.send({message: 'Password was changed succesfully !'})
+            }
+        })
+    })
+    })
+    
 app.listen(3307, ()=>{
     console.log('Running server')
 })

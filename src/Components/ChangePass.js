@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Header from './Header'
 import $ from 'jquery'
 import './css/ChangePass.css'
+import Axios from 'axios'
 export default function ChangePass() {
     let isLoggedIn = document.cookie;
 
@@ -41,7 +42,7 @@ export default function ChangePass() {
         $('.passMatchAlert').fadeOut()
     }
     
-    const showPasswords=()=>{
+    const changePassword=()=>{
         console.log('new pass: ', newPass)
         console.log('confirm new pass: ', confirmNewPass)
         if(newPass.length<=8)
@@ -59,6 +60,13 @@ export default function ChangePass() {
             showAlertSuccess()
             hideAlertMatch()
             hideAlertFail()
+
+            Axios.post('http://localhost:3307/changePass',{
+                password: newPass,
+                username: isLoggedIn
+            }).then((response)=>{
+                console.log(response)
+            })
         }
 
     }
@@ -79,7 +87,7 @@ export default function ChangePass() {
                 <FormControl className='enterPassword'  onChange = {(e)=>setNewPass(e.target.value)} type='password' placeholder='Въведете новата парола'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setConfirmNewPass(e.target.value)} type='password' placeholder='Потвърдете новата парола'/>
 
-                <Button className='submitLoginForm' onClick={showPasswords}> <strong>Смени паролата си</strong> </Button>
+                <Button className='submitLoginForm' onClick={changePassword}> <strong>Смени паролата си</strong> </Button>
                 <br></br>
                 <br></br>
                 <br></br>
