@@ -42,15 +42,21 @@ export default function ChangePass() {
     const showPasswords=()=>{
         console.log('new pass: ', newPass)
         console.log('confirm new pass: ', confirmNewPass)
-        if(newPass.length<=8 || confirmNewPass.length<=8)
+        if(newPass.length<=8)
         {
             showAlertFail()
+            hideAlertSuccess()
+            hideAlertMatch()
         }
         if(newPass!=confirmNewPass){
            showAlertMatch()
+           hideAlertFail()
+           hideAlertSuccess()
         }
         if(newPass==confirmNewPass && newPass.length>8){
             showAlertSuccess()
+            hideAlertMatch()
+            hideAlertFail()
         }
 
     }
@@ -63,9 +69,9 @@ export default function ChangePass() {
                 <div className='loginForm'>
                 <h2>Смяна на парола</h2>
                 <br></br>
-                <Alert className='btn-danger passLengthAlert' onClick={hideAlertFail}> Паролата не може да съдържа по-малко от 8 символа </Alert>
-                <Alert className='btn-danger passMatchAlert' onClick={hideAlertMatch}> Паролите не съвпадат </Alert>
-                <Alert className='btn-success passSuccessAlert' onClick={hideAlertSuccess}> Успешно променихте паролата си </Alert>
+                <Alert className='btn-danger passLengthAlert' onClick={hideAlertFail}> <strong>Паролата трябва да е по-дълга от 8 символа</strong> </Alert>
+                <Alert className='btn-danger passMatchAlert' onClick={hideAlertMatch}> <strong>Паролите не съвпадат</strong> </Alert>
+                <Alert className='btn-success passSuccessAlert' onClick={hideAlertSuccess}> <strong>Успешно променихте паролата си</strong> </Alert>
 
 
                 <FormControl className='enterPassword'  onChange = {(e)=>setNewPass(e.target.value)} type='password' placeholder='Въведете новата парола'/>
