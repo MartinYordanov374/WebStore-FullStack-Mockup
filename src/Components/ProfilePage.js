@@ -10,8 +10,6 @@ import {AiOutlineLogout} from 'react-icons/ai'
 import Axios from 'axios'
 import $ from 'jquery'
 import './css/profilepage.css'
-import {BrowserRouter as Router, Redirect, Link} from 'react-router-dom'
-
 
 export default function ProfilePage() {
     let cookieUsername = document.cookie;

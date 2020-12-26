@@ -11,6 +11,7 @@ import Register from './Components/Register'
 import ProfilePage from './Components/ProfilePage'
 
 import NotFoundPage from './Components/NotFoundPage';
+import ChangePass from './Components/ChangePass' 
 import {store} from './Components/store'
 import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom'
 import {Provider} from 'react-redux'
@@ -46,6 +47,8 @@ function App () {
                 <Route path='/Login' component={Login}/>
                 <Route path='/Register' component={Register}/>
                 <Route path='/ProfilePage' component={ProfilePage}/>
+                <Route path='/ChangePass' component={ChangePass}/>
+
                 <Route path="*" component={NotFoundPage} />
 
             </Switch>
