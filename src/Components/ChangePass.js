@@ -24,6 +24,7 @@ export default function ChangePass() {
         $('.passSuccessAlert').css('opacity', 1)
 
         $('.passSuccessAlert').fadeIn()
+        window.location='/profilepage'
     }
     const showAlertMatch=()=>{
         $('.passMatchAlert').css('opacity', 1)

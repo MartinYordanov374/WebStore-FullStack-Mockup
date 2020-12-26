@@ -28,6 +28,9 @@ export default function ProfilePage() {
         })
         window.location='/Home'
     }
+    const changePass=()=>{
+        window.location='/changePass'
+    }
     return (
         <div className='profilePageWrapper'>
             <Navbar/>
@@ -72,7 +75,7 @@ export default function ProfilePage() {
                         </Button>
                         <br></br>
                         <br></br>
-                        <Button className='btn-warning'> 
+                        <Button className='btn-warning' onClick={changePass}> 
                             <span className='changePassButton'>
                                 <FaWrench size={20}/>
                                 <strong> Промени паролата си </strong>
