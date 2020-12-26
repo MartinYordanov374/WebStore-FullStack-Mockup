@@ -8,6 +8,8 @@ class Header extends Component {
     render() { 
         const {productsInWishList} = this.props;
         const {productsInCart} = this.props;
+        let isLoggedIn = document.cookie
+        console.log('Header cookies:', isLoggedIn)
     return (
         <div>
             <Navbar variant='light'>
@@ -22,10 +24,17 @@ class Header extends Component {
                     </NavLink>
                 </NavItem>
                 <Nav className='ml-auto'>
-                    <NavItem>
+                    <NavItem>    
+                        { isLoggedIn.length > 3 
+                        ?                    
+                        <NavLink href='/profilepage'>
+                            <FaUserCircle className='loginLink' size={32}></FaUserCircle>
+                        </NavLink>
+                        :
                         <NavLink href='/Login'>
                             <FaUserCircle className='loginLink' size={32}></FaUserCircle>
                         </NavLink>
+                        }
                         <NavLink href='/Wishlist'>
                             <FaHeart className='wishlistIcon'size={30}/><span className='wishListIndex'>{productsInWishList.length}</span>
                         </NavLink>

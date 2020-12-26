@@ -44,7 +44,9 @@ export default function Login() {
         let hours = 1
         date.setTime(date.getTime()+(hours*60*60*1000))
         document.cookie=`${username}; expires=${date.toUTCString()}; path=./ProfilePage`
+
     }
+
 
     const showUserNotFoundAlert=()=>{
             $('.alert-danger').css('opacity', 1)
