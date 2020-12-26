@@ -4,11 +4,13 @@ import Navbar from './Header'
 import Footer from './Footer'
 import {FormControl, Button, Alert} from 'react-bootstrap'
 import {AiOutlineLogin} from 'react-icons/ai'
+import {Redirect} from 'react-router-dom'
 import Axios from 'axios'
 import $ from 'jquery'
 export default function Login() {
     const [userLog, setUserLog] = useState('')
     const [passLog, setPassLog] = useState('')
+    let isLoggedIn = document.cookie;
     useEffect(()=>{
         $('.alert-success').fadeOut()
         $('.alert-danger').fadeOut()
@@ -80,11 +82,17 @@ export default function Login() {
         <div className='loginFormWrapper'>
             <Navbar/>
             <div className='loginForm'>
+                {isLoggedIn.length>3 
+                ?
+                <Redirect to='./profilepage'></Redirect>
+
+                :                            
+                <div>
                 <h2>Вход</h2>
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Изглежда този потребител не съществува. </strong></Alert>
 
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си, <span className='usernameField'/>! </strong></Alert>
-                <Alert className='alert-warning' onClick={hideWrongPassAlert}> <strong>Грешна име или парола! </strong></Alert>
+                <Alert className='alert-warning' onClick={hideWrongPassAlert}> <strong>Грешно име или парола! </strong></Alert>
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
@@ -92,8 +100,8 @@ export default function Login() {
                 <br></br>
                 <br></br>
                 <a href='/register'>Нямате профил? Регистрирайте се тук!</a>
-
-
+                </div>
+                }
             </div>
             <Footer/>
         </div>

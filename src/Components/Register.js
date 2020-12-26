@@ -11,6 +11,7 @@ import $ from 'jquery'
 export default function Register() {
     const [userReg, setUserReg] = useState('')
     const [passReg, setPassReg] = useState('')
+    let isLoggedIn = document.cookie;
     useEffect(()=>{
         hideAlerts()
     },[])
@@ -76,6 +77,12 @@ export default function Register() {
         <div className='loginFormWrapper'>
             <Navbar/>
             <div className='loginForm'>
+                {isLoggedIn.length>3 
+                ?
+                <Redirect to='/profilepage'></Redirect>
+
+                :
+                <div>
                 <h2>Регистрация</h2>
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong>Регистрацията е успешна!</strong></Alert>
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Въвели сте невалидно име или парола !</strong></Alert>
@@ -88,6 +95,9 @@ export default function Register() {
                 <br></br>
                 <br></br>
                 <a href='/login'>Вече имате профил? Влезте тук.</a>
+                </div>
+                }
+                
 
             </div>
             <Footer/>
