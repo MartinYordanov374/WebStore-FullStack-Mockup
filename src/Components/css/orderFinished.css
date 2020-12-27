@@ -1,0 +1,57 @@
+.infoBox {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  margin-top: 2%;
+  margin-left: 25%;
+  width: 50%;
+}
+
+.infoBox .borderLine {
+  border-color: black;
+}
+
+.infoBox .orderInfoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.infoBox .orderInfoContainer .productsInfo {
+  border-style: solid;
+  border-color: black;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.infoBox .orderInfoContainer .quantityInfo {
+  border-style: solid;
+  border-color: black;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.infoBox .orderInfoContainer .priceInfo {
+  border-style: solid;
+  border-color: black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.returnButton {
+  margin-top: 1%;
+}
+/*# sourceMappingURL=orderFinished.css.map */

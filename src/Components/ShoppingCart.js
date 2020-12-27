@@ -30,16 +30,25 @@ class ShoppingCart extends Component {
             for(var i =0; i<=productsInCart.length-1;i++)
             {
                 Axios.post('http://localhost:3307/finishOrder',{
-                    username: document.cookie.split(';').pop(),
-                    products: productsInCart[i].name,
-                    quantity: productsInCart[i].quantity,
-                    price: productsInCart[i].price
-                }).then((response)=>{
-                    console.log(response)
+                      username: document.cookie.split(';').pop(),
+                      products: productsInCart[i].name,
+                      quantity: productsInCart[i].quantity,
+                      price: productsInCart[i].price
+                  }).then((response)=>{
+                      console.log(response)
                 })
-                
+                if(i==productsInCart.length-1){
+                    store.dispatch({type: 'finishOrder', products: productsInCart[i].name, quantity:productsInCart[i].quantity, price: productsInCart[i].price})
+                    store.dispatch({type: 'clearCart'})
+                    
+                }
             }
-            store.dispatch({type: 'clearCart'})
+            console.log(productsInCart.length)
+            if(productsInCart.length<=1){
+                window.location='/orderfinished'
+            }
+
+            
         }
         return (
             <div className='cartWrapper'>
@@ -77,6 +86,9 @@ class ShoppingCart extends Component {
                     <FormControl placeholder='Въведи Адрес'/>
                     <FormControl placeholder='Въведи Телефонен Номер'/>
                 </div> */}
+                {productsInCart.length>0
+                ?
+            <div>
                 <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
                 <Button variant='warning' className='finishOrderButton' onClick={showProducts}>
                     <strong>
@@ -84,14 +96,19 @@ class ShoppingCart extends Component {
                     </strong>
                 </Button>
             </div>
+            :
+            ""}
+                
+            </div>
         );
     }
 }
 
-const mapStateToProps=(state={productsInWishList:[{}], productsInCart:[{}]})=>{
+const mapStateToProps=(state={productsInWishList:[{}], productsInCart:[{}], productsOrdered: [{}] })=>{
     return{
         productsInWishList: state.productsInWishList,
-        productsInCart: state.productsInCart
+        productsInCart: state.productsInCart,
+        productsOrdered: state.productsOrdered
     }
 }
 

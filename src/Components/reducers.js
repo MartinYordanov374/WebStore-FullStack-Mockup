@@ -1,4 +1,4 @@
-const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
+const reducer=(state={productsInWishList:[{}], productsInCart:[{}], productsOrdered:[{}]}, action)=>{
     switch(action.type)
     {
         case 'addToFavorites':
@@ -61,6 +61,20 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
                 return{
                     ...state,
                     productsInCart: cartNow
+                }
+            case 'finishOrder':
+                let productsOrdered = state.productsOrdered
+                alert(JSON.stringify(productsOrdered))
+                return{
+                    ...state,
+                    productsOrdered: [...state.productsOrdered, {products: action.products, quantity: action.quantity, price: action.price}]
+                }
+            case 'clearProductsOrdered':
+                let productsOrderedNew = state.productsOrdered;
+                productsOrderedNew = []
+                return{
+                    ...state,
+                    productsOrdered: productsOrderedNew
                 }
         default:
             return state
