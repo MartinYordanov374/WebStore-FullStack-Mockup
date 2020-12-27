@@ -46,6 +46,8 @@ export default function Login() {
         let hours = 1
         date.setTime(date.getTime()+(hours*60*60*1000))
         document.cookie=`${username}; expires=${date.toUTCString()}; path=./ProfilePage`
+                document.cookie=`${username}; expires=${date.toUTCString()}; path=./ShoppingCart`
+
 
     }
 
@@ -85,7 +87,6 @@ export default function Login() {
                 {isLoggedIn.length>3 
                 ?
                 <Redirect to='./profilepage'></Redirect>
-
                 :                            
                 <div>
                 <h2>Вход</h2>

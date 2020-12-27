@@ -56,7 +56,7 @@ export default function ChangePass() {
            hideAlertFail()
            hideAlertSuccess()
         }
-        if(newPass==confirmNewPass && newPass.length>8){
+        if(newPass===confirmNewPass && newPass.length>8){
             showAlertSuccess()
             hideAlertMatch()
             hideAlertFail()

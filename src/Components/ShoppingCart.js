@@ -8,6 +8,7 @@ import {connect} from 'react-redux'
 import {v4} from 'uuid'
 import './css/Cart.css'
 import $ from 'jquery'
+import Axios from 'axios'
 
 class ShoppingCart extends Component {
     render() {
@@ -25,6 +26,20 @@ class ShoppingCart extends Component {
             store.dispatch({type:'decrease', id: product.id})
         }
 
+        const showProducts=()=>{
+            for(var i =0; i<=productsInCart.length-1;i++)
+            {
+                Axios.post('http://localhost:3307/finishOrder',{
+                    username: document.cookie.split(';').pop(),
+                    products: productsInCart[i].name,
+                    quantity: productsInCart[i].quantity,
+                    price: ((totalSumDollars*1000)/1000)
+                }).then((response)=>{
+                    console.log(response)
+                })
+                
+            }
+        }
         return (
             <div className='cartWrapper'>
                 <Navbar></Navbar>
@@ -62,7 +77,7 @@ class ShoppingCart extends Component {
                     <FormControl placeholder='Въведи Телефонен Номер'/>
                 </div> */}
                 <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
-                <Button variant='warning' className='finishOrderButton'>
+                <Button variant='warning' className='finishOrderButton' onClick={showProducts}>
                     <strong>
                         <FaTruck className='deliveryIcon'size={20}/> Завърши поръчката
                     </strong>

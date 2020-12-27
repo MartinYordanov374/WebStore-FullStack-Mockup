@@ -96,7 +96,21 @@ app.post('/changePass', (req,res)=>{
         })
     })
     })
+app.post('/finishOrder', (req,res)=>{
+    const username = req.body.username;
+    const products = req.body.products;
+    const quantity = req.body.quantity;
+    const price = req.body.price;
+    db.query('INSERT INTO orders (username, products, quantity, price) VALUES(?,?,?,?)', [username,products, quantity,price], (err,result)=>{
+        if(err){
+            res.send({err: err})
+        }
+        else{
+            res.send({message: 'successfully made an order'})
+        }
+    })
     
+})
 app.listen(3307, ()=>{
     console.log('Running server')
 })
