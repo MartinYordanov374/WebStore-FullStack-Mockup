@@ -55,7 +55,13 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}]}, action)=>{
                     ...state,
                     productsInCart: lowerCart
                 }
-        
+            case 'clearCart':
+                let cartNow = state.productsInCart;
+                cartNow = [];
+                return{
+                    ...state,
+                    productsInCart: cartNow
+                }
         default:
             return state
     }

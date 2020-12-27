@@ -39,6 +39,7 @@ class ShoppingCart extends Component {
                 })
                 
             }
+            store.dispatch({type: 'clearCart'})
         }
         return (
             <div className='cartWrapper'>
