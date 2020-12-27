@@ -33,7 +33,7 @@ class ShoppingCart extends Component {
                     username: document.cookie.split(';').pop(),
                     products: productsInCart[i].name,
                     quantity: productsInCart[i].quantity,
-                    price: ((totalSumDollars*1000)/1000)
+                    price: productsInCart[i].price
                 }).then((response)=>{
                     console.log(response)
                 })
