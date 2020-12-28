@@ -53,53 +53,57 @@ class ShoppingCart extends Component {
         return (
             <div className='cartWrapper'>
                 <Navbar></Navbar>
-                {productsInCart.length==0 ?
-                <p className='emptyCartAlert'>Вашата количка е празна!</p>
-                 : ""}
-                    {/* <span className='productGuideWrapper'>
-                        <span classname='row'>
-                        <span className='productIndexGuide col-sm-8 col-md-8 col-lg-8'>Продукт</span>
-                        <span className='productQuantityGuide col-sm-8 col-md-8 col-lg-8'>Количество</span>
-                        <span className='productPriceGuide col-sm-8 col-md-8 col-lg-8'>Цена</span> 
-                        </span>
-                    </span> */}
-                    <hr></hr>
-                {productsInCart.map(product=>    
-                <div className='productsWrapper'>
-                    <p className='productName'>{product.name}</p>
-                    <img className='productImage' src={product.image}/>
-                    <p className='productPrice'>
-                        <span className='productQuantity'>
-                            <FaArrowLeft className='decreaseQuantity' size={20} onClick={()=>decreaseQuantity(product)}/>
-                                <span className='quantity'>
-                                    {product.quantity}
-                                </span>
-                            <FaArrowRight className='increaseQuantity' size={20} onClick={()=>increaseQuantity(product)}/>
-                        </span> Цена: {Math.round(product.price*product.quantity*100)/100} лв.</p>
-                    <FaTrash className='removeProduct' size={25} onClick={()=>removeFromCart(product)}></FaTrash>
-                    <hr></hr>
-                    <span className='calculateTotal'>{totalSumDollars+=product.price*product.quantity}</span>       
-                </div>)
-                }
-                {/* <div className='anonymousOrder'>
-                    <FormControl placeholder='Въведи Имена'/>
-                    <FormControl placeholder='Въведи Адрес'/>
-                    <FormControl placeholder='Въведи Телефонен Номер'/>
-                </div> */}
+                <div className='actualCartWrapper'>
+                        {productsInCart.length==0 ?
+                        <p className={productsInCart.length==0 ? 'emptyCartAlert' : ""}>Вашата количка е празна!</p>
+                        : ""}
+                    {productsInCart.map(product=>  
+                            <div className='productsWrapper'>
+                                <p className='productName'>{product.name}</p>
+                                <img className='productImage' src={product.image}/>
+                                <p className='productPrice'>
+                                    <span className='productQuantity'>
+                                        <FaArrowLeft className='decreaseQuantity' size={20} onClick={()=>decreaseQuantity(product)}/>
+                                            <span className='quantity'>
+                                                {product.quantity}
+                                            </span>
+                                        <FaArrowRight className='increaseQuantity' size={20} onClick={()=>increaseQuantity(product)}/>
+                                    </span> Цена: {Math.round(product.price*product.quantity*100)/100} лв.</p>
+                                <FaTrash className='removeProduct' size={25} onClick={()=>removeFromCart(product)}></FaTrash>
+                                <hr></hr>
+                                <span className='calculateTotal'>{totalSumDollars+=product.price*product.quantity}</span>       
+                            </div>)    
+                    }  
+                </div>
                 {productsInCart.length>0
-                ?
-            <div>
-                <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
-                <Button variant='warning' className='finishOrderButton' onClick={showProducts}>
-                    <strong>
-                        <FaTruck className='deliveryIcon'size={20}/> Завърши поръчката
-                    </strong>
-                </Button>
+                        ?
+                <div className='finishOrderDiv'>
+
+                        
+                        <div>
+                            <h1>Завършване на поръчката</h1>
+                            <p className='enterNameNotification'>Име</p>
+                            <FormControl className='enterName' placeholder='Въведете име'></FormControl>
+
+                            <p className='enterAddressNotification'>Адрес</p>
+                            <FormControl className='enterAddress' placeholder='Въведете адрес'></FormControl>
+                            <p className='enterPhoneNotification'>Телефон</p>
+
+                            <FormControl className='enterPhone' placeholder='Въведете телефон'></FormControl>
+                            <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
+
+                            <Button variant='warning' className='finishOrderButton' onClick={showProducts}>
+                                <strong>
+                                    <span className='deliveryIcon'> <FaTruck size={20}/> Завърши поръчката </span>
+                                </strong>
+                            </Button>
+                        </div>
+                        
+                    </div>
+                    :
+                    ""}
             </div>
-            :
-            ""}
-                
-            </div>
+            
         );
     }
 }

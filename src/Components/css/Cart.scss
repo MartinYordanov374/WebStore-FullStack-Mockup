@@ -1,4 +1,19 @@
+@mixin inputFields{
+    width: 50%;
+    margin-left: 25%;
+
+}
+@mixin inputFieldsNotifications{
+    text-align: left;
+    margin-top: 1px;
+    margin-left: 25%;
+}
 .cartWrapper{
+    .actualCartWrapper{
+        float: left;
+        width: 70%;
+
+    }
     .productsWrapper{
         padding: 0;
         
@@ -26,7 +41,6 @@
     }
     .showTotal{
         margin-top: 2%;
-        margin-left: 70%;  
         font-size: 20px; 
     }
     .removeProduct{
@@ -78,23 +92,60 @@
     }
     .emptyCartAlert{
         font-size: 25px;
+        margin-left: 50%;
     }
-    .finishOrderButton{
+    
+}
+.finishOrderButton{
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-radius: 10px;
+    animation: wiggle 2.5s infinite;
+
+    &:hover{
         background-color: white;
-        color: black;
-        border-color: black;
-        border-radius: 10px;
-        margin-left: 70%;
-        &:hover{
-            background-color: white;
-            box-shadow: 2px 2px 0px  black;
-        } 
-        .deliveryIcon{
-        }
+        box-shadow: 2px 2px 0px  black;
+    } 
+    
+    @keyframes wiggle {
+        0% { transform: rotate(0deg); }
+       80% { transform: rotate(0deg); }
+       85% { transform: rotate(5deg); }
+       95% { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
     }
 }
-.anonymousOrder{
-    width: 50%;
-    display: flex;
-    margin-left: 10px;
+.finishOrderDiv{
+    margin-top: 1.2%;
+    float: left;
+    width: 30%;
+    border-style: solid;
+    border-color: black;
+    .finishOrderButton{
+    }
+    .showTotal{
+    }
+    .enterName{
+        @include inputFields()
+    }
+    .enterAddress{
+        @include inputFields()
+
+    }
+    .enterPhone{
+        @include inputFields()
+    }
+    .enterNameNotification{
+        @include inputFieldsNotifications()
+    }
+    .enterPhoneNotification{
+        @include inputFieldsNotifications()
+
+    }
+    .enterAddressNotification{
+        @include inputFieldsNotifications()
+
+    }
+
 }
