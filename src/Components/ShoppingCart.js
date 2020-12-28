@@ -14,6 +14,7 @@ class ShoppingCart extends Component {
     render() {
         const {productsInCart} = this.props;
         let totalSumDollars = 0;
+        let isLoggedIn = document.cookie;
         const removeFromCart=(product)=>{
             store.dispatch({type:'removeFromCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
         }
@@ -27,26 +28,30 @@ class ShoppingCart extends Component {
         }
 
         const showProducts=()=>{
+            if($('.enterName').val().length > 2 && $('.enterAddress').val().length > 0 && $('.enterPhone').val().length>8){
+
+            
             for(var i =0; i<=productsInCart.length-1;i++)
             {
                 Axios.post('http://localhost:3307/finishOrder',{
-                      username: document.cookie.split(';').pop(),
-                      products: productsInCart[i].name,
-                      quantity: productsInCart[i].quantity,
-                      price: productsInCart[i].price
-                  }).then((response)=>{
-                      console.log(response)
+                       username: document.cookie.split(';').pop(),
+                       products: productsInCart[i].name,
+                       quantity: productsInCart[i].quantity,
+                       price: productsInCart[i].price
+                   }).then((response)=>{
+                       console.log(response)
                 })
                 if(i==productsInCart.length-1){
                     store.dispatch({type: 'finishOrder', products: productsInCart[i].name, quantity:productsInCart[i].quantity, price: productsInCart[i].price})
                     store.dispatch({type: 'clearCart'})
+                    window.location='/orderfinished'
                     
                 }
             }
-            console.log(productsInCart.length)
-            if(productsInCart.length<=1){
-                window.location='/orderfinished'
-            }
+
+            
+        }
+
 
             
         }
@@ -54,9 +59,14 @@ class ShoppingCart extends Component {
             <div className='cartWrapper'>
                 <Navbar></Navbar>
                 <div className='actualCartWrapper'>
-                        {productsInCart.length==0 ?
+                        {productsInCart.length==0 && isLoggedIn.length>3 ?
                         <p className={productsInCart.length==0 ? 'emptyCartAlert' : ""}>Вашата количка е празна!</p>
                         : ""}
+                        {isLoggedIn.length<3 ?
+                            <p className={productsInCart.length==0 ? 'emptyCartAlert' : ""}>Изглежда не сте влязъл в профила си</p>
+                            :
+                            ""
+                        }
                     {productsInCart.map(product=>  
                             <div className='productsWrapper'>
                                 <p className='productName'>{product.name}</p>
@@ -91,7 +101,9 @@ class ShoppingCart extends Component {
 
                             <FormControl className='enterPhone' placeholder='Въведете телефон'></FormControl>
                             <p className='showTotal'>Общо: {Math.round(totalSumDollars*100)/100} лв.</p>
-
+                            
+                            
+                        
                             <Button variant='warning' className='finishOrderButton' onClick={showProducts}>
                                 <strong>
                                     <span className='deliveryIcon'> <FaTruck size={20}/> Завърши поръчката </span>
