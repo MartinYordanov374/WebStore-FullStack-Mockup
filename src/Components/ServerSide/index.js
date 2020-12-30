@@ -98,10 +98,13 @@ app.post('/changePass', (req,res)=>{
     })
 app.post('/finishOrder', (req,res)=>{
     const username = req.body.username;
+    const name = req.body.name;
+    const phone = req.body.phone;
+    const address = req.body.address;
     const products = req.body.products;
     const quantity = req.body.quantity;
     const price = req.body.price;
-    db.query('INSERT INTO orders (username, products, quantity, price) VALUES(?,?,?,?)', [username,products, quantity,price], (err,result)=>{
+    db.query('INSERT INTO orders (username, name, phone, address, products, quantity, price) VALUES(?,?,?,?,?,?,?)', [username, name, phone, address, products, quantity,price], (err,result)=>{
         if(err){
             res.send({err: err})
         }

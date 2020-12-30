@@ -33,3 +33,4 @@
 [1227/145228.468:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [1227/145228.773:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\G580\AppData\Local\AVAST Software\Browser\User Data\Crashpad\attachments\cffc6692-4938-4c2b-918b-406790edb23e: The system cannot find the path specified. (0x3)
 [1227/231926.744:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1230/150333.334:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

@@ -26,7 +26,7 @@ class orderFinished extends Component {
             {isLoggedIn.length>3 && productsOrdered.length>0
             ?
             <div className='infoBox'>
-                <h1>Поръчката ви пътува към вас!</h1>
+                <h1>Вие завършихте поръчката си!</h1>
                 <hr className='borderLine'></hr>
                 <div className='orderInfoContainer'>
                     <div className='productsInfo'>

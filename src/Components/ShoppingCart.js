@@ -28,13 +28,16 @@ class ShoppingCart extends Component {
         }
 
         const showProducts=()=>{
+
             if($('.enterName').val().length > 2 && $('.enterAddress').val().length > 0 && $('.enterPhone').val().length>8){
 
-            
             for(var i =0; i<=productsInCart.length-1;i++)
             {
                 Axios.post('http://localhost:3307/finishOrder',{
                        username: document.cookie.split(';').pop(),
+                       name: $('.enterName').val(),
+                       phone: $('.enterPhone').val(),
+                       address: $('.enterAddress').val(),
                        products: productsInCart[i].name,
                        quantity: productsInCart[i].quantity,
                        price: productsInCart[i].price
