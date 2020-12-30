@@ -9,7 +9,7 @@ import {store} from './store'
 import $ from 'jquery'
 import {v4} from 'uuid'
 export default function MasksPage() {
-    const masksList=[
+    const masksList=[   
         {
             name: 'Game Mask - Фортнайт',
             image: MissingImage,
@@ -26,6 +26,7 @@ export default function MasksPage() {
         },
     
     ]
+    let isLoggedIn=document.cookie;
     const addToWishlist=(product, id)=>{
         store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
  
@@ -45,7 +46,12 @@ export default function MasksPage() {
                     <img className='hoodieImage' src={mask.image}></img>
                     <div className='purchaseField'>
                         <p><strong>{mask.price} лв.</strong></p>
+                        {isLoggedIn.length>3
+                        ?
                         <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(mask)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
+                        :
+                        <Button className='buyHoodieButton' variant='warning' disabled='disabled' onClick={()=>addToCart(mask)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Не сте регистриран</strong></Button>
+                    }
                     </div> 
                 </div>)}
             </div>

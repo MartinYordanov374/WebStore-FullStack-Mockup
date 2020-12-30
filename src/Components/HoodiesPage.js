@@ -15,6 +15,7 @@ class HoodiesPage extends Component {
     render(){
     let {productsInWishList} = this.props;
     let {productsInCart} = this.props;
+    let isLoggedIn = document.cookie;
     const hoodiesList=[
         {
             name: 'Game Hoodie - Фортнайт',
@@ -51,10 +52,17 @@ class HoodiesPage extends Component {
                 <div className='hoodieWrapper'>
                     <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index, hoodie)}size={25}/><strong>{hoodie.name}</strong> </p>     
                     <img className='hoodieImage' src={hoodie.image}></img>
+                    {isLoggedIn.length>3 ?
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price} лв.</strong></p>
                         <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
                     </div> 
+                    :
+                    <div className='purchaseField'>
+                        <p><strong>{hoodie.price} лв.</strong></p>
+                        <Button className='buyHoodieButton' variant='warning' disabled='disabled' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Не сте регистриран</strong></Button>
+                    </div> 
+                }
                 </div>)}
             </div>
             <Footer></Footer>

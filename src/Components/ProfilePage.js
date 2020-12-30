@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import {FormControl, Button, Alert} from 'react-bootstrap'
 import {FaCog, FaTrash, FaWrench, FaPaperPlane} from 'react-icons/fa'
 import {AiOutlineLogout} from 'react-icons/ai'
+import {Redirect} from 'react-router-dom'
 
 import Axios from 'axios'
 import $ from 'jquery'
@@ -38,11 +39,7 @@ export default function ProfilePage() {
                 <p className='profileGreeting'>
                     {cookieUsername==0
                     ?
-                        <span className='notRegisteredAlert'>
-                            <strong>
-                                Изглежда не сте влезли в профила си
-                            </strong>
-                        </span>
+                        <Redirect to='/Home'/>
 
                     :
                         <span className='greetUserField'>

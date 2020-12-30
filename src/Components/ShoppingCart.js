@@ -28,7 +28,7 @@ class ShoppingCart extends Component {
         }
 
         const showProducts=()=>{
-
+            let addItem = false;
             if($('.enterName').val().length > 2 && $('.enterAddress').val().length > 0 && $('.enterPhone').val().length>8){
 
             for(var i =0; i<=productsInCart.length-1;i++)
@@ -44,11 +44,16 @@ class ShoppingCart extends Component {
                    }).then((response)=>{
                        console.log(response)
                 })
-                if(i==productsInCart.length-1){
+                addItem=true;
+                console.log(addItem)
+                if(addItem){
                     store.dispatch({type: 'finishOrder', products: productsInCart[i].name, quantity:productsInCart[i].quantity, price: productsInCart[i].price})
                     store.dispatch({type: 'clearCart'})
-                    window.location='/orderfinished'
-                    
+                    if(i==productsInCart.length-1){
+                        window.location='/orderfinished'
+                    }
+                    addItem=false;
+
                 }
             }
 
