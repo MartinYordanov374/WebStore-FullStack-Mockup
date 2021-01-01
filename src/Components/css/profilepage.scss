@@ -56,13 +56,21 @@
             border-right: 0px;
             border-top: 0px;
             border-bottom: 0px;
-            border-style: solid;
+        }
+        .ordersBox{
+            .orderInfo{
 
+                display: inline;
+                margin-left: 10%;
+            }
+            
         }
         .orderHistoryTitle{
             font-size: 20px;
             margin-left: 1%;
         }
+        
     }
+    
 
 }

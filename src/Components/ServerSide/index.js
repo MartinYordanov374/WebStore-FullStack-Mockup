@@ -110,9 +110,33 @@ app.post('/finishOrder', (req,res)=>{
         }
         else{
             res.send({message: 'successfully made an order'})
+            
         }
     })
-    
+})
+app.post('/orderHistory', (req,res)=>{
+    const username = " "+ req.body.username;
+
+     db.query('SELECT username, COUNT(*) AS occurences FROM orders WHERE username=?', username, (err, result)=>{
+         if(err){
+             res.send({err: err})
+         }
+         else{
+             res.send({message: result})
+         }
+     })
+})
+
+app.post('/seeOrders', (req,res)=>{
+    const username = " " + req.body.username;
+    db.query('SELECT * FROM orders WHERE username=?', username, (err, result)=>{
+        if(err){
+            res.send({err: err})
+        }
+        else{
+            res.send({message: result})
+        }
+    })
 })
 app.listen(3307, ()=>{
     console.log('Running server')

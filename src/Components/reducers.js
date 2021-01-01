@@ -1,13 +1,22 @@
-const reducer=(state={productsInWishList:[{}], productsInCart:[{}], productsOrdered:[{}]}, action)=>{
+const reducer=(state={productsInWishList:[{}], productsInCart:[{}], productsOrdered:[{}], orderHistory:[{}]}, action)=>{
     switch(action.type)
     {
+        case 'showOrderHistory': 
+            return{
+                ...state,
+                orderHistory: [...state.orderHistory, {products: action.products, quantity: action.quantity, price: action.price}]
+            }
+        case 'clearOrderHistory': 
+            return{
+                ...state,
+                orderHistory: []
+            }
         case 'addToFavorites':
             return{
                 ...state,
                 productsInWishList: [...state.productsInWishList, {name: action.name, image: action.image, price: action.price, quantity: action.quantity, id: action.id}]
             }
         case 'addToCart':
-            console.log(state)
             return{
                 ...state,
                 productsInCart: [...state.productsInCart, {name: action.name, image: action.image, price: action.price, quantity: action.quantity, id: action.id}]
