@@ -29,18 +29,19 @@ $backgroundColorNavbar: rgb(53, 53, 53);
     }
 } 
 
+
 .searchBar{
     border-radius: 25px;
-    width: 55%;
+    width: 60%;
     height: 35px;
     color: black;
     margin-left: 1%;
     position: relative;
 
+
 }
 .searchButton{
-    position: absolute;
-    margin-left: 75%;
+    background-color: white;
 }
 .Icons{
     margin-left: 2%;

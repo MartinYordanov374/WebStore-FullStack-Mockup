@@ -26,7 +26,7 @@
 
 .searchBar {
   border-radius: 25px;
-  width: 55%;
+  width: 60%;
   height: 35px;
   color: black;
   margin-left: 1%;
@@ -34,8 +34,7 @@
 }
 
 .searchButton {
-  position: absolute;
-  margin-left: 75%;
+  background-color: white;
 }
 
 .Icons {
