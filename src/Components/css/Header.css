@@ -1,39 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 .nav-link {
-  -webkit-transition: linear 0.6s;
-  transition: linear 0.6s;
-  color: black;
-  font-size: 18px;
+  color: white;
   display: inline;
-  transition: linear 0.6s;
 }
 
-.nav-link:hover {
-  color: gray;
-  -webkit-transition: linear 0.6s;
-  transition: linear 0.6s;
+.HoodiesLink {
+  background-color: #666;
+  color: white !important;
+}
+
+.HoodiesLink:hover {
+  background-color: #666;
+  color: white;
+}
+
+.nav-item .MasksLink {
+  color: white !important;
+}
+
+.nav-item .MasksLink:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.searchBar {
+  border-radius: 25px;
+  width: 55%;
+  height: 35px;
+  color: black;
+  margin-left: 1%;
+  position: relative;
+}
+
+.searchButton {
+  position: absolute;
+  margin-left: 75%;
+}
+
+.Icons {
+  margin-left: 2%;
 }
 
 .navbar {
-  background-color: #F2EDD7FF;
+  background-color: #353535;
   -webkit-box-shadow: 0px 1px 0px 0px black;
           box-shadow: 0px 1px 0px 0px black;
   font-family: 'Poppins', sans-serif;
-}
-
-.navbar .navbarBrand {
-  margin-left: 26.5%;
-  font-size: 25px;
-  -webkit-transition: linear 0.6s;
-  transition: linear 0.6s;
-  transition: linear 0.6s;
-}
-
-.navbar .navbarBrand:hover {
-  color: gray;
-  -webkit-transition: linear 0.6s;
-  transition: linear 0.6s;
 }
 
 .shoppingCartIcon {
@@ -67,20 +80,22 @@
 }
 
 .wishListIndex {
-  color: purple;
+  color: white;
   font-size: 17px;
   margin-left: 5px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .cartIndex {
-  color: yellowgreen;
+  color: white;
   font-size: 17px;
   margin-left: 5px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .homeButton {
-  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 20px;
+  color: white;
 }
 /*# sourceMappingURL=Header.css.map */

@@ -41,7 +41,7 @@ $hoodieWrapperBackgroundColor: gray;
         .buyHoodieButton{
             width: 45%;
             margin-bottom: 4px;
-            background-color: white;
+            background-color: $backgroundColor;
             border-color: black;
             border-radius: 10px;
             &:hover{
