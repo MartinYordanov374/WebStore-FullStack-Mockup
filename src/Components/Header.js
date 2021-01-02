@@ -3,12 +3,14 @@ import {connect} from 'react-redux'
 import {Navbar, Nav, NavbarBrand, NavItem, NavLink, FormControl, Button} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Header.css'
-import {FaHeart, FaShoppingCart, FaUserCircle, FaSearch} from 'react-icons/fa'
+import {FaHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck} from 'react-icons/fa'
+import $ from 'jquery'
 class Header extends Component {
     render() { 
         const {productsInWishList} = this.props;
         const {productsInCart} = this.props;
-        let isLoggedIn = document.cookie
+        let isLoggedIn = document.cookie;
+        
     return (
         <div className='navbarWrapper sticky-top'>
             <Navbar className='sticky-top' variant='light'>
@@ -23,17 +25,17 @@ class Header extends Component {
                     </NavLink>
                 </NavItem>
                 <FormControl className='searchBar' placeholder='Потърсете продукт...'/>
-                <FaSearch className='searchButton'/>
+                <FaSearch className='searchButton' />
                 <Nav className='Icons'>
                     <NavItem>    
                         { isLoggedIn.length > 3 
                         ?                    
                         <NavLink href='/profilepage'>
-                            <FaUserCircle className='loginLink' size={32}></FaUserCircle>
+                            <FaUserCheck className='loginLink' size={32}></FaUserCheck>
                         </NavLink>
                         :
                         <NavLink href='/Login'>
-                            <FaUserCircle className='loginLink' size={32}></FaUserCircle>
+                            <FaRegUser className='loginLink' size={32}></FaRegUser>
                         </NavLink>
                         }
                         <NavLink href='/Wishlist'>
