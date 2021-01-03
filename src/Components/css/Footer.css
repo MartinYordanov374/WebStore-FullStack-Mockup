@@ -1,53 +1,120 @@
-@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .footerWrapper {
-  background-color: #F2EDD7FF;
+  background-color: #353535;
+  width: 100%;
   margin-top: 5%;
-  color: black;
+  color: #adadad;
   width: 100%;
   border-style: solid;
   border-width: 1px;
-  border-top: 2;
+  border-top: 2px;
   border-left: 0px;
   border-right: 0px;
   border-bottom: 0px;
-  border-radius: 5px;
 }
 
 .footerText {
   font-size: 25px;
   font-family: 'Antic Slab', serif;
+  margin-top: 10%;
 }
 
-.socialMediaLink {
-  color: black;
-  -webkit-transition: linear 0.6s;
-  transition: linear 0.6s;
-}
-
-.socialMediaLink:hover {
-  text-decoration: none;
-  color: gray;
-  -webkit-transition: linear 0.6s;
-  transition: linear 0.6s;
-}
-
-.footerInstagramLink {
-  font-size: 25px;
+.footerTextSubscribe {
+  font-size: 24px;
   font-family: 'Antic Slab', serif;
-}
-
-.footerInstagramLink .instagramIcon {
-  background-image: linear-gradient(150deg, blue, purple, #f7a3b1, orange);
-  border-radius: 10px;
+  margin-top: 10%;
+  text-align: left;
+  margin-left: 5%;
   color: white;
 }
 
-.footerFacebookLink {
-  font-size: 25px;
+.footerTitleAbout {
+  font-size: 24px;
   font-family: 'Antic Slab', serif;
+  margin-top: 10%;
+  text-align: left;
+  margin-left: 5%;
+  color: white;
 }
 
-.footerFacebookLink .facebookIcon {
+.footerTextAbout {
+  font-size: 17px;
+}
+
+.footerTitleNavigation {
+  font-size: 24px;
+  font-family: 'Antic Slab', serif;
+  margin-top: 10%;
+  text-align: left;
+  margin-left: 5%;
+  color: white;
+}
+
+.footerNavigationTab {
+  text-align: left;
+}
+
+.footerNavigationLinkContainer {
+  display: inline;
+}
+
+.footerNavigationLink {
+  text-align: left;
+  margin-top: 10%;
+  color: #47acf8;
+}
+
+.footerNavigationLink:hover {
+  color: #2ea0f7;
+  text-decoration: none;
+}
+
+.socialMediaIcons {
+  margin-top: 5%;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.facebookIcon {
   color: #3b5998;
+  margin-left: 5%;
+  border-style: solid;
+  border-color: #4b4b4b;
+  border-width: 2px;
+  border-radius: 60%;
+}
+
+.facebookIcon:hover {
+  color: #4463a7;
+}
+
+.instagramIcon {
+  background-image: linear-gradient(150deg, blue, purple, #f7a3b1, orange);
+  border-radius: 10px;
+  border-style: solid;
+  color: white;
+  border-color: #4b4b4b;
+  border-width: 2px;
+}
+
+.instagramIcon:hover {
+  background-image: linear-gradient(150deg, #2828ff, #970397, #f7a2b0, #fab535);
+}
+
+.subscribeNewsletterButton {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #ff8f00), color-stop(160%, black));
+  background-image: linear-gradient(180deg, #ff8f00 24%, black 160%);
+  color: white;
+  margin-left: 5px;
+}
+
+.subscribeNewsletterButton:hover {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #ff8f00), color-stop(160%, black));
+  background-image: linear-gradient(180deg, #ff8f00 24%, black 160%);
+}
+
+.subscribeNewsletterForm {
+  margin-left: 5%;
 }
 /*# sourceMappingURL=Footer.css.map */

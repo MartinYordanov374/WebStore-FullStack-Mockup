@@ -1,50 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @mixin linkText{
     font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+@mixin footerTitles{
+    font-size: 24px;
     font-family: 'Antic Slab', serif;
+    margin-top: 10%;
+    text-align: left;
+    margin-left: 5%;
+    color: white;
 }
 .footerWrapper{
-    background-color:#F2EDD7FF;
+    background-color:rgb(53, 53, 53);
+    width: 100%;
     margin-top: 5%;
-    color: black;
+    color: rgb(173, 173, 173);
     width: 100%;
     border-style: solid;
     border-width: 1px;
-    border-top: 2;
+    border-top: 2px;
     border-left: 0px;
     border-right: 0px;
     border-bottom: 0px;
-    border-radius: 5px;
 
 }
 .footerText{
     font-size: 25px;
     font-family: 'Antic Slab', serif;
+    margin-top: 10%;
 }
-    .socialMediaLink
-    {
-        color: black;
-        transition: linear 0.6s;
-        &:hover{
-            text-decoration: none;
-            color: gray;
-            transition: linear 0.6s;
+.footerTextSubscribe{
+    @include footerTitles();
+}
+.footerTitleAbout{
+    @include footerTitles();
+}
+.footerTextAbout{
+    font-size: 17px;
+}
+.footerTitleNavigation{
+    @include footerTitles();
+}
+.footerNavigationTab{
+    text-align: left;
 
+}
+.footerNavigationLinkContainer{
+    display: inline;
+}
+.footerNavigationLink{
+    text-align: left;
+    margin-top: 10%;
+    color: rgb(71, 172, 248);
+    &:hover{
+        color: rgb(46, 160, 247);
+        text-decoration: none;
 
-        }
     }
-.footerInstagramLink{
-    @include linkText();
-    .instagramIcon{
-        background-image: linear-gradient(150deg, blue,purple, rgb(247, 163, 177), orange);
-        border-radius: 10px;
-        //purple pink orange 
+}
+.socialMediaIcons{
+    margin-top: 5%;
+    text-align: left;
+    margin-left: 5%;
+    
+}
+.facebookIcon{
+    color: #3b5998;
+    margin-left: 5%;
+    border-style: solid;
+    border-color: rgb(75, 75, 75);
+    border-width: 2px;
+    border-radius: 60%;
+    &:hover{
+        color: #4463a7;
+    }
+}
+.instagramIcon{
+    background-image: linear-gradient(150deg, blue,purple, rgb(247, 163, 177), orange);
+    border-radius: 10px;
+    border-style: solid;
+    //purple pink orange 
+    color: white;
+    border-color: rgb(75, 75, 75);
+    border-width: 2px;
+    &:hover{
+        background-image: linear-gradient(150deg, rgb(40, 40, 255),rgb(151, 3, 151), rgb(247, 162, 176), rgb(250, 181, 53));
+
+    }
+}
+.subscribeNewsletterButton{
+    // background-image: linear-gradient(180deg,#F06105,#FF4F00 40%);    
+    background-image: linear-gradient(180deg,#ff8f00 24%, black 160%);
+    color: white;
+    margin-left: 5px;
+    &:hover{
         color: white;
+        background-image: linear-gradient(180deg,#ff8f00 24%, black 160%);
     }
 }
-.footerFacebookLink{
-    @include linkText();
-    .facebookIcon{
-        color: #3b5998;
-    }
+.subscribeNewsletterForm{
+    margin-left: 5%;
+
 }
