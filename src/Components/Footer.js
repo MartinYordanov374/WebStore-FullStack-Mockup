@@ -27,9 +27,9 @@ export default function Footer() {
                     <p className='footerTextAbout'>Neon е онлайн магазин за дрехи в корените, на който дълбоко лежи ефикасността и доставките на време, за вас - нашите клиенти!</p>
 
                 </div>
-                <div className='footerNavigation col-sm-3 col-lg-3 col-xs-3'>
+                <div className='footerNavigation col-sm-4 col-lg-4 col-xs-4'>
                     <p className='footerTitleNavigation'>Навигация</p>
-                    <div className='footerNavigationTab'>
+                    <div className='footerNavigationTab '>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
                             <a className='footerNavigationLink' href='/Masks'>Маски <RiArrowDropRightLine/></a>
                         </div>
