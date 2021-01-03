@@ -34,8 +34,9 @@ body, html{
     color: white;
     border-width: 1px;
     border-style: solid;
-    border-color: black;
-    width: 50%;
+    border-color: rgb(1, 106, 1);
+    width: 99%;
+    margin-bottom: 10px;
     word-wrap: break-word;
     &:hover{
         box-shadow: 2px 2px 0px  black;

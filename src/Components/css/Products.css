@@ -41,8 +41,9 @@ img {
   color: white;
   border-width: 1px;
   border-style: solid;
-  border-color: black;
-  width: 50%;
+  border-color: #016a01;
+  width: 99%;
+  margin-bottom: 10px;
   word-wrap: break-word;
   margin-top: 11.8%;
 }
@@ -70,8 +71,9 @@ img {
   color: white;
   border-width: 1px;
   border-style: solid;
-  border-color: black;
-  width: 50%;
+  border-color: #016a01;
+  width: 99%;
+  margin-bottom: 10px;
   word-wrap: break-word;
 }
 
