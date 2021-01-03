@@ -48,9 +48,9 @@ export default function MasksPage() {
                         <p><strong>{mask.price} лв.</strong></p>
                         {isLoggedIn.length>3
                         ?
-                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(mask)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
+                        <Button className='buyHoodieButtonActive' variant='warning' onClick={()=>addToCart(mask)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
                         :
-                        <Button className='buyHoodieButton' variant='warning' disabled='disabled' onClick={()=>addToCart(mask)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Не сте регистриран</strong></Button>
+                        <Button className='buyHoodieButtonDisabled' variant='warning' disabled='disabled' onClick={()=>addToCart(mask)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Не сте регистриран</strong></Button>
                     }
                     </div> 
                 </div>)}
