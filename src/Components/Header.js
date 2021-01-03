@@ -4,13 +4,29 @@ import {Navbar, Nav, NavbarBrand, NavItem, NavLink, FormControl, Button, InputGr
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Header.css'
 import {FaHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck} from 'react-icons/fa'
+import {Redirect} from 'react-router-dom'
 import $ from 'jquery'
 class Header extends Component {
     render() { 
         const {productsInWishList} = this.props;
         const {productsInCart} = this.props;
         let isLoggedIn = document.cookie;
-        
+        let categories=[
+            "hoodies",
+            "masks"
+        ]
+        const SearchBar=()=>{
+            let searchString = $('.searchBarValue').val().toLowerCase()
+            const filtered = categories.filter((character)=>{
+                 return(
+                     character.includes(searchString)
+                 
+                 )
+        })
+            window.location=filtered[0]
+
+            
+        }
     return (
         <div className='navbarWrapper sticky-top'>
             <Navbar expand='lg' className='sticky-top' variant='light'>
@@ -28,9 +44,9 @@ class Header extends Component {
                         </NavLink>
                     </NavItem>
                     <InputGroup className='searchBar'>
-                        <FormControl placeholder='Потърсете продукт...'/>
+                        <FormControl className='searchBarValue' placeholder='Потърсете продукт...'/>
                         <InputGroup.Append>
-                            <InputGroup.Text className='searchButton'>
+                            <InputGroup.Text className='searchButton' onClick={SearchBar}>
                                 <FaSearch/>
                             </InputGroup.Text>
                         </InputGroup.Append>
