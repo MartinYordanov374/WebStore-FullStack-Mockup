@@ -41,9 +41,11 @@
 }
 
 .products .hoodieWrapper .buyHoodieButton {
-  width: 45%;
+  width: 50%;
   margin-bottom: 4px;
-  background-color: #F2EDD7FF;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #ff8f00), color-stop(160%, black));
+  background-image: linear-gradient(180deg, #ff8f00 24%, black 160%);
+  color: white;
   border-color: black;
   border-radius: 10px;
 }
@@ -55,7 +57,7 @@
 }
 
 .products .hoodieWrapper .buyHoodieButton .buyIcon {
-  color: green;
+  color: black;
   opacity: 1;
 }
 

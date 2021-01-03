@@ -11,6 +11,7 @@ import {FaShoppingCart, FaHeart} from 'react-icons/fa'
 import {store} from './store'
 import {connect} from 'react-redux'
 import {v4} from 'uuid'
+import {Redirect} from 'react-router-dom'
 class HoodiesPage extends Component {
     render(){
     let {productsInWishList} = this.props;
@@ -38,12 +39,13 @@ class HoodiesPage extends Component {
     }
     const addToCart=(product)=>{
         store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
-        storeInCookies()
-    }
-    const storeInCookies=()=>{
-        document.cookie=`products=${JSON.stringify(productsInCart)}; path=/Cart;`
+        // storeInCookies();
         
     }
+    // const storeInCookies=()=>{
+    //     document.cookie=`products=${JSON.stringify(productsInCart)}; path=/Cart;`
+        
+    // }
     return (
         <div>
             <Navbar></Navbar>
@@ -55,7 +57,7 @@ class HoodiesPage extends Component {
                     {isLoggedIn.length>3 ?
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price} лв.</strong></p>
-                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
+                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> Купи</Button>
                     </div> 
                     :
                     <div className='purchaseField'>

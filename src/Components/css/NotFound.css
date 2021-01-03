@@ -5,4 +5,8 @@
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
 }
+
+body, html {
+  background-color: #F7F3F5;
+}
 /*# sourceMappingURL=NotFound.css.map */
