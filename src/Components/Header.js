@@ -37,10 +37,10 @@ class Header extends Component {
                     <NavItem>
                         
                         <NavLink className='HoodiesLink' href='/Hoodies'>
-                            Худита
+                            <strong>Худита</strong>
                         </NavLink>
                         <NavLink className='MasksLink' href='/Masks'>
-                            Маски
+                            <strong>Маски</strong>
                         </NavLink>
                     </NavItem>
                     <InputGroup className='searchBar'>
