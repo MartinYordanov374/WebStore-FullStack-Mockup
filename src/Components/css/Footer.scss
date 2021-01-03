@@ -104,3 +104,37 @@
     margin-left: 5%;
 
 }
+.footerMore{
+    border-style: solid;
+    border-color: gray;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+    .footerMoreText{
+        font-size: 25px;
+    }
+}
+.privacyDetails{
+    display: inline-flex;
+    white-space: nowrap;
+    .privacyPolicy{
+        .privacyPolicyLink{
+            text-decoration: none;
+            color: gray;
+            &:hover{
+                color: rgb(169, 169, 169);
+            }
+        }
+    }
+    .termsOfUse{
+        margin-left: 10px;
+        .termsOfUseLink{
+            text-decoration: none;
+            color: gray;
+            &:hover{
+                color: rgb(169, 169, 169);
+            }
+        }
+    }
+
+}

@@ -16,8 +16,8 @@ export default function Footer() {
                             </InputGroup.Append>
                         </InputGroup>
                         <div className='socialMediaIcons'>
-                            <FaInstagram className='instagramIcon' size={40}></FaInstagram>
-                            <FaFacebook className='facebookIcon'size={40}></FaFacebook>
+                            <FaInstagram className='instagramIcon' size={44.5}></FaInstagram>
+                            <FaFacebook className='facebookIcon'size={44.5}></FaFacebook>
 
                         </div>
                 </div>
@@ -59,10 +59,18 @@ export default function Footer() {
 
                 </div>
             </div>
-            <div className='footerLinks col-sm-12 col-lg-12 col-xs-12'>
-                    <p className='footerText'>Връзки</p>
-
+            <div className='footerMore col-sm-12 col-lg-12 col-xs-12'>
+                
+                    <p className='footerMoreText'> Example Address that I will update once the project is finished </p>
+            </div>
+            <div className='privacyDetails'>
+                <div className='privacyPolicy'>
+                    <p><a href='/privacyPolicy' className='privacyPolicyLink'>Поверителност</a></p>
                 </div>
+                <div className='termsOfUse'>
+                    <p ><a href='/privacyPolicy' className='termsOfUseLink'>Условия за ползване</a></p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -121,4 +121,45 @@
 .subscribeNewsletterForm {
   margin-left: 5%;
 }
+
+.footerMore {
+  border-style: solid;
+  border-color: gray;
+  border-left: 0;
+  border-right: 0;
+  text-align: center;
+}
+
+.footerMore .footerMoreText {
+  font-size: 25px;
+}
+
+.privacyDetails {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.privacyDetails .privacyPolicy .privacyPolicyLink {
+  text-decoration: none;
+  color: gray;
+}
+
+.privacyDetails .privacyPolicy .privacyPolicyLink:hover {
+  color: darkgray;
+}
+
+.privacyDetails .termsOfUse {
+  margin-left: 10px;
+}
+
+.privacyDetails .termsOfUse .termsOfUseLink {
+  text-decoration: none;
+  color: gray;
+}
+
+.privacyDetails .termsOfUse .termsOfUseLink:hover {
+  color: darkgray;
+}
 /*# sourceMappingURL=Footer.css.map */
