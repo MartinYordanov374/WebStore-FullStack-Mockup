@@ -1,6 +1,6 @@
 import React from 'react'
 import './css/Footer.css'
-import {FaInstagram, FaFacebook} from 'react-icons/fa'
+import {FaFacebook, FaTwitterSquare, FaInstagram} from 'react-icons/fa'
 import {FormControl, InputGroup, Button} from 'react-bootstrap'
 import {RiArrowDropRightLine} from 'react-icons/ri'
 export default function Footer() {
@@ -18,6 +18,7 @@ export default function Footer() {
                         <div className='socialMediaIcons'>
                             <FaInstagram className='instagramIcon' size={40}></FaInstagram>
                             <FaFacebook className='facebookIcon'size={40}></FaFacebook>
+
                         </div>
                 </div>
 
@@ -30,28 +31,28 @@ export default function Footer() {
                     <p className='footerTitleNavigation'>Навигация</p>
                     <div className='footerNavigationTab'>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Hoodies'>Masks <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Masks'>Маски <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'>Hoodies <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Hoodies'>Худита <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'>Login <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Login'>Влез <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'>Register <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Register'>Регистрация <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'>Cart <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Cart'>Кошница <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'>Favorites <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Wishlist'>Любими <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'>Offers <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Contact'>Контакт <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'>Contacts <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Promotions'>Промоции <RiArrowDropRightLine/></a>
                         </div>
 
                     </div>
@@ -60,8 +61,6 @@ export default function Footer() {
             </div>
             <div className='footerLinks col-sm-12 col-lg-12 col-xs-12'>
                     <p className='footerText'>Връзки</p>
-                    <p className='footerInstagramLink'><FaInstagram className='instagramIcon' size={40}></FaInstagram> <a className='socialMediaLink' href='https://www.instagram.com'>Последвайте ни в Инстаграм</a>  </p>
-                    <p className='footerFacebookLink'><FaFacebook className='facebookIcon'size={40}></FaFacebook> <a className='socialMediaLink' href='https://wwww.facebook.com'>Последвайте ни във Фейсбук</a> </p>
 
                 </div>
         </div>

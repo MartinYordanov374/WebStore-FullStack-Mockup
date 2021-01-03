@@ -73,13 +73,17 @@
   margin-top: 5%;
   text-align: left;
   margin-left: 5%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  float: left;
 }
 
 .facebookIcon {
   color: #3b5998;
+  background-color: white;
   margin-left: 5%;
   border-style: solid;
-  border-color: #4b4b4b;
   border-width: 2px;
   border-radius: 60%;
 }

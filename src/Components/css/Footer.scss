@@ -63,31 +63,32 @@
     margin-top: 5%;
     text-align: left;
     margin-left: 5%;
-    
+    display: inline-flex;
+    float: left;
 }
-.facebookIcon{
-    color: #3b5998;
-    margin-left: 5%;
-    border-style: solid;
-    border-color: rgb(75, 75, 75);
-    border-width: 2px;
-    border-radius: 60%;
-    &:hover{
-        color: #4463a7;
+    .facebookIcon{
+        color: #3b5998; 
+        background-color: white;
+        margin-left: 5%;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 60%;
+        &:hover{
+            color: #4463a7;
+        }
     }
-}
-.instagramIcon{
-    background-image: linear-gradient(150deg, blue,purple, rgb(247, 163, 177), orange);
-    border-radius: 10px;
-    border-style: solid;
-    //purple pink orange 
-    color: white;
-    border-color: rgb(75, 75, 75);
-    border-width: 2px;
-    &:hover{
-        background-image: linear-gradient(150deg, rgb(40, 40, 255),rgb(151, 3, 151), rgb(247, 162, 176), rgb(250, 181, 53));
 
-    }
+.instagramIcon{
+     background-image: linear-gradient(150deg, blue,purple, rgb(247, 163, 177), orange);
+     border-radius: 10px;
+     border-style: solid;
+     color: white;
+     border-color: rgb(75, 75, 75);
+     border-width: 2px;
+     &:hover{
+         background-image: linear-gradient(150deg, rgb(40, 40, 255),rgb(151, 3, 151), rgb(247, 162, 176), rgb(250, 181, 53));
+
+     }
 }
 .subscribeNewsletterButton{
     // background-image: linear-gradient(180deg,#F06105,#FF4F00 40%);    
