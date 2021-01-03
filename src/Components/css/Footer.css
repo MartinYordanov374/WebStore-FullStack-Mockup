@@ -83,10 +83,10 @@
 .facebookIcon {
   color: #3b5998;
   background-color: white;
-  margin-left: 5%;
   border-style: solid;
   border-width: 2px;
   border-radius: 60%;
+  margin-left: 20px;
 }
 
 .facebookIcon:hover {

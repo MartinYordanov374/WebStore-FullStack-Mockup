@@ -16,8 +16,8 @@ export default function Footer() {
                             </InputGroup.Append>
                         </InputGroup>
                         <div className='socialMediaIcons'>
-                            <FaInstagram className='instagramIcon' size={44.5}></FaInstagram>
-                            <FaFacebook className='facebookIcon'size={44.5}></FaFacebook>
+                            <a href='https://www.instagram.com'><FaInstagram className='instagramIcon' size={44.5}></FaInstagram></a>
+                            <a href='https://www.facebook.com'><FaFacebook className='facebookIcon'size={44.5}></FaFacebook></a>
 
                         </div>
                 </div>

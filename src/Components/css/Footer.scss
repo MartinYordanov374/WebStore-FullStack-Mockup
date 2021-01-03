@@ -74,10 +74,10 @@
     .facebookIcon{
         color: #3b5998; 
         background-color: white;
-        margin-left: 5%;
         border-style: solid;
         border-width: 2px;
         border-radius: 60%;
+        margin-left: 20px;
         &:hover{
             color: #4463a7;
         }
@@ -90,6 +90,7 @@
      color: white;
      border-color: rgb(75, 75, 75);
      border-width: 2px;
+
      &:hover{
          background-image: linear-gradient(150deg, rgb(40, 40, 255),rgb(151, 3, 151), rgb(247, 162, 176), rgb(250, 181, 53));
 
