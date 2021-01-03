@@ -17,12 +17,12 @@ class Products extends Component {
                     <div className='Hoodies'>
                         <img src={Hoodie}></img>
                         <br></br>
-                        <Button variant='warning' className='goToHoodiesButton' href='/Hoodies'><strong>Към страницата с Худита</strong></Button>
+                        <Button variant='success' className='goToHoodiesButton' href='/Hoodies'><strong>Към страницата с Худита</strong></Button>
                     </div>
                     <div className='Masks'>
                         <img src={Mask}></img>
                         <br></br>
-                        <Button variant='warning' className='goToMasksButton' href='/Masks'><strong>Към страницата с Маски</strong></Button>
+                        <Button variant='success' className='goToMasksButton' href='/Masks'><strong>Към страницата с Маски</strong></Button>
                     </div>
                 </div>
                 <Footer></Footer>

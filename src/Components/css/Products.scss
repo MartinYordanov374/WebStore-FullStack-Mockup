@@ -1,6 +1,6 @@
 $backgroundColorProduct: #ffcc00;
 
-$categoryButtonColor: white;
+$categoryButtonColor: green;
 $categoryButtonColorHover: #F2EDD7FF;
 body, html{
     width: 100%; 
@@ -27,8 +27,8 @@ body, html{
     border-radius: 10px;
 }
 @mixin CategoriesButton{
-    background-color: $categoryButtonColor;
-    color: black;
+    background-image: linear-gradient($categoryButtonColor, black 120%);
+    color: white;
     border-width: 1px;
     border-style: solid;
     border-color: black;

@@ -35,8 +35,9 @@ img {
 }
 
 .Categories .Hoodies .goToHoodiesButton {
-  background-color: white;
-  color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(green), color-stop(120%, black));
+  background-image: linear-gradient(green, black 120%);
+  color: white;
   border-width: 1px;
   border-style: solid;
   border-color: black;
@@ -64,8 +65,9 @@ img {
 
 .Categories .Masks .goToMasksButton {
   margin-top: 11.8%;
-  background-color: white;
-  color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(green), color-stop(120%, black));
+  background-image: linear-gradient(green, black 120%);
+  color: white;
   border-width: 1px;
   border-style: solid;
   border-color: black;
