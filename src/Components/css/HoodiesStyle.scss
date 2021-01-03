@@ -15,6 +15,14 @@ $hoodieWrapperBackgroundColor: gray;
     word-wrap: break-word;
 
 }
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
 .products
 {   
     background-color: white;
@@ -38,7 +46,28 @@ $hoodieWrapperBackgroundColor: gray;
         .hoodieName{
             margin-top: 5px;
         }
-        .buyHoodieButton{
+        .buyHoodieButtonActive{
+            width: 50%;
+            margin-bottom: 4px;
+            background-image: linear-gradient(180deg,#ff8f00 24%, black 160%);
+            color: white;
+            border-color: black;
+            border-radius: 10px;
+            animation: wiggle 2.5s infinite;
+            &:hover{
+                background-color: $backgroundColor;
+                box-shadow: 2px 2px 0px  black;
+                animation: wiggle 1s infinite;
+
+            } 
+            .buyIcon{
+                color: black;
+                opacity: 1;
+                
+            }
+        }
+        
+        .buyHoodieButtonDisabled{
             width: 50%;
             margin-bottom: 4px;
             background-image: linear-gradient(180deg,#ff8f00 24%, black 160%);

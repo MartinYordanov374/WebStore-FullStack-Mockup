@@ -1,4 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  85% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  95% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  85% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  95% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 .products {
   background-color: white;
 }
@@ -40,7 +85,32 @@
   margin-top: 5px;
 }
 
-.products .hoodieWrapper .buyHoodieButton {
+.products .hoodieWrapper .buyHoodieButtonActive {
+  width: 50%;
+  margin-bottom: 4px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #ff8f00), color-stop(160%, black));
+  background-image: linear-gradient(180deg, #ff8f00 24%, black 160%);
+  color: white;
+  border-color: black;
+  border-radius: 10px;
+  -webkit-animation: wiggle 2.5s infinite;
+          animation: wiggle 2.5s infinite;
+}
+
+.products .hoodieWrapper .buyHoodieButtonActive:hover {
+  background-color: #F2EDD7FF;
+  -webkit-box-shadow: 2px 2px 0px  black;
+          box-shadow: 2px 2px 0px  black;
+  -webkit-animation: wiggle 1s infinite;
+          animation: wiggle 1s infinite;
+}
+
+.products .hoodieWrapper .buyHoodieButtonActive .buyIcon {
+  color: black;
+  opacity: 1;
+}
+
+.products .hoodieWrapper .buyHoodieButtonDisabled {
   width: 50%;
   margin-bottom: 4px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #ff8f00), color-stop(160%, black));
@@ -50,13 +120,13 @@
   border-radius: 10px;
 }
 
-.products .hoodieWrapper .buyHoodieButton:hover {
+.products .hoodieWrapper .buyHoodieButtonDisabled:hover {
   background-color: #F2EDD7FF;
   -webkit-box-shadow: 2px 2px 0px  black;
           box-shadow: 2px 2px 0px  black;
 }
 
-.products .hoodieWrapper .buyHoodieButton .buyIcon {
+.products .hoodieWrapper .buyHoodieButtonDisabled .buyIcon {
   color: black;
   opacity: 1;
 }

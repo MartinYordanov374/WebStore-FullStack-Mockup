@@ -57,12 +57,12 @@ class HoodiesPage extends Component {
                     {isLoggedIn.length>3 ?
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price} лв.</strong></p>
-                        <Button className='buyHoodieButton' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> Купи</Button>
+                        <Button className='buyHoodieButtonActive' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> Купи</Button>
                     </div> 
                     :
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price} лв.</strong></p>
-                        <Button className='buyHoodieButton' variant='warning' disabled='disabled' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Не сте регистриран</strong></Button>
+                        <Button className='buyHoodieButtonDisabled' variant='warning' disabled='disabled' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Не сте регистриран</strong></Button>
                     </div> 
                 }
                 </div>)}
