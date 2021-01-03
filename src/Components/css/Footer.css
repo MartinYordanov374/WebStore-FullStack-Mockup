@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 .footerWrapper {
   background-color: #353535;
   width: 100%;
@@ -21,20 +22,20 @@
 
 .footerTextSubscribe {
   font-size: 24px;
-  font-family: 'Antic Slab', serif;
   margin-top: 10%;
   text-align: left;
   margin-left: 5%;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footerTitleAbout {
   font-size: 24px;
-  font-family: 'Antic Slab', serif;
   margin-top: 10%;
   text-align: left;
   margin-left: 5%;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footerTextAbout {
@@ -43,11 +44,11 @@
 
 .footerTitleNavigation {
   font-size: 24px;
-  font-family: 'Antic Slab', serif;
   margin-top: 10%;
   text-align: left;
   margin-left: 5%;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footerNavigationTab {

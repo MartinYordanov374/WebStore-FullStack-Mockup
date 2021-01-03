@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @mixin linkText{
     font-size: 25px;
-    font-family: 'Poppins', sans-serif;
+    // font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 @mixin footerTitles{
     font-size: 24px;
-    font-family: 'Antic Slab', serif;
+    // font-family: 'Antic Slab', serif;
     margin-top: 10%;
     text-align: left;
     margin-left: 5%;
     color: white;
+    font-family: 'Roboto', sans-serif;
+
 }
 .footerWrapper{
     background-color:rgb(53, 53, 53);

@@ -1,6 +1,6 @@
 $backgroundColor:  #F2EDD7FF;
 $hoodieWrapperBackgroundColor: gray;
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @mixin hoodieWrapperStyle{
     background-color: $backgroundColor;
     width: 30%;
@@ -11,7 +11,7 @@ $hoodieWrapperBackgroundColor: gray;
     border-width: 1px;  
     border-color: black;
     margin-right: 5%;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
     word-wrap: break-word;
 
 }
@@ -49,13 +49,15 @@ $hoodieWrapperBackgroundColor: gray;
         .buyHoodieButtonActive{
             width: 50%;
             margin-bottom: 4px;
-            background-image: linear-gradient(180deg,#ff8f00 24%, black 160%);
-            color: white;
-            border-color: black;
+            // background-image: linear-gradient(180deg,#ff8f00 24%, black 160%);
+            background-color: #ff9900;
+            color: black;
+            border-color: #d88302;
             border-radius: 10px;
             animation: wiggle 2.5s infinite;
+            font-size: 20px;
             &:hover{
-                background-color: $backgroundColor;
+                background-color: #ff9900;
                 box-shadow: 2px 2px 0px  black;
                 animation: wiggle 1s infinite;
 

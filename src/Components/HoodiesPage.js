@@ -57,7 +57,7 @@ class HoodiesPage extends Component {
                     {isLoggedIn.length>3 ?
                     <div className='purchaseField'>
                         <p><strong>{hoodie.price} лв.</strong></p>
-                        <Button className='buyHoodieButtonActive' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> Купи</Button>
+                        <Button className='buyHoodieButtonActive' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
                     </div> 
                     :
                     <div className='purchaseField'>

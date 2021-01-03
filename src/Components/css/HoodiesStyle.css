@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @-webkit-keyframes wiggle {
   0% {
     -webkit-transform: rotate(0deg);
@@ -58,7 +58,7 @@
   border-width: 1px;
   border-color: black;
   margin-right: 5%;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
   word-wrap: break-word;
   border-radius: 5px;
 }
@@ -88,17 +88,17 @@
 .products .hoodieWrapper .buyHoodieButtonActive {
   width: 50%;
   margin-bottom: 4px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, #ff8f00), color-stop(160%, black));
-  background-image: linear-gradient(180deg, #ff8f00 24%, black 160%);
-  color: white;
-  border-color: black;
+  background-color: #ff9900;
+  color: black;
+  border-color: #d88302;
   border-radius: 10px;
   -webkit-animation: wiggle 2.5s infinite;
           animation: wiggle 2.5s infinite;
+  font-size: 20px;
 }
 
 .products .hoodieWrapper .buyHoodieButtonActive:hover {
-  background-color: #F2EDD7FF;
+  background-color: #ff9900;
   -webkit-box-shadow: 2px 2px 0px  black;
           box-shadow: 2px 2px 0px  black;
   -webkit-animation: wiggle 1s infinite;
