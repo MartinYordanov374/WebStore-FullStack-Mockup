@@ -98,7 +98,7 @@ export default function Login() {
                 <Button className='submitLoginForm' onClick ={login}> <strong><AiOutlineLogin size={20}/> Влезте в профила си</strong> </Button>
                 <br></br>
                 <br></br>
-                <a href='/register'>Нямате профил? Регистрирайте се тук!</a>
+                <a href='/register'>Нямате профил? Регистрирайте се, безплатно тук!</a>
                 </div>
                 }
             </div>
