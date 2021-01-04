@@ -8,11 +8,11 @@ export default class SecondNavbar extends Component {
                 <Navbar className='bottomNavbar'>
                 <Nav>
                     <NavItem>
-                        <NavLink href='/New' className='newProductsLink'> <strong>NEW </strong></NavLink>
+                        <NavLink href='/New' className='newProductsLink'> <strong> НОВИ </strong></NavLink>
                     </NavItem>
                     
                     <NavItem>
-                        <NavLink href='/Sale' className='saleLink'> <strong>SALE</strong> </NavLink>
+                        <NavLink href='/Sale' className='saleLink'> <strong> ПРОМОЦИИ</strong> </NavLink>
                     </NavItem>
                 </Nav>
                 </Navbar>

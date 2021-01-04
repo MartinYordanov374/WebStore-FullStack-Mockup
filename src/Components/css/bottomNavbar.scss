@@ -11,12 +11,16 @@
         .nav-item{
             .newProductsLink{
                 @include navBarLink();
+
                 &:hover{
-                    background-color: violet;
+                    filter: drop-shadow(0px 0px 4px white);
                 }
             }
             .saleLink{
-                @include navBarLink()
+                @include navBarLink();
+                &:hover{
+                    filter: drop-shadow(0px 0px 4px white);
+                }
             }
         }
     }
