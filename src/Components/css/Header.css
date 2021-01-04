@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 .nav-link {
   color: white;
   display: inline;
@@ -45,7 +46,7 @@
   background-color: #353535;
   -webkit-box-shadow: 0px 1px 0px 0px black;
           box-shadow: 0px 1px 0px 0px black;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .shoppingCartIcon {
@@ -82,14 +83,14 @@
   color: white;
   font-size: 17px;
   margin-left: 5px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .cartIndex {
   color: white;
   font-size: 17px;
   margin-left: 5px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .homeButton {

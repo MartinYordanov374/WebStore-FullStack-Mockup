@@ -7,12 +7,13 @@ import Mask from '../Components/Images/Masks.png'
 import Navbar from './Header'
 import Footer from './Footer'
 import {Button} from 'react-bootstrap'
-
+import SecondNavbar from './SecondNavbar'
 class Products extends Component {
     render() {
         return (
             <div>
                 <Navbar></Navbar>
+                <SecondNavbar/>
                 <div className='Categories'>
                     <div className='Hoodies'>
                         <img src={Hoodie}></img>

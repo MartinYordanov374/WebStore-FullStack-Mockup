@@ -3,7 +3,9 @@ import {connect} from 'react-redux'
 import {Navbar, Nav, NavbarBrand, NavItem, NavLink, FormControl, Button, InputGroup} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Header.css'
-import {FaHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck} from 'react-icons/fa'
+import {FaRegHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck} from 'react-icons/fa'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
+
 import {Redirect} from 'react-router-dom'
 import $ from 'jquery'
 class Header extends Component {
@@ -29,7 +31,7 @@ class Header extends Component {
         }
     return (
         <div className='navbarWrapper sticky-top'>
-            <Navbar expand='lg' className='sticky-top' variant='light'>
+            <Navbar expand='lg' className='sticky-top navbar' variant='light'>
                 <NavbarBrand href='/Home'><span className='homeButton'><strong>Neon</strong></span></NavbarBrand>
                 <Navbar.Toggle />
                 <Navbar.Collapse>
@@ -64,10 +66,10 @@ class Header extends Component {
                             </NavLink>
                             }
                             <NavLink href='/Wishlist'>
-                                <FaHeart className='wishlistIcon'size={30}/><span className='wishListIndex'>{productsInWishList.length}</span>
+                                <FaRegHeart className='wishlistIcon'size={30}/><span className='wishListIndex'>{productsInWishList.length}</span>
                             </NavLink>
                             <NavLink href='/Cart'>
-                                <FaShoppingCart  className='shoppingCartIcon'size={30}></FaShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
+                                <AiOutlineShoppingCart  className='shoppingCartIcon'size={30}></AiOutlineShoppingCart><span className='cartIndex'>{productsInCart.length}</span>
                             </NavLink>
                         </NavItem>
                     </Nav>
