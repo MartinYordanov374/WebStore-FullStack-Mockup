@@ -4,7 +4,9 @@ import {Navbar, Nav, NavbarBrand, NavItem, NavLink, FormControl, Button, InputGr
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Header.css'
 import {FaRegHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck} from 'react-icons/fa'
-import {AiOutlineShoppingCart} from 'react-icons/ai'
+import {AiOutlineShoppingCart,AiOutlineUser} from 'react-icons/ai'
+import {FiUserCheck} from 'react-icons/fi'
+
 
 import {Redirect} from 'react-router-dom'
 import $ from 'jquery'
@@ -58,11 +60,11 @@ class Header extends Component {
                             { isLoggedIn.length > 3 
                             ?                    
                             <NavLink href='/profilepage'>
-                                <FaUserCheck className='loginLink' size={32}></FaUserCheck>
+                                <FiUserCheck className='loginLink' size={32}></FiUserCheck>
                             </NavLink>
                             :
                             <NavLink href='/Login'>
-                                <FaRegUser className='loginLink' size={32}></FaRegUser>
+                                <AiOutlineUser className='loginLink' size={32}></AiOutlineUser>
                             </NavLink>
                             }
                             <NavLink href='/Wishlist'>
