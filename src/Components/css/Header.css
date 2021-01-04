@@ -34,8 +34,41 @@
   position: relative;
 }
 
+.searchBarValue {
+  background-color: #353535;
+  color: white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.searchBarValue:focus {
+  background-color: #353535;
+  color: white;
+}
+
+.searchBarValue::-webkit-input-placeholder {
+  color: white;
+}
+
+.searchBarValue:-ms-input-placeholder {
+  color: white;
+}
+
+.searchBarValue::-ms-input-placeholder {
+  color: white;
+}
+
+.searchBarValue::placeholder {
+  color: white;
+}
+
 .searchButton {
-  background-color: white;
+  background-color: #353535;
+  color: white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .Icons {

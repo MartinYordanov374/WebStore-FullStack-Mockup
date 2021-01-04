@@ -40,11 +40,27 @@ $backgroundColorNavbar: rgb(53, 53, 53);
     color: black;
     margin-left: 1%;
     position: relative;
-
-
+}
+.searchBarValue{
+    background-color: rgb(53,53,53);
+    color: white;
+    border-top: 0;    
+    border-left: 0;
+    border-right: 0;
+    &:focus{
+        background-color: rgb(53,53,53);
+        color: white;
+    }
+    &::placeholder{
+        color: white;
+    }
 }
 .searchButton{
-    background-color: white;
+    background-color: rgb(53,53,53);
+    color: white;
+    border-top: 0;    
+    border-left: 0;
+    border-right: 0;
 }
 .Icons{
     margin-left: 2%;

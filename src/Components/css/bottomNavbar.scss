@@ -11,6 +11,9 @@
         .nav-item{
             .newProductsLink{
                 @include navBarLink();
+                &:hover{
+                    background-color: violet;
+                }
             }
             .saleLink{
                 @include navBarLink()

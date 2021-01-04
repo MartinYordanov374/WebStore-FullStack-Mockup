@@ -5,6 +5,10 @@
   font-size: 15px;
 }
 
+.navbar .navbar-nav .nav-item .newProductsLink:hover {
+  background-color: violet;
+}
+
 .navbar .navbar-nav .nav-item .saleLink {
   color: white;
   font-family: 'Lato', sans-serif;
