@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Navbar, Nav, NavbarBrand, NavItem, NavLink, FormControl, Button, InputGroup, Dropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Header.css'
-import {FaRegHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck} from 'react-icons/fa'
+import {FaRegHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck, FaCaretRight} from 'react-icons/fa'
 import {AiOutlineShoppingCart,AiOutlineUser} from 'react-icons/ai'
 import {FiUserCheck} from 'react-icons/fi'
 
@@ -47,7 +47,7 @@ class Header extends Component {
                     $('.dropDown').hide()
 
                 }
-            $('.dropDownItemOne').text(filtered[0]).val();
+            $('.dropdownValue').text(filtered[0]+).val();
 
         
             }
@@ -81,12 +81,8 @@ class Header extends Component {
                             </InputGroup>
                             <Dropdown className='dropDown'>
                                     <Dropdown.Item className='dropDownItemOne' onClick={goToPage}>
-                                        
+                                        <p className='dropdownValue'></p>
                                     </Dropdown.Item>
-                                    <Dropdown.Item className='dropDownItemTwo' onClick={goToPage}>
-                                        
-                                    </Dropdown.Item>
-                                    
                             </Dropdown>
                         </div>
                     <Nav className='Icons'>

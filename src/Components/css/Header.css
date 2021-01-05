@@ -77,6 +77,10 @@
   display: none;
 }
 
+.dropdownValue {
+  text-align: left;
+}
+
 .Icons {
   margin-left: 2%;
 }
