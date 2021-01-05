@@ -77,8 +77,18 @@
   display: none;
 }
 
+.dropDownItemOne:hover {
+  background-color: gray;
+  opacity: 0.8;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+}
+
 .dropdownValue {
   text-align: left;
+  font-size: 20px;
 }
 
 .Icons {
