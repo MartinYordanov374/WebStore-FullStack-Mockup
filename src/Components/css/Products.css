@@ -6,13 +6,12 @@ body, html {
 }
 
 .App {
-  background-color: #c5d5db;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e0cf), color-stop(#c5d5db), to(#9fa8a3));
-  background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3);
+  background-color: #9fa8a3;
 }
 
 .App .products {
-  background-color: #f2f2f2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e0cf), color-stop(#c5d5db), to(#9fa8a3));
+  background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3);
 }
 
 img {

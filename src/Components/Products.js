@@ -11,7 +11,7 @@ import SecondNavbar from './SecondNavbar'
 class Products extends Component {
     render() {
         return (
-            <div>
+            <div className='categoriesWrapper'>
                 <Navbar></Navbar>
                 <SecondNavbar/>
                 <div className='Categories'>

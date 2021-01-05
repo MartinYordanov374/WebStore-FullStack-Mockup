@@ -14,14 +14,12 @@ body, html{
     // background-color: #687477;
     // background-color: #403234;
     .products{
-        background-color: #f2f2f2;
+        background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
     }
-    background-color: #c5d5db;
     //c5d5db
     //9fa8a3
     //e3e0cf
-    background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
-
+    background-color:  #9fa8a3;
 }
 @mixin CategoriesBackground{
     
