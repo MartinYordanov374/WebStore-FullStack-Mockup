@@ -47,7 +47,7 @@ class Header extends Component {
                     $('.dropDown').hide()
 
                 }
-            $('.dropdownValue').text(filtered[0]+).val();
+            $('.dropdownValue').text(filtered[0]).val();
 
         
             }
