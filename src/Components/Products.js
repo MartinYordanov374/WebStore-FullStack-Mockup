@@ -4,24 +4,33 @@ import './css/Products.css'
 import $ from 'jquery'
 import Hoodie from '../Components/Images/Hoodies.png'
 import Mask from '../Components/Images/Masks.png'
+import CarouselImage from '../Components/Images/openingstore_promotional.png'
+import Sales from '../Components/Images/SALES.png'
 import Navbar from './Header'
 import Footer from './Footer'
 import {Button, Carousel} from 'react-bootstrap'
-import SecondNavbar from './SecondNavbar'
 class Products extends Component {
     render() {
         return (
             <div className='categoriesWrapper'>
                 <Navbar></Navbar>
-                <SecondNavbar/>
+                <Carousel>
+                    <Carousel.Item id='carouselItem'>
+                        <img className='carouselImage' src={CarouselImage}/>
+                    </Carousel.Item>
+                    <Carousel.Item id='carouselItem'>
+                        <img className='carouselImage' src={Sales}/>
+                    </Carousel.Item>
+                </Carousel>
+
                 <div className='Categories'>
                     <div className='Hoodies'>
-                        <img src={Hoodie}></img>
+                        <img className='productImage' src={Hoodie}></img>
                         <br></br>
                         <Button variant='success' className='goToHoodiesButton' href='/Hoodies'><strong>Към страницата с Худита</strong></Button>
                     </div>
                     <div className='Masks'>
-                        <img src={Mask}></img>
+                        <img className='productImage' src={Mask}></img>
                         <br></br>
                         <Button variant='success' className='goToMasksButton' href='/Masks'><strong>Към страницата с Маски</strong></Button>
                     </div>

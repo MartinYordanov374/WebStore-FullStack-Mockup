@@ -6,7 +6,7 @@ import './css/Header.css'
 import {FaRegHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck, FaCaretRight} from 'react-icons/fa'
 import {AiOutlineShoppingCart,AiOutlineUser} from 'react-icons/ai'
 import {FiUserCheck} from 'react-icons/fi'
-
+import SecondNavbar from './SecondNavbar'
 
 import {Redirect} from 'react-router-dom'
 import $ from 'jquery'
@@ -109,6 +109,7 @@ class Header extends Component {
                 </Navbar.Collapse>
 
             </Navbar>
+            <SecondNavbar/>
 
         </div>
 
