@@ -71,6 +71,12 @@
   border-right: 0;
 }
 
+.dropDown {
+  color: green;
+  background-color: white;
+  display: none;
+}
+
 .Icons {
   margin-left: 2%;
 }

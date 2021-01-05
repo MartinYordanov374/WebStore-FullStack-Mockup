@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Navbar, Nav, NavbarBrand, NavItem, NavLink, FormControl, Button, InputGroup} from 'react-bootstrap'
+import {Navbar, Nav, NavbarBrand, NavItem, NavLink, FormControl, Button, InputGroup, Dropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Header.css'
 import {FaRegHeart, FaShoppingCart, FaRegUser, FaSearch, FaUserCheck} from 'react-icons/fa'
@@ -27,9 +27,32 @@ class Header extends Component {
                  
                  )
         })
+            
             window.location=filtered[0]
 
             
+        }
+        const SearchBarSuggestions=()=>{
+            let searchString = $('.searchBarValue').val().toLowerCase()
+            const filtered = categories.filter((character)=>{
+                 return(
+                     character.includes(searchString)
+                 
+                 )
+            })
+                if(searchString.length>0){
+                    $('.dropDown').show()
+                }
+                else{  
+                    $('.dropDown').hide()
+
+                }
+            $('.dropDownItemOne').text(filtered[0]).val();
+
+        
+            }
+        const goToPage=()=>{
+            window.location='/'+$('.dropDownItemOne').text()
         }
     return (
         <div className='navbarWrapper sticky-top'>
@@ -47,14 +70,25 @@ class Header extends Component {
                             <strong>Маски</strong>
                         </NavLink>
                     </NavItem>
-                    <InputGroup className='searchBar'>
-                        <FormControl className='searchBarValue' placeholder='Потърсете продукт...'/>
-                        <InputGroup.Append>
-                            <InputGroup.Text className='searchButton' onClick={SearchBar}>
-                                <FaSearch/>
-                            </InputGroup.Text>
-                        </InputGroup.Append>
-                    </InputGroup>
+                        <div className='searchBar'>
+                            <InputGroup >
+                                <FormControl className='searchBarValue' placeholder='Потърсете продукт...' onChange={SearchBarSuggestions}/>
+                                <InputGroup.Append>
+                                    <InputGroup.Text className='searchButton' onClick={SearchBar}>
+                                        <FaSearch/>
+                                    </InputGroup.Text>
+                                </InputGroup.Append>
+                            </InputGroup>
+                            <Dropdown className='dropDown'>
+                                    <Dropdown.Item className='dropDownItemOne' onClick={goToPage}>
+                                        
+                                    </Dropdown.Item>
+                                    <Dropdown.Item className='dropDownItemTwo' onClick={goToPage}>
+                                        
+                                    </Dropdown.Item>
+                                    
+                            </Dropdown>
+                        </div>
                     <Nav className='Icons'>
                         <NavItem>    
                             { isLoggedIn.length > 3 
