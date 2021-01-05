@@ -17,7 +17,6 @@ class Header extends Component {
         let isLoggedIn = document.cookie;
         let categories=[
             "hoodies",
-            "hats",
             "masks",
         ]
         const SearchBar=()=>{
