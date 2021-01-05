@@ -16,7 +16,11 @@ body, html{
     .products{
         background-color: #f2f2f2;
     }
-    background-color: #f2f2f2;
+    background-color: #c5d5db;
+    //c5d5db
+    //9fa8a3
+    //e3e0cf
+    background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
 
 }
 @mixin CategoriesBackground{
@@ -44,7 +48,27 @@ body, html{
 }
 
 img{
-    width: 50%;
+    max-width: 50%;
+}
+.hoodieWrapper{
+    display: inline-block;
+}
+.hoodieLink{
+    display: inline-block;
+    position: relative;
+    margin-top: 4%;
+    margin-left: 2%;
+    background-color: white;
+    &:hover{
+
+    }
+}
+
+
+.buttonWrapper{
+    background-color: rgb(221, 221, 221);
+    width: 25%;
+    margin-left: 38.5%;
 }
 .Categories{
     display: inline-flex;
@@ -69,4 +93,21 @@ img{
             @include CategoriesButton();
         }
     }
+}
+#caption{
+    position: relative;
+    right: auto;
+    left: auto;
+    background-color: rgb(150, 53, 150);
+    box-shadow: 2px 2px 4px  rgba(119, 41, 119, 0.8);
+    padding-bottom: 20px;
+    color: black;
+    text-align: center;
+    width: 25%;
+    margin-left: 38.5%;
+}
+.slide{
+.carousel-indicators{
+    display: none;
+}
 }

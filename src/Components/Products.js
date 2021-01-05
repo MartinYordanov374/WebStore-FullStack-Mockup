@@ -6,7 +6,7 @@ import Hoodie from '../Components/Images/Hoodies.png'
 import Mask from '../Components/Images/Masks.png'
 import Navbar from './Header'
 import Footer from './Footer'
-import {Button} from 'react-bootstrap'
+import {Button, Carousel} from 'react-bootstrap'
 import SecondNavbar from './SecondNavbar'
 class Products extends Component {
     render() {
@@ -26,6 +26,22 @@ class Products extends Component {
                         <Button variant='success' className='goToMasksButton' href='/Masks'><strong>Към страницата с Маски</strong></Button>
                     </div>
                 </div>
+                {/* <div className='categoriesWrapper'>
+                        <Carousel>
+                            <Carousel.Item>
+                                <img className='hoodieLink' src={Hoodie}/>
+                                <Carousel.Caption id='caption'>
+                                    <strong>HOODIES</strong>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img className='hoodieLink' src={Mask}/>
+                                <Carousel.Caption id='caption'>
+                                    <strong>MASKS</strong>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        </Carousel>
+                </div> */}
                 <Footer></Footer>
             </div>
         )

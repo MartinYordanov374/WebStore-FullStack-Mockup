@@ -6,7 +6,9 @@ body, html {
 }
 
 .App {
-  background-color: #f2f2f2;
+  background-color: #c5d5db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e0cf), color-stop(#c5d5db), to(#9fa8a3));
+  background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3);
 }
 
 .App .products {
@@ -14,7 +16,25 @@ body, html {
 }
 
 img {
-  width: 50%;
+  max-width: 50%;
+}
+
+.hoodieWrapper {
+  display: inline-block;
+}
+
+.hoodieLink {
+  display: inline-block;
+  position: relative;
+  margin-top: 4%;
+  margin-left: 2%;
+  background-color: white;
+}
+
+.buttonWrapper {
+  background-color: #dddddd;
+  width: 25%;
+  margin-left: 38.5%;
 }
 
 .Categories {
@@ -80,5 +100,23 @@ img {
 .Categories .Masks .goToMasksButton:hover {
   -webkit-box-shadow: 2px 2px 0px  black;
           box-shadow: 2px 2px 0px  black;
+}
+
+#caption {
+  position: relative;
+  right: auto;
+  left: auto;
+  background-color: #963596;
+  -webkit-box-shadow: 2px 2px 4px rgba(119, 41, 119, 0.8);
+          box-shadow: 2px 2px 4px rgba(119, 41, 119, 0.8);
+  padding-bottom: 20px;
+  color: black;
+  text-align: center;
+  width: 25%;
+  margin-left: 38.5%;
+}
+
+.slide .carousel-indicators {
+  display: none;
 }
 /*# sourceMappingURL=Products.css.map */
