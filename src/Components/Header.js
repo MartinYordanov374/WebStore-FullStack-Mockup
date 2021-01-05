@@ -17,7 +17,8 @@ class Header extends Component {
         let isLoggedIn = document.cookie;
         let categories=[
             "hoodies",
-            "masks"
+            "hats",
+            "masks",
         ]
         const SearchBar=()=>{
             let searchString = $('.searchBarValue').val().toLowerCase()
@@ -79,10 +80,11 @@ class Header extends Component {
                                     </InputGroup.Text>
                                 </InputGroup.Append>
                             </InputGroup>
+
                             <Dropdown className='dropDown'>
                                     <Dropdown.Item className='dropDownItemOne' onClick={goToPage}>
                                         <p className='dropdownValue'></p>
-                                    </Dropdown.Item>
+                                    </Dropdown.Item>  
                             </Dropdown>
                         </div>
                     <Nav className='Icons'>

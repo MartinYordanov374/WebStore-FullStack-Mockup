@@ -78,17 +78,20 @@
 }
 
 .dropDownItemOne:hover {
-  background-color: gray;
-  opacity: 0.8;
-  font-size: 20px;
-  color: white;
-  text-align: left;
-  font-family: 'Lato', sans-serif;
+  background-color: white;
 }
 
 .dropdownValue {
   text-align: left;
   font-size: 20px;
+  margin-top: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.dropdownValue:hover {
+  background-color: rgba(208, 216, 198, 0.3);
+  color: black;
+  text-align: left;
 }
 
 .Icons {

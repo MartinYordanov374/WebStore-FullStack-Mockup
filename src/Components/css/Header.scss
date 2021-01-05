@@ -67,20 +67,23 @@ $backgroundColorNavbar: rgb(53, 53, 53);
     background-color: white;
     display: none;
     
+    
 }
 .dropDownItemOne{
     &:hover{
-        background-color: rgb(128,128,128);
-        opacity: 0.8;
-        font-size: 20px;
-        color: white;
-        text-align: left;
-        @include textProps()
+        background-color: white;
     }
 }
 .dropdownValue{
     text-align: left;
     font-size: 20px;
+    margin-top: 10px;
+    &:hover{
+        background-color: rgba(208, 216, 198, 0.3);
+        color: black;
+        text-align: left;
+    }
+    @include textProps()
 
 }
 
