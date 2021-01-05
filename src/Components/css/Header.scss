@@ -78,7 +78,7 @@ $backgroundColorNavbar: rgb(53, 53, 53);
     text-align: left;
     font-size: 20px;
     margin-top: 10px;
-    padding: 10;
+    padding: 1;
     &:hover{
         background-color: rgba(208, 216, 198, 0.3);
         color: black;
@@ -102,30 +102,19 @@ $backgroundColorNavbar: rgb(53, 53, 53);
 .shoppingCartIcon{
     color: white;
     filter: drop-shadow(0.5px 0.5px 0.5px black);
-    &:hover{
-        color:yellowgreen;
 
-
-    }
 }
 .wishlistIcon{
     color: white;
     filter: drop-shadow(0.5px 0.5px 0.5px black);
 
-    &:hover{
-        color: rgb(106, 2, 106);
-
-    }
 }
 .loginLink
 {
     color: white;
     filter: drop-shadow(0.5px 0.5px 0.5px black);
 
-    &:hover{
-        color: orange;
 
-    }
 }
 .wishListIndex{
     color: white;

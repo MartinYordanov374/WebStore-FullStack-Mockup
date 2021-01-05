@@ -85,7 +85,7 @@
   text-align: left;
   font-size: 20px;
   margin-top: 10px;
-  padding: 10;
+  padding: 1;
   font-family: 'Lato', sans-serif;
 }
 
@@ -112,28 +112,16 @@
           filter: drop-shadow(0.5px 0.5px 0.5px black);
 }
 
-.shoppingCartIcon:hover {
-  color: yellowgreen;
-}
-
 .wishlistIcon {
   color: white;
   -webkit-filter: drop-shadow(0.5px 0.5px 0.5px black);
           filter: drop-shadow(0.5px 0.5px 0.5px black);
 }
 
-.wishlistIcon:hover {
-  color: #6a026a;
-}
-
 .loginLink {
   color: white;
   -webkit-filter: drop-shadow(0.5px 0.5px 0.5px black);
           filter: drop-shadow(0.5px 0.5px 0.5px black);
-}
-
-.loginLink:hover {
-  color: orange;
 }
 
 .wishListIndex {
