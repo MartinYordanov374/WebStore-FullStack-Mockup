@@ -64,8 +64,8 @@
 }
 
 .products .hoodieWrapper .hoodieImage {
-  -webkit-filter: drop-shadow(5px 5px 5px black);
-          filter: drop-shadow(5px 5px 5px black);
+  -webkit-filter: drop-shadow(5px 5px 8px black);
+          filter: drop-shadow(5px 5px 8px black);
 }
 
 .products .hoodieWrapper .addFaves {

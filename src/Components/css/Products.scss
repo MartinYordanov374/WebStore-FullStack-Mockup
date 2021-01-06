@@ -49,6 +49,7 @@ body, html{
 
 .productImage{
     max-width: 50%;
+    filter: drop-shadow(5px 5px 5px black)
 }
 .hoodieWrapper{
     display: inline-block;

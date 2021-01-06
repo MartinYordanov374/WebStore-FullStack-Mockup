@@ -3,7 +3,7 @@ import Navbar from './Header'
 import Footer from './Footer'
 
 import GreenHoodie from './Images/Hoodie_2.png'
-import RedHoodie from './Images/Hoodie_3.png'
+import OrangeHoodie from './Images/Orange_Hoodie.png'
 import './css/HoodiesStyle.css'
 import {Button} from 'react-bootstrap'
 import $ from 'jquery'
@@ -26,8 +26,8 @@ class HoodiesPage extends Component {
             id: v4()
         },
         {
-            name: 'Neon Hoodie - червено',
-            image: RedHoodie,
+            name: 'Neon Hoodie - оранжево',
+            image: OrangeHoodie,
             price: 39.94,
             quantity: 1,
             id:v4()
