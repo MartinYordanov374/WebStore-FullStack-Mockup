@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import Navbar from './Header'
 import Footer from './Footer'
 
-import fortniteHoodie from './Images/Hoodies.png'
-import kiritoHoodie from './Images/kirito_Hoodie.png'
+import GreenHoodie from './Images/Hoodie_2.png'
+import RedHoodie from './Images/Hoodie_3.png'
 import './css/HoodiesStyle.css'
 import {Button} from 'react-bootstrap'
 import $ from 'jquery'
@@ -19,15 +19,15 @@ class HoodiesPage extends Component {
     let isLoggedIn = document.cookie;
     const hoodiesList=[
         {
-            name: 'Game Hoodie - Фортнайт',
-            image: fortniteHoodie,
+            name: 'Neon Hoodie - зелено',
+            image: GreenHoodie,
             price: 36.96,
             quantity: 1,
             id: v4()
         },
         {
-            name: 'Anime Hoodie - Sword Art Online - Кирито',
-            image: kiritoHoodie,
+            name: 'Neon Hoodie - червено',
+            image: RedHoodie,
             price: 39.94,
             quantity: 1,
             id:v4()
