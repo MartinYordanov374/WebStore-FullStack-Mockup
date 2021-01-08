@@ -4,7 +4,9 @@ import Footer from './Footer'
 import {FaShoppingCart, FaHeart} from 'react-icons/fa'
 import {Button} from 'react-bootstrap'
 
-import MissingImage from './Images/noImage.png'
+import Hoodie_2 from './Images/Hoodie_3.png'
+import Hoodie_4 from './Images/Hoodie_4.png'
+
 import {store} from './store'
 import $ from 'jquery'
 import {v4} from 'uuid'
@@ -12,14 +14,14 @@ export default function MasksPage() {
     const masksList=[   
         {
             name: 'Game Mask - Фортнайт',
-            image: MissingImage,
+            image: Hoodie_2,
             price: 5.50,
             quantity: 1,
             id: v4()
         },
         {
             name: 'Anime Mask - Naruto - Sasuke',
-            image: MissingImage,
+            image: Hoodie_4,
             price: 3.40,
             quantity: 1,
             id: v4()
