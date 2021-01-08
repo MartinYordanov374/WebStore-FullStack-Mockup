@@ -48,8 +48,16 @@ body, html{
 }
 
 .productImage{
-    max-width: 50%;
-    filter: drop-shadow(5px 5px 5px black)
+    max-width: 80%;
+    background-color: rgb(221, 221, 221);
+ // filter: drop-shadow(5px 5px 5px black);
+    &:hover{
+        box-shadow: 2px 2px 4px black;
+    }
+}
+.showProductImage{
+    filter: drop-shadow(4px 4px 4px black)
+
 }
 .hoodieWrapper{
     display: inline-block;
@@ -61,7 +69,8 @@ body, html{
     margin-left: 2%;
     background-color: white;
     &:hover{
-
+        filter: drop-shadow(5px 5px 5px black);
+        border-style: solid;
     }
 }
 
@@ -75,25 +84,32 @@ body, html{
     display: inline-flex;
     margin-top: 1%;
     .Hoodies{
-        @include CategoriesBackground();
+        // @include CategoriesBackground();
         width: 50%;
         margin-left: 10px;
         margin-right: 10px;
+
         .goToHoodiesButton{
             @include CategoriesButton();
             margin-top: 11.8%;
         }
     }
     .Masks{
-        @include CategoriesBackground();
+        // @include CategoriesBackground();
+       
         width: 50%;
         margin-left: 10px;
         margin-right: 10px;
+        
         .goToMasksButton{
             margin-top: 11.8%;
             @include CategoriesButton();
         }
     }
+}
+.caption{
+    background-color: white;
+
 }
 #caption{
     position: relative;

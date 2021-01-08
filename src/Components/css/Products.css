@@ -14,9 +14,18 @@ body, html {
 }
 
 .productImage {
-  max-width: 50%;
-  -webkit-filter: drop-shadow(5px 5px 5px black);
-          filter: drop-shadow(5px 5px 5px black);
+  max-width: 80%;
+  background-color: #dddddd;
+}
+
+.productImage:hover {
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+}
+
+.showProductImage {
+  -webkit-filter: drop-shadow(4px 4px 4px black);
+          filter: drop-shadow(4px 4px 4px black);
 }
 
 .hoodieWrapper {
@@ -29,6 +38,12 @@ body, html {
   margin-top: 4%;
   margin-left: 2%;
   background-color: white;
+}
+
+.hoodieLink:hover {
+  -webkit-filter: drop-shadow(5px 5px 5px black);
+          filter: drop-shadow(5px 5px 5px black);
+  border-style: solid;
 }
 
 .buttonWrapper {
@@ -45,11 +60,6 @@ body, html {
 }
 
 .Categories .Hoodies {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  background-color: #F7F3F5;
-  border-radius: 10px;
   width: 50%;
   margin-left: 10px;
   margin-right: 10px;
@@ -74,11 +84,6 @@ body, html {
 }
 
 .Categories .Masks {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  background-color: #F7F3F5;
-  border-radius: 10px;
   width: 50%;
   margin-left: 10px;
   margin-right: 10px;
@@ -100,6 +105,10 @@ body, html {
 .Categories .Masks .goToMasksButton:hover {
   -webkit-box-shadow: 2px 2px 0px  black;
           box-shadow: 2px 2px 0px  black;
+}
+
+.caption {
+  background-color: white;
 }
 
 #caption {

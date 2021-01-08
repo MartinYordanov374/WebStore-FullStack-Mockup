@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import './css/Products.css'
 import $ from 'jquery'
 import Hoodie from '../Components/Images/Hoodie_1.png'
-import Mask from '../Components/Images/Masks.png'
+import Mask from '../Components/Images/Hoodie_3.png'
 import CarouselImage from '../Components/Images/openingstore_promotional.png'
 import Sales from '../Components/Images/SALES.png'
 import Navbar from './Header'
@@ -25,32 +25,20 @@ class Products extends Component {
 
                 <div className='Categories'>
                     <div className='Hoodies'>
-                        <img className='productImage' src={Hoodie}></img>
-                        <br></br>
-                        <Button variant='success' className='goToHoodiesButton' href='/Hoodies'><strong>Към страницата с Худита</strong></Button>
+                        <div className='productImage'>
+                            <img className='showProductImage' src={Hoodie}></img>
+                            <p className='caption'><a href='/men'>Men</a></p>
+                        </div>
+
                     </div>
                     <div className='Masks'>
-                        <img className='productImage' src={Mask}></img>
-                        <br></br>
-                        <Button variant='success' className='goToMasksButton' href='/Masks'><strong>Към страницата с Маски</strong></Button>
+                        <div className='productImage'>
+                            <img className='showProductImage' src={Mask}></img>
+                            <a href='/women'><p className='caption'>Women</p></a>
+                        </div>
+
                     </div>
                 </div>
-                {/* <div className='categoriesWrapper'>
-                        <Carousel>
-                            <Carousel.Item>
-                                <img className='hoodieLink' src={Hoodie}/>
-                                <Carousel.Caption id='caption'>
-                                    <strong>HOODIES</strong>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img className='hoodieLink' src={Mask}/>
-                                <Carousel.Caption id='caption'>
-                                    <strong>MASKS</strong>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        </Carousel>
-                </div> */}
                 <Footer></Footer>
             </div>
         )
@@ -62,4 +50,5 @@ const mapStateToProps=(state={products:[{}], productsInCart:[{}]})=>{
         productsInCart: state.productsInCart
     }
 }
+
 export default connect(mapStateToProps)(Products)
