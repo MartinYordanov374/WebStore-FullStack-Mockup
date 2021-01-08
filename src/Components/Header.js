@@ -16,8 +16,8 @@ class Header extends Component {
         const {productsInCart} = this.props;
         let isLoggedIn = document.cookie;
         let categories=[
-            "hoodies",
-            "masks",
+            "men",
+            "women",
         ]
         const SearchBar=()=>{
             let searchString = $('.searchBarValue').val().toLowerCase()
@@ -63,11 +63,11 @@ class Header extends Component {
 
                     <NavItem>
                         
-                        <NavLink className='HoodiesLink' href='/Hoodies'>
-                            <strong>Худита</strong>
+                        <NavLink className='HoodiesLink' href='/Men'>
+                            <strong>Мъже</strong>
                         </NavLink>
-                        <NavLink className='MasksLink' href='/Masks'>
-                            <strong>Маски</strong>
+                        <NavLink className='MasksLink' href='/Women'>
+                            <strong>Жени</strong>
                         </NavLink>
                     </NavItem>
                         <div className='searchBar'>
