@@ -3,6 +3,8 @@ $backgroundColorProduct: #ffcc00;
 $categoryButtonColor: green;
 $categoryButtonColorHover: #F2EDD7FF;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 body, html{
     width: 100%; 
     height: 100%;
@@ -46,19 +48,6 @@ body, html{
         box-shadow: 2px 2px 0px  black;
     }
 }
-
-.productImage{
-    max-width: 80%;
-    background-color: rgb(221, 221, 221);
- // filter: drop-shadow(5px 5px 5px black);
-    &:hover{
-        box-shadow: 2px 2px 4px black;
-    }
-}
-.showProductImage{
-    filter: drop-shadow(4px 4px 4px black)
-
-}
 .hoodieWrapper{
     display: inline-block;
 }
@@ -89,7 +78,9 @@ body, html{
 }
 .Categories{
     display: inline-flex;
-    margin-top: 1%;
+    margin-top: 5%;
+    margin-left: 7%;
+    filter: drop-shadow(2px 2px 2px black);
     .Hoodies{
         // @include CategoriesBackground();
         width: 50%;
@@ -115,8 +106,24 @@ body, html{
     }
 }
 .caption{
-    background-color: white;
+    background-color: rgb(237, 237, 237);
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
 
+.productImage{
+    max-width: 80%;
+    background-color: rgb(221, 221, 221);
+ // filter: drop-shadow(5px 5px 5px black);
+    &:hover{
+        box-shadow: 2px 2px 4px black;
+    }
+}
+
+.showProductImage{
+    filter: drop-shadow(4px 4px 4px black)
 }
 #caption{
     position: relative;
