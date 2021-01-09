@@ -3,8 +3,15 @@ import {connect} from 'react-redux'
 import './css/Products.css'
 import $ from 'jquery'
 import Hoodie from '../Components/Images/Hoodie_1.png'
-import Hoodie_Featured_One from '../Components/Images/Hoodie_2.png'
-import Hoodie_Featured_Two from '../Components/Images/Hoodie_3.png'
+import Hoodie_Featured_One from '../Components/Images/Hoodie_Featured_1.png'
+import Hoodie_Featured_Two from '../Components/Images/Hoodie_Featured_2.png'
+import Hoodie_Featured_Three from '../Components/Images/Hoodie_Featured_3.png'
+import Hoodie_Featured_Four from '../Components/Images/Hoodie_Featured_4.png'
+import Hoodie_Featured_Five from '../Components/Images/Hoodie_Featured_5.png'
+import Hoodie_Featured_Six from '../Components/Images/Hoodie_Featured_6.png'
+
+
+
 
 
 import Mask from '../Components/Images/Hoodie_3.png'
@@ -33,11 +40,11 @@ class Products extends Component {
                     <Carousel>
                         <Carousel.Item>
                             <div className='Hoodies'>
-                                    <img className='showProductImage' src={Hoodie}></img>
-                                    {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
                                     <img className='showProductImage' src={Hoodie_Featured_One}></img>
-                                    
+                                    {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
                                     <img className='showProductImage' src={Hoodie_Featured_Two}></img>
+                                    
+                                    <img className='showProductImage' src={Hoodie_Featured_Three}></img>
 
                                     {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
                             </div>
@@ -45,9 +52,9 @@ class Products extends Component {
                         <Carousel.Item>
                             <div className='Hoodies'>
                                 {/* <div className='productImage'> */}
-                                    <img className='showProductImage' src={Mask}></img>
-                                    <img className='showProductImage' src={Hoodie_Featured_Two}></img>
-                                    <img className='showProductImage' src={Hoodie_Featured_One}></img>
+                                    <img className='showProductImage' src={Hoodie_Featured_Four}></img>
+                                    <img className='showProductImage' src={Hoodie_Featured_Five}></img>
+                                    <img className='showProductImage' src={Hoodie_Featured_Six}></img>
 
                                     {/* <a href='/women' className='CategoryLink'><p className='caption'><strong>Жени</strong></p></a> */}
                                 {/* </div> */}
