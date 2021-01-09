@@ -85,7 +85,7 @@ body, html{
     .Hoodies{
         // @include CategoriesBackground();
         width: 50%;
-        
+        filter: drop-shadow(2px 2px 4px black);
         display: inline-flex;
         float: left;
         margin-left: 40px;
@@ -120,11 +120,14 @@ body, html{
 }
 
 .showProductImage{
-    // filter: drop-shadow(4px 4px 4px black);
+    filter: drop-shadow(4px 4px 4px rgb(211, 209, 209));
     // float: left;
     // max-width: 50%;
     margin-left: 10%;
     background-color: rgb(204, 204, 204);
+    &:hover{
+        transform: scale(1.02,1.02)
+    }
 }
 #caption{
     position: relative;

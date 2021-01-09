@@ -53,6 +53,8 @@ body, html {
 
 .Categories .Hoodies {
   width: 50%;
+  -webkit-filter: drop-shadow(2px 2px 4px black);
+          filter: drop-shadow(2px 2px 4px black);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -114,8 +116,15 @@ body, html {
 }
 
 .showProductImage {
+  -webkit-filter: drop-shadow(4px 4px 4px #d3d1d1);
+          filter: drop-shadow(4px 4px 4px #d3d1d1);
   margin-left: 10%;
   background-color: #cccccc;
+}
+
+.showProductImage:hover {
+  -webkit-transform: scale(1.02, 1.02);
+          transform: scale(1.02, 1.02);
 }
 
 #caption {
