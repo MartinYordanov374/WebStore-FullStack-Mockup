@@ -52,7 +52,7 @@ body, html {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 5%;
-  margin-left: 2%;
+  margin-left: 5%;
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
 }
@@ -111,21 +111,21 @@ body, html {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   padding: 5px;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .productImage {
   max-width: 80%;
-  background-color: white;
 }
 
 .productImage:hover {
-  -webkit-box-shadow: 2px 2px 4px black;
-          box-shadow: 2px 2px 4px black;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
 .showProductImage {
-  -webkit-filter: drop-shadow(4px 4px 4px black);
-          filter: drop-shadow(4px 4px 4px black);
+  background-color: #cccccc;
 }
 
 #caption {
@@ -143,6 +143,14 @@ body, html {
 }
 
 .slide .carousel-indicators {
+  display: none;
+}
+
+.slide .carousel-control-prev {
+  display: none;
+}
+
+.slide .carousel-control-next {
   display: none;
 }
 

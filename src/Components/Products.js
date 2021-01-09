@@ -4,7 +4,7 @@ import './css/Products.css'
 import $ from 'jquery'
 import Hoodie from '../Components/Images/Hoodie_1.png'
 import Mask from '../Components/Images/Hoodie_3.png'
-import CarouselImage from '../Components/Images/openingstore_promotional.png'
+import CarouselImage from '../Components/Images/neon_special.png'
 import Sales from '../Components/Images/SALES.png'
 import Navbar from './Header'
 import Footer from './Footer'
@@ -14,7 +14,7 @@ class Products extends Component {
         return (
             <div className='categoriesWrapper'>
                 <Navbar></Navbar>
-                <Carousel>
+                <Carousel id='carouselMainPage'> 
                     <Carousel.Item id='carouselItem'>
                         <img className='carouselImage' src={CarouselImage}/>
                     </Carousel.Item>
