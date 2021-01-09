@@ -3,6 +3,10 @@ import {connect} from 'react-redux'
 import './css/Products.css'
 import $ from 'jquery'
 import Hoodie from '../Components/Images/Hoodie_1.png'
+import Hoodie_Featured_One from '../Components/Images/Hoodie_2.png'
+import Hoodie_Featured_Two from '../Components/Images/Hoodie_3.png'
+
+
 import Mask from '../Components/Images/Hoodie_3.png'
 import CarouselImage from '../Components/Images/neon_special.png'
 import Sales from '../Components/Images/SALES.png'
@@ -31,9 +35,9 @@ class Products extends Component {
                             <div className='Hoodies'>
                                     <img className='showProductImage' src={Hoodie}></img>
                                     {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
-                                    <img className='showProductImage' src={Hoodie}></img>
+                                    <img className='showProductImage' src={Hoodie_Featured_One}></img>
                                     
-                                    <img className='showProductImage' src={Hoodie}></img>
+                                    <img className='showProductImage' src={Hoodie_Featured_Two}></img>
 
                                     {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
                             </div>
@@ -42,8 +46,8 @@ class Products extends Component {
                             <div className='Hoodies'>
                                 {/* <div className='productImage'> */}
                                     <img className='showProductImage' src={Mask}></img>
-                                    <img className='showProductImage' src={Mask}></img>
-                                    <img className='showProductImage' src={Mask}></img>
+                                    <img className='showProductImage' src={Hoodie_Featured_Two}></img>
+                                    <img className='showProductImage' src={Hoodie_Featured_One}></img>
 
                                     {/* <a href='/women' className='CategoryLink'><p className='caption'><strong>Жени</strong></p></a> */}
                                 {/* </div> */}
