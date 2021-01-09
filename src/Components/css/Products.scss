@@ -73,6 +73,13 @@ body, html{
         border-style: solid;
     }
 }
+.CategoryLink{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+
+    }
+}
 
 
 .buttonWrapper{

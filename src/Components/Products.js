@@ -27,14 +27,14 @@ class Products extends Component {
                     <div className='Hoodies'>
                         <div className='productImage'>
                             <img className='showProductImage' src={Hoodie}></img>
-                            <p className='caption'><a href='/men'>Men</a></p>
+                            <a href='/men' className='CategoryLink'><p className='caption'>Men</p></a>
                         </div>
 
                     </div>
                     <div className='Masks'>
                         <div className='productImage'>
                             <img className='showProductImage' src={Mask}></img>
-                            <a href='/women'><p className='caption'>Women</p></a>
+                            <a href='/women' className='CategoryLink'><p className='caption'>Women</p></a>
                         </div>
 
                     </div>

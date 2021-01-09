@@ -46,6 +46,14 @@ body, html {
   border-style: solid;
 }
 
+.CategoryLink {
+  text-decoration: none;
+}
+
+.CategoryLink:hover {
+  text-decoration: none;
+}
+
 .buttonWrapper {
   background-color: #dddddd;
   width: 25%;
