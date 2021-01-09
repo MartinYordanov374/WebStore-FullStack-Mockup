@@ -52,7 +52,6 @@ body, html {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 5%;
-  margin-left: 5%;
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
 }
@@ -116,7 +115,7 @@ body, html {
 }
 
 .productImage {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .productImage:hover {

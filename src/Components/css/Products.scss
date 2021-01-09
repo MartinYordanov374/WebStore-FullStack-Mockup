@@ -81,7 +81,6 @@ body, html{
 .Categories{
     display: inline-flex;
     margin-top: 5%;
-    margin-left: 5%;
     filter: drop-shadow(2px 2px 2px black);
     .Hoodies{
         // @include CategoriesBackground();
@@ -118,7 +117,7 @@ body, html{
 }
 
 .productImage{
-    max-width: 80%;
+    max-width: 100%;
     // background-color: white;
     &:hover{
         // box-shadow: 2px 2px 4px black;
