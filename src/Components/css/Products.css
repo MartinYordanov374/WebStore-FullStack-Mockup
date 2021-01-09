@@ -48,16 +48,15 @@ body, html {
 }
 
 .Categories {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   margin-top: 5%;
-  -webkit-filter: drop-shadow(2px 2px 2px black);
-          filter: drop-shadow(2px 2px 2px black);
 }
 
 .Categories .Hoodies {
   width: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  float: left;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -114,16 +113,8 @@ body, html {
   margin-left: 25%;
 }
 
-.productImage {
-  max-width: 100%;
-}
-
-.productImage:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
 .showProductImage {
+  margin-left: 10%;
   background-color: #cccccc;
 }
 

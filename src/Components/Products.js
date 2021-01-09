@@ -24,20 +24,34 @@ class Products extends Component {
                 </Carousel>
 
                 <div className='Categories col-sm-12 col-md-12 col-lg-12 col-xs-12'>
-                    <div className='Hoodies'>
-                        <div className='productImage'>
-                            <img className='showProductImage' src={Hoodie}></img>
-                            <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a>
-                        </div>
-                    </div>
+                    <h1>Featured Hoodies</h1>
+                    <br></br>
+                    <Carousel>
+                        <Carousel.Item>
+                            <div className='Hoodies'>
+                                    <img className='showProductImage' src={Hoodie}></img>
+                                    {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
+                                    <img className='showProductImage' src={Hoodie}></img>
+                                    
+                                    <img className='showProductImage' src={Hoodie}></img>
 
-                    <div className='Masks'>
-                        <div className='productImage'>
-                            <img className='showProductImage' src={Mask}></img>
-                            <a href='/women' className='CategoryLink'><p className='caption'><strong>Жени</strong></p></a>
-                        </div>
-                    </div>
+                                    {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
+                            </div>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <div className='Hoodies'>
+                                {/* <div className='productImage'> */}
+                                    <img className='showProductImage' src={Mask}></img>
+                                    <img className='showProductImage' src={Mask}></img>
+                                    <img className='showProductImage' src={Mask}></img>
+
+                                    {/* <a href='/women' className='CategoryLink'><p className='caption'><strong>Жени</strong></p></a> */}
+                                {/* </div> */}
+                            </div>
+                        </Carousel.Item>
+                    </Carousel>
                 </div>
+                
                 <Footer></Footer>
             </div>
         )

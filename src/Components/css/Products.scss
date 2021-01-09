@@ -79,12 +79,15 @@ body, html{
     margin-left: 38.5%;
 }
 .Categories{
-    display: inline-flex;
+    // display: inline-flex;
     margin-top: 5%;
-    filter: drop-shadow(2px 2px 2px black);
+    // filter: drop-shadow(2px 2px 2px black);
     .Hoodies{
         // @include CategoriesBackground();
         width: 50%;
+        
+        display: inline-flex;
+        float: left;
         margin-left: 10px;
         margin-right: 10px;
         .goToHoodiesButton{
@@ -116,21 +119,12 @@ body, html{
     margin-left: 25%;
 }
 
-.productImage{
-    max-width: 100%;
-    // background-color: white;
-    &:hover{
-        // box-shadow: 2px 2px 4px black;
-        transform: scale(1.1,1.1)
-
-    }
-}
-
 .showProductImage{
     // filter: drop-shadow(4px 4px 4px black);
-    
+    // float: left;
+    // max-width: 50%;
+    margin-left: 10%;
     background-color: rgb(204, 204, 204);
-    
 }
 #caption{
     position: relative;
