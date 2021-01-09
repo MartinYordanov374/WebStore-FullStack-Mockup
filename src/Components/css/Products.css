@@ -7,11 +7,12 @@ body, html {
 }
 
 .App {
-  background-color: white;
+  background-color: #f2f1f1;
+  background-color: #f2f1f1;
 }
 
 .App .products {
-  background-color: white;
+  background-color: #f2f1f1;
 }
 
 .hoodieWrapper {
@@ -51,7 +52,7 @@ body, html {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 5%;
-  margin-left: 7%;
+  margin-left: 2%;
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
 }
@@ -82,7 +83,6 @@ body, html {
 
 .Categories .Masks {
   width: 50%;
-  margin-left: 10px;
   margin-right: 10px;
 }
 
@@ -105,7 +105,8 @@ body, html {
 }
 
 .caption {
-  background-color: #ededed;
+  background-color: white;
+  background-color: #e4e4e4;
   color: black;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
@@ -114,7 +115,7 @@ body, html {
 
 .productImage {
   max-width: 80%;
-  background-color: #dddddd;
+  background-color: white;
 }
 
 .productImage:hover {

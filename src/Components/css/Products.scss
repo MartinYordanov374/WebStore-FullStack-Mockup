@@ -15,15 +15,17 @@ body, html{
     // background-color: #E2C2B3;
     // background-color: #687477;
     // background-color: #403234;
+    background-color: rgb(242, 241, 241);
+
     .products{
         // background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
-        background-color: white;
+        background-color:  rgb(242, 241, 241);
     }
     //c5d5db
     //9fa8a3
     //e3e0cf
     // background-color:  #9fa8a3;
-    background-color: white;
+    background-color:  rgb(242, 241, 241);
 }
 @mixin CategoriesBackground{
     
@@ -79,14 +81,13 @@ body, html{
 .Categories{
     display: inline-flex;
     margin-top: 5%;
-    margin-left: 7%;
+    margin-left: 2%;
     filter: drop-shadow(2px 2px 2px black);
     .Hoodies{
         // @include CategoriesBackground();
         width: 50%;
         margin-left: 10px;
         margin-right: 10px;
-
         .goToHoodiesButton{
             @include CategoriesButton();
             margin-top: 11.8%;
@@ -96,7 +97,6 @@ body, html{
         // @include CategoriesBackground();
        
         width: 50%;
-        margin-left: 10px;
         margin-right: 10px;
         
         .goToMasksButton{
@@ -106,7 +106,9 @@ body, html{
     }
 }
 .caption{
-    background-color: rgb(237, 237, 237);
+    background-color: white;
+
+    background-color: rgb(228, 228, 228);
     color: black;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
@@ -115,7 +117,7 @@ body, html{
 
 .productImage{
     max-width: 80%;
-    background-color: rgb(221, 221, 221);
+    background-color: white;
  // filter: drop-shadow(5px 5px 5px black);
     &:hover{
         box-shadow: 2px 2px 4px black;

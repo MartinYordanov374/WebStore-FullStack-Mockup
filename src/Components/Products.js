@@ -23,20 +23,19 @@ class Products extends Component {
                     </Carousel.Item>
                 </Carousel>
 
-                <div className='Categories'>
+                <div className='Categories col-sm-12 col-md-12 col-lg-12 col-xs-12'>
                     <div className='Hoodies'>
                         <div className='productImage'>
                             <img className='showProductImage' src={Hoodie}></img>
-                            <a href='/men' className='CategoryLink'><p className='caption'>Men</p></a>
+                            <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a>
                         </div>
-
                     </div>
+
                     <div className='Masks'>
                         <div className='productImage'>
                             <img className='showProductImage' src={Mask}></img>
-                            <a href='/women' className='CategoryLink'><p className='caption'>Women</p></a>
+                            <a href='/women' className='CategoryLink'><p className='caption'><strong>Жени</strong></p></a>
                         </div>
-
                     </div>
                 </div>
                 <Footer></Footer>
