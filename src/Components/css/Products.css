@@ -7,12 +7,12 @@ body, html {
 }
 
 .App {
-  background-color: #f2f1f1;
-  background-color: #f2f1f1;
+  background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .App .products {
-  background-color: #f2f1f1;
+  background-color: #f3f3f3;
 }
 
 .hoodieWrapper {
@@ -47,8 +47,14 @@ body, html {
   margin-left: 38.5%;
 }
 
+.featured {
+  font-family: 'Lato', sans-serif;
+  color: #dc0000;
+  font-size: 50px;
+}
+
 .Categories {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .Categories .Hoodies {
@@ -116,10 +122,8 @@ body, html {
 }
 
 .showProductImage {
-  -webkit-filter: drop-shadow(4px 4px 4px #d3d1d1);
-          filter: drop-shadow(4px 4px 4px #d3d1d1);
   margin-left: 10%;
-  background-color: #cccccc;
+  background-color: #f3f3f3;
 }
 
 .showProductImage:hover {

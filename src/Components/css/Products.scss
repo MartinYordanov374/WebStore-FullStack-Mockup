@@ -15,17 +15,17 @@ body, html{
     // background-color: #687477;
     // background-color: #403234;
     
-    background-color: rgb(242, 241, 241);
+    background-color:#f3f3f3;
 
     .products{
         // background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
-        background-color:  rgb(242, 241, 241);
+        background-color:#f3f3f3;
     }
     //c5d5db
     //9fa8a3
     //e3e0cf
     // background-color:  #9fa8a3;
-    background-color:  rgb(242, 241, 241);
+    background-color:#f3f3f3;
 }
 @mixin CategoriesBackground{
     
@@ -78,9 +78,14 @@ body, html{
     width: 25%;
     margin-left: 38.5%;
 }
+.featured{
+    font-family: 'Lato', sans-serif;
+    color: rgb(220, 0, 0);
+    font-size: 50px;
+}
 .Categories{
     // display: inline-flex;
-    margin-top: 5%;
+    margin-top: 2%;
     // filter: drop-shadow(2px 2px 2px black);
     .Hoodies{
         // @include CategoriesBackground();
@@ -120,11 +125,11 @@ body, html{
 }
 
 .showProductImage{
-    filter: drop-shadow(4px 4px 4px rgb(211, 209, 209));
-    // float: left;
+    // filter: drop-shadow(4px 4px 4px rgb(211, 209, 209));
+        // float: left;
     // max-width: 50%;
     margin-left: 10%;
-    background-color: rgb(204, 204, 204);
+    background-color:#f3f3f3;
     &:hover{
         transform: scale(1.02,1.02)
     }

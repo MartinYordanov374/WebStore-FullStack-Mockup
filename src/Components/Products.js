@@ -35,19 +35,20 @@ class Products extends Component {
                 </Carousel>
 
                 <div className='Categories col-sm-12 col-md-12 col-lg-12 col-xs-12'>
-                    <h1>Featured Hoodies</h1>
+                    <h1 className='featured'>Featured Hoodies</h1>
                     <br></br>
                     <Carousel>
                         <Carousel.Item>
                             <div className='Hoodies'>
-                                    <img className='showProductImage' src={Hoodie_Featured_One}></img>
+                                    <img className='showProductImage' href = '/women' src={Hoodie_Featured_One}></img>
                                     {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
-                                    <img className='showProductImage' src={Hoodie_Featured_Two}></img>
+                                    <img className='showProductImage' href='/women'src={Hoodie_Featured_Two}></img>
                                     
-                                    <img className='showProductImage' src={Hoodie_Featured_Three}></img>
+                                    <img className='showProductImage' href = '/men' src={Hoodie_Featured_Three}></img>
 
                                     {/* <a href='/men' className='CategoryLink'><p className='caption'><strong>Мъже</strong></p></a> */}
                             </div>
+                            
                         </Carousel.Item>
                         <Carousel.Item>
                             <div className='Hoodies'>
