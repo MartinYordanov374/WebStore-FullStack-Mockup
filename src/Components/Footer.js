@@ -31,10 +31,10 @@ export default function Footer() {
                     <p className='footerTitleNavigation'><strong>Навигация</strong></p>
                     <div className='footerNavigationTab '>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Masks'><strong>Маски</strong> <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/women'><strong>Жени</strong> <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Hoodies'><strong>Худита</strong> <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/men'><strong>Мъже</strong> <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
                             <a className='footerNavigationLink' href='/Login'><strong>Влез</strong> <RiArrowDropRightLine/></a>
