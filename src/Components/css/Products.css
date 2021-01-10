@@ -42,28 +42,27 @@ body, html {
   display: inline-flex;
 }
 
-.exhibitionHoodiesWrapper:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
 .exhibitionHoodiesWrapper .exhibitionHoodieImage {
   margin-top: 4%;
+  margin-left: 25%;
   display: block;
   position: relative;
-  background-color: white;
   -webkit-filter: drop-shadow(1px 0px 1px black);
           filter: drop-shadow(1px 0px 1px black);
 }
 
+.exhibitionHoodiesWrapper .exhibitionHoodieImage:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
 .exhibitionHoodiesWrapper .exhibitionImageWrapper {
   text-align: center;
-  margin-left: 10%;
 }
 
 .exhibitionHoodiesWrapper .addFaves {
+  margin-left: 20%;
   float: left;
-  margin-left: 10px;
   color: white;
   -webkit-filter: drop-shadow(0.5px 0.5px 0.5px black);
           filter: drop-shadow(0.5px 0.5px 0.5px black);
