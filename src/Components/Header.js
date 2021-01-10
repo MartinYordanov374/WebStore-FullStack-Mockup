@@ -63,10 +63,10 @@ class Header extends Component {
 
                     <NavItem>
                         
-                        <NavLink className='HoodiesLink' href='/Men'>
+                        <NavLink className='HoodiesLink' href='#goToMen'>
                             <strong>Мъже</strong>
                         </NavLink>
-                        <NavLink className='MasksLink' href='/Women'>
+                        <NavLink className='MasksLink' href='#goToWomen'>
                             <strong>Жени</strong>
                         </NavLink>
                     </NavItem>

@@ -33,6 +33,46 @@ body, html {
   border-style: solid;
 }
 
+.exhibitionHoodiesWrapper {
+  width: 40%;
+  margin-left: 5%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.exhibitionHoodiesWrapper:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.exhibitionHoodiesWrapper .exhibitionHoodieImage {
+  margin-top: 4%;
+  display: block;
+  position: relative;
+  background-color: white;
+  -webkit-filter: drop-shadow(1px 0px 1px black);
+          filter: drop-shadow(1px 0px 1px black);
+}
+
+.exhibitionHoodiesWrapper .exhibitionImageWrapper {
+  text-align: center;
+  margin-left: 10%;
+}
+
+.exhibitionHoodiesWrapper .addFaves {
+  float: left;
+  margin-left: 10px;
+  color: white;
+  -webkit-filter: drop-shadow(0.5px 0.5px 0.5px black);
+          filter: drop-shadow(0.5px 0.5px 0.5px black);
+}
+
+.exhibitionHoodiesWrapper .addFaves:hover {
+  color: #d8d8d8;
+  opacity: 1;
+}
+
 .CategoryLink {
   text-decoration: none;
 }

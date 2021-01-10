@@ -9,19 +9,62 @@ import Hoodie_Featured_Three from '../Components/Images/Hoodie_Featured_3.png'
 import Hoodie_Featured_Four from '../Components/Images/Hoodie_Featured_4.png'
 import Hoodie_Featured_Five from '../Components/Images/Hoodie_Featured_5.png'
 import Hoodie_Featured_Six from '../Components/Images/Hoodie_Featured_6.png'
-
-
-
-
-
 import Mask from '../Components/Images/Hoodie_3.png'
 import CarouselImage from '../Components/Images/neon_special.png'
 import Sales from '../Components/Images/SALES.png'
 import Navbar from './Header'
 import Footer from './Footer'
 import {Button, Carousel} from 'react-bootstrap'
+import GreenHoodie from '../Components/Images/Hoodie_1.png'
+import OrangeHoodie from '../Components/Images/Hoodie_3.png'
+import Hoodie_2 from '../Components/Images/Hoodie_2.png'
+import Hoodie_4 from '../Components/Images/Hoodie_4.png'
+import {store} from './store'
+import {FaHeart} from 'react-icons/fa'
+
+import {v4} from 'uuid'
+
 class Products extends Component {
+    
     render() {
+        const menHoodiesList=[
+            {
+                name: 'Neon Hoodie',
+                image: GreenHoodie,
+                price: 36.96,
+                quantity: 1,
+                id: v4()
+            },
+            {
+                name: 'Neon Hoodie',
+                image: OrangeHoodie,
+                price: 39.94,
+                quantity: 1,
+                id:v4()
+            },
+        ]
+        const womenHoodiesList=[   
+        {
+            name: 'Neon Hoodie',
+            image: Hoodie_2,
+            price: 5.50,
+            quantity: 1,
+            id: v4()
+        },
+        {
+            name: 'Neon Hoodie',
+            image: Hoodie_4,
+            price: 3.40,
+            quantity: 1,
+            id: v4()
+        },
+    
+    ]
+    const addToWishlist=(product, id)=>{
+        store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
+ 
+        $('#'+id).css('color', 'purple')     
+    }
         return (
             <div className='categoriesWrapper'>
                 <Navbar></Navbar>
@@ -63,6 +106,31 @@ class Products extends Component {
                             </div>
                         </Carousel.Item>
                     </Carousel>
+                </div>
+                <hr></hr>
+                <a href='/Men'>Вижте още от тази категория</a>
+
+                <div className='MenHoodies' id='goToMen'>
+                    {menHoodiesList.map((hoodie, index)=>
+                    <div className='exhibitionHoodiesWrapper'>
+                        <div className='exhibitionImageWrapper'>
+                            <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
+                            <img className='exhibitionHoodieImage' src={hoodie.image}/>
+                        </div>
+                    </div>)}
+                </div>
+                <hr></hr>
+                <a className='hoodiesLink' href='/Women'>Вижте още от тази категория</a>
+
+                <div className='WomenHoodies' id='goToWomen'> 
+                    {womenHoodiesList.map((hoodie, index)=>
+                    <div className='exhibitionHoodiesWrapper'>
+                        <div className='exhibitionImageWrapper'>
+                            <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
+                            <img className='exhibitionHoodieImage' src={hoodie.image}/>
+                        </div>
+                    </div>)}
+
                 </div>
                 
                 <Footer></Footer>
