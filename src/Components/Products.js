@@ -110,6 +110,7 @@ class Products extends Component {
                 <hr></hr>
 
                 <div className='MenHoodies' id='goToMen'>
+                    <h2>Мъже</h2>
                     {menHoodiesList.map((hoodie, index)=>
                     <div className='exhibitionHoodiesWrapper'>
                         <div className='exhibitionImageWrapper'>
@@ -121,6 +122,7 @@ class Products extends Component {
                 <a className='goToCategoryLink' href='/Men'>Вижте още от тази категория</a>
                 <hr></hr>
                 <div className='WomenHoodies' id='goToWomen'> 
+                    <h2>Жени</h2>
                     {womenHoodiesList.map((hoodie, index)=>
                     <div className='exhibitionHoodiesWrapper'>
                         <div className='exhibitionImageWrapper'>

@@ -67,7 +67,7 @@ body, html{
 }
 .exhibitionHoodiesWrapper{
     width: 40%;
-    margin-left: 5%;
+    // margin-left: 5%;
     // background-color: white;
 
     display: inline-flex;
@@ -78,6 +78,7 @@ body, html{
         position: relative;
         // box-shadow: 2px 2px 2px 2px black;
         filter: drop-shadow(1px 0px 1px black);
+        box-shadow: 1px 1px 1px  black;
         &:hover{
             transform: scale(1.1,1.1)
         }
@@ -99,6 +100,7 @@ body, html{
 
 }
 .goToCategoryLink{
+    // margin-left: 5%;
     text-decoration: none;
     &:hover{
         text-decoration: none;
