@@ -33,10 +33,11 @@ class Products extends Component {
                         <img className='carouselImage' src={Sales}/>
                     </Carousel.Item>
                 </Carousel>
+                <hr></hr>
 
                 <div className='Categories col-sm-12 col-md-12 col-lg-12 col-xs-12'>
-                    <h1 className='featured'>Featured Hoodies</h1>
-                    <br></br>
+                    <h1 className='featured'>Специални оферти</h1>
+                    <hr></hr>
                     <Carousel>
                         <Carousel.Item>
                             <div className='Hoodies'>
