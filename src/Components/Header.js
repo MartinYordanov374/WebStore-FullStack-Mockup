@@ -60,7 +60,7 @@ class Header extends Component {
                 <NavbarBrand href='/Home'><span className='homeButton'><strong>Neon</strong></span></NavbarBrand>
                 <Navbar.Toggle />
                 <Navbar.Collapse>
-
+                    {window.location.href.endsWith('Home') ?
                     <NavItem>
                         
                         <NavLink className='HoodiesLink' href='#goToMen'>
@@ -70,6 +70,15 @@ class Header extends Component {
                             <strong>Жени</strong>
                         </NavLink>
                     </NavItem>
+                    :<NavItem>
+                        
+                    <NavLink className='HoodiesLink' href='/men'>
+                        <strong>Мъже</strong>
+                    </NavLink>
+                    <NavLink className='MasksLink' href='/women'>
+                        <strong>Жени</strong>
+                    </NavLink>
+                    </NavItem>}
                         <div className='searchBar'>
                             <InputGroup >
                                 <FormControl className='searchBarValue' placeholder='Потърсете продукт...' onChange={SearchBarSuggestions}/>
