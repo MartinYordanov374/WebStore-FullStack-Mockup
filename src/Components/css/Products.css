@@ -74,6 +74,14 @@ body, html {
   opacity: 1;
 }
 
+.goToCategoryLink {
+  text-decoration: none;
+}
+
+.goToCategoryLink:hover {
+  text-decoration: none;
+}
+
 .CategoryLink {
   text-decoration: none;
 }

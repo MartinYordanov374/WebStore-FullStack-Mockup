@@ -16,9 +16,9 @@ import Navbar from './Header'
 import Footer from './Footer'
 import {Button, Carousel} from 'react-bootstrap'
 import GreenHoodie from '../Components/Images/Hoodie_1.png'
-import OrangeHoodie from '../Components/Images/Hoodie_3.png'
-import Hoodie_2 from '../Components/Images/Hoodie_2.png'
-import Hoodie_4 from '../Components/Images/Hoodie_4.png'
+import OrangeHoodie from '../Components/Images/Hoodie_Featured_4.png'
+import Hoodie_2 from '../Components/Images/Hoodie_Featured_2.png'
+import Hoodie_4 from '../Components/Images/Hoodie_Featured_1.png'
 import {store} from './store'
 import {FaHeart} from 'react-icons/fa'
 
@@ -108,7 +108,6 @@ class Products extends Component {
                     </Carousel>
                 </div>
                 <hr></hr>
-                <a href='/Men'>Вижте още от тази категория</a>
 
                 <div className='MenHoodies' id='goToMen'>
                     {menHoodiesList.map((hoodie, index)=>
@@ -119,9 +118,8 @@ class Products extends Component {
                         </div>
                     </div>)}
                 </div>
+                <a className='goToCategoryLink' href='/Men'>Вижте още от тази категория</a>
                 <hr></hr>
-                <a className='hoodiesLink' href='/Women'>Вижте още от тази категория</a>
-
                 <div className='WomenHoodies' id='goToWomen'> 
                     {womenHoodiesList.map((hoodie, index)=>
                     <div className='exhibitionHoodiesWrapper'>
@@ -130,8 +128,8 @@ class Products extends Component {
                             <img className='exhibitionHoodieImage' src={hoodie.image}/>
                         </div>
                     </div>)}
-
                 </div>
+                <a className='goToCategoryLink' href='/Women'>Вижте още от тази категория</a>
                 
                 <Footer></Footer>
             </div>

@@ -95,8 +95,13 @@ body, html{
             opacity: 1;
         }
     }    
+
 }
-.hoodiesLink{
+.goToCategoryLink{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
 }
 
 .CategoryLink{
