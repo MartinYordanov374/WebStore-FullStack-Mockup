@@ -101,6 +101,13 @@ body, html{
         margin-top: 1%;
         margin-left: 2%;
         width: 50%;
+        animation: wiggle 1.5s infinite;
+    }
+    .buyOnExhibitionDisabled{
+        margin-top: 1%;
+        margin-left: 2%;
+        width: 50%;
+        
     }
 
 }
@@ -210,5 +217,10 @@ body, html{
     width: 100%;
 }
 
-#carouselMainPage{
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }

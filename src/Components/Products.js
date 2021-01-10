@@ -125,7 +125,7 @@ class Products extends Component {
                             ?
                             <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
                             :
-                            <Button className='btn-danger buyOnExhibition disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
+                            <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
                             }
                         </div>
                     </div>)}
@@ -144,7 +144,7 @@ class Products extends Component {
                             ?
                             <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
                             :
-                            <Button className='btn-danger buyOnExhibition disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
+                            <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
                             }
                         </div>
                     </div>)}
