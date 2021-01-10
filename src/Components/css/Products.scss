@@ -80,7 +80,7 @@ body, html{
         filter: drop-shadow(1px 0px 1px black);
         box-shadow: 1px 1px 1px  black;
         &:hover{
-            transform: scale(1.1,1.1)
+            transform: scale(1.03,1.03)
         }
     }
     .exhibitionImageWrapper{
@@ -97,6 +97,11 @@ body, html{
             opacity: 1;
         }
     }    
+    .buyOnExhibition{
+        margin-top: 1%;
+        margin-left: 1px;
+        width: 50%;
+    }
 
 }
 .goToCategoryLink{

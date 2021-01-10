@@ -53,8 +53,8 @@ body, html {
 }
 
 .exhibitionHoodiesWrapper .exhibitionHoodieImage:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
 }
 
 .exhibitionHoodiesWrapper .exhibitionImageWrapper {
@@ -72,6 +72,12 @@ body, html {
 .exhibitionHoodiesWrapper .addFaves:hover {
   color: #d8d8d8;
   opacity: 1;
+}
+
+.exhibitionHoodiesWrapper .buyOnExhibition {
+  margin-top: 1%;
+  margin-left: 1px;
+  width: 50%;
 }
 
 .goToCategoryLink {

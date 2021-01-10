@@ -21,7 +21,7 @@ import Hoodie_2 from '../Components/Images/Hoodie_Featured_2.png'
 import Hoodie_4 from '../Components/Images/Hoodie_Featured_1.png'
 import {store} from './store'
 import {FaHeart} from 'react-icons/fa'
-
+import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {v4} from 'uuid'
 
 class Products extends Component {
@@ -119,6 +119,8 @@ class Products extends Component {
                         <div className='exhibitionImageWrapper'>
                             <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
                             <img className='exhibitionHoodieImage' src={hoodie.image}/>
+                            <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
+
                         </div>
                     </div>)}
                 </div>
@@ -131,7 +133,7 @@ class Products extends Component {
                         <div className='exhibitionImageWrapper'>
                             <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
                             <img className='exhibitionHoodieImage' src={hoodie.image}/>
-                            <Button className='buyOnExhibition' onClick={()=>addToCart(hoodie)}>Купи</Button>
+                            <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
                         </div>
                     </div>)}
                 </div>
