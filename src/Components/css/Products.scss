@@ -102,6 +102,10 @@ body, html{
         margin-left: 2%;
         width: 50%;
         animation: wiggle 1.5s infinite;
+        &:hover{
+            animation: wiggle 1s infinite;
+
+        }
     }
     .buyOnExhibitionDisabled{
         margin-top: 1%;

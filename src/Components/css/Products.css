@@ -82,6 +82,11 @@ body, html {
           animation: wiggle 1.5s infinite;
 }
 
+.exhibitionHoodiesWrapper .buyOnExhibition:hover {
+  -webkit-animation: wiggle 1s infinite;
+          animation: wiggle 1s infinite;
+}
+
 .exhibitionHoodiesWrapper .buyOnExhibitionDisabled {
   margin-top: 1%;
   margin-left: 2%;

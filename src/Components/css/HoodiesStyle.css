@@ -92,8 +92,8 @@
   color: black;
   border-color: #d88302;
   border-radius: 10px;
-  -webkit-animation: wiggle 2.5s infinite;
-          animation: wiggle 2.5s infinite;
+  -webkit-animation: wiggle 1.5s infinite;
+          animation: wiggle 1.5s infinite;
   font-size: 20px;
 }
 
