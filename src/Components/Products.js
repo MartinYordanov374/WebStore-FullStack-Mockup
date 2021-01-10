@@ -65,6 +65,9 @@ class Products extends Component {
  
         $('#'+id).css('color', 'purple')     
     }
+    const addToCart=(product)=>{
+        store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
+    }
         return (
             <div className='categoriesWrapper'>
                 <Navbar></Navbar>
@@ -128,6 +131,7 @@ class Products extends Component {
                         <div className='exhibitionImageWrapper'>
                             <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
                             <img className='exhibitionHoodieImage' src={hoodie.image}/>
+                            <Button className='buyOnExhibition' onClick={()=>addToCart(hoodie)}>Купи</Button>
                         </div>
                     </div>)}
                 </div>
