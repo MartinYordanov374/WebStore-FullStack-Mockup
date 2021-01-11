@@ -21,7 +21,7 @@ app.post('/register', (req, res)=>{
     const email = req.body.email;
 
     const saltRounds = 10;
-    db.query('SELECT 1 FROM users WHERE username=?', username, (err, result)=>{
+    db.query('SELECT 1 FROM users WHERE email=? OR username=?', [email, username], (err, result)=>{
         if(result.length>0)
         {
            res.send({message: 'user already registered'})
