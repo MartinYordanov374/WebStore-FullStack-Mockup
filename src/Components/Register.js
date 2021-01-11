@@ -92,10 +92,8 @@ export default function Register() {
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong>Регистрацията е успешна!</strong></Alert>
                 <Alert className='alert-danger' onClick={hideAlertFail}> <strong> Въвели сте невалидно име или парола !</strong></Alert>
                 <Alert className='alert-warning' onClick={hideAlertTaken}> <strong>Този потребител вече съществува!</strong></Alert>
-
-
                 <FormControl className='enterUsername' onChange={(e)=>setUserReg(e.target.value)} placeholder='Въведете никнейм'/>
-                <FormControl className='enterUsername' onChange={(e)=>setEmailReg(e.target.value)} placeholder='Въведете имейл'/>
+                <FormControl className='enterEmail' onChange={(e)=>setEmailReg(e.target.value)} placeholder='Въведете имейл'/>
 
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassReg(e.target.value)} type='password' placeholder='Въведете парола'/>
                 <Button className='submitLoginForm' onClick ={register}><FaKey/> Завърши регистрация </Button>
