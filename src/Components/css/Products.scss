@@ -16,17 +16,17 @@ body, html{
     // background-color: #687477;
     // background-color: #403234;
     
-    background-color:#f3f3f3;
+    background-color:#d8d8d8;
 
     .products{
         // background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
-        background-color:#f3f3f3;
+        background-color:#d8d8d8;
     }
     //c5d5db
     //9fa8a3
     //e3e0cf
     // background-color:  #9fa8a3;
-    background-color:#f3f3f3;
+    background-color:#d8d8d8;
 }
 @mixin CategoriesBackground{
     
@@ -75,6 +75,7 @@ body, html{
         margin-top: 4%;
         margin-left: 25%;
         display: block;
+        background-color: #e2e2e2;
         position: relative;
         // box-shadow: 2px 2px 2px 2px black;
         filter: drop-shadow(1px 0px 1px black);
@@ -98,7 +99,7 @@ body, html{
         }
     }    
     .buyOnExhibition{
-        margin-top: 1%;
+        // margin-top: 1%;
         margin-left: 2%;
         width: 50%;
         animation: wiggle 1.5s infinite;
@@ -114,6 +115,10 @@ body, html{
         
     }
 
+}
+.hoodiePrice{
+    font-family: 'Lato', 'sans-serif';
+    font-size: 20px;
 }
 .goToCategoryLink{
     // margin-left: 5%;
@@ -150,7 +155,7 @@ body, html{
         // @include CategoriesBackground();
         width: 50%;
         filter: drop-shadow(2px 2px 4px black);
-        display: inline-flex;
+        display: flex;
         float: left;
         margin-left: 40px;
         margin-right: 10px;
@@ -171,6 +176,11 @@ body, html{
         }
     }
 }
+.categoryName{
+    font-family: 'Lato', 'sans-serif';
+    font-size: 35px;
+    color: #df0000;
+}
 .caption{
     background-color: white;
 
@@ -187,8 +197,9 @@ body, html{
     // filter: drop-shadow(4px 4px 4px rgb(211, 209, 209));
         // float: left;
     // max-width: 50%;
+    width: 50%;
     margin-left: 10%;
-    background-color:#f3f3f3;
+    // background-color:#e2e2e2;
     &:hover{
         transform: scale(1.02,1.02)
     }
@@ -210,12 +221,7 @@ body, html{
     .carousel-indicators{
         display: none;
     }
-    .carousel-control-prev{
-        display: none;
-    }
-    .carousel-control-next{
-        display: none;
-    }
+    
 }
 .carouselImage{
     width: 100%;

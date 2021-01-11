@@ -8,12 +8,12 @@ body, html {
 }
 
 .App {
-  background-color: #f3f3f3;
-  background-color: #f3f3f3;
+  background-color: #d8d8d8;
+  background-color: #d8d8d8;
 }
 
 .App .products {
-  background-color: #f3f3f3;
+  background-color: #d8d8d8;
 }
 
 .hoodieWrapper {
@@ -45,6 +45,7 @@ body, html {
   margin-top: 4%;
   margin-left: 25%;
   display: block;
+  background-color: #e2e2e2;
   position: relative;
   -webkit-filter: drop-shadow(1px 0px 1px black);
           filter: drop-shadow(1px 0px 1px black);
@@ -75,7 +76,6 @@ body, html {
 }
 
 .exhibitionHoodiesWrapper .buyOnExhibition {
-  margin-top: 1%;
   margin-left: 2%;
   width: 50%;
   -webkit-animation: wiggle 1.5s infinite;
@@ -91,6 +91,11 @@ body, html {
   margin-top: 1%;
   margin-left: 2%;
   width: 50%;
+}
+
+.hoodiePrice {
+  font-family: 'Lato', 'sans-serif';
+  font-size: 20px;
 }
 
 .goToCategoryLink {
@@ -129,9 +134,9 @@ body, html {
   width: 50%;
   -webkit-filter: drop-shadow(2px 2px 4px black);
           filter: drop-shadow(2px 2px 4px black);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   float: left;
   margin-left: 40px;
   margin-right: 10px;
@@ -178,6 +183,12 @@ body, html {
           box-shadow: 2px 2px 0px  black;
 }
 
+.categoryName {
+  font-family: 'Lato', 'sans-serif';
+  font-size: 35px;
+  color: #df0000;
+}
+
 .caption {
   background-color: white;
   background-color: #e4e4e4;
@@ -190,8 +201,8 @@ body, html {
 }
 
 .showProductImage {
+  width: 50%;
   margin-left: 10%;
-  background-color: #f3f3f3;
 }
 
 .showProductImage:hover {
@@ -214,14 +225,6 @@ body, html {
 }
 
 .slide .carousel-indicators {
-  display: none;
-}
-
-.slide .carousel-control-prev {
-  display: none;
-}
-
-.slide .carousel-control-next {
   display: none;
 }
 
