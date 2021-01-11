@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 .loginForm {
-  background-color: #F2EDD7FF;
+  background-color: #e8eff8;
   width: 50%;
   margin-left: 25%;
   margin-top: 2%;
   border-radius: 10px;
+  font-family: 'Lato', sans-serif;
   border-color: black;
   border-style: solid;
   border-width: 1px;
@@ -36,24 +38,33 @@
   width: 40%;
   margin-top: 5%;
   margin-left: 30%;
-  -webkit-filter: drop-shadow(2px 2px 2px black);
-          filter: drop-shadow(2px 2px 2px black);
+  background-color: #e8eff8;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: black;
 }
 
 .loginForm .enterEmail {
   width: 40%;
   margin-top: 10px;
   margin-left: 30%;
-  -webkit-filter: drop-shadow(2px 2px 2px black);
-          filter: drop-shadow(2px 2px 2px black);
+  background-color: #e8eff8;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: black;
 }
 
 .loginForm .enterPassword {
   width: 40%;
   margin-top: 10px;
   margin-left: 30%;
-  -webkit-filter: drop-shadow(2px 2px 2px black);
-          filter: drop-shadow(2px 2px 2px black);
+  background-color: #e8eff8;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: black;
 }
 
 .loginForm .submitLoginForm {
@@ -61,5 +72,9 @@
   width: 40%;
   -webkit-filter: drop-shadow(2px 2px 2px black);
           filter: drop-shadow(2px 2px 2px black);
+}
+
+.loginFormWrapper {
+  background-color: #d9e6f5;
 }
 /*# sourceMappingURL=login.css.map */

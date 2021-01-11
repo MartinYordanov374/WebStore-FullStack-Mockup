@@ -10,6 +10,7 @@ import $ from 'jquery'
 export default function Login() {
     const [userLog, setUserLog] = useState('')
     const [passLog, setPassLog] = useState('')
+    const [emailLog, setEmailLog] = useState('')
     let isLoggedIn = document.cookie;
     useEffect(()=>{
         $('.alert-success').fadeOut()
@@ -18,6 +19,7 @@ export default function Login() {
     },[])
 
     const login=()=>{
+        
         Axios.post('http://localhost:3307/login',{
                 usernameLogin: userLog,
                 passwordLogin: passLog
@@ -94,6 +96,7 @@ export default function Login() {
                 <Alert className='alert-warning' onClick={hideWrongPassAlert}> <strong>Грешно име или парола! </strong></Alert>
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
+                {/* <FormControl className='enterEmail' onChange={(e)=>setEmailLog(e.target.value)} placeholder='Въведете имейл адрес'/> */}
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
                 <Button className='submitLoginForm' onClick ={login}> <strong><AiOutlineLogin size={20}/> Влезте в профила си</strong> </Button>
                 <br></br>
