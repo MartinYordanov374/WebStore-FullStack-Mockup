@@ -10,7 +10,6 @@ import $ from 'jquery'
 export default function Login() {
     const [userLog, setUserLog] = useState('')
     const [passLog, setPassLog] = useState('')
-    const [emailLog, setEmailLog] = useState('')
     let isLoggedIn = document.cookie;
     useEffect(()=>{
         $('.alert-success').fadeOut()

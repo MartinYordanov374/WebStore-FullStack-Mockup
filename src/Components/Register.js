@@ -11,16 +11,21 @@ import $ from 'jquery'
 export default function Register() {
     const [userReg, setUserReg] = useState('')
     const [passReg, setPassReg] = useState('')
+    const [emailReg, setEmailReg] = useState('')
     let isLoggedIn = document.cookie;
     useEffect(()=>{
         hideAlerts()
     },[])
     const register=()=>{
-            if(userReg.length>3 && passReg.length>8)
+            let pattern = '[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+'
+            let checkEmailRegex = RegExp(pattern)
+            let isEmailValid = checkEmailRegex.test(emailReg);
+            if(userReg.length>3 && passReg.length>8 && isEmailValid)
             {
                 Axios.post('http://localhost:3307/register',{
                          username: userReg,
-                         password: passReg
+                         password: passReg,
+                         email: emailReg
                      }).then((response)=>{
                          if(response.data.message==='user already registered'){
                             showAlertTaken()
@@ -90,6 +95,8 @@ export default function Register() {
 
 
                 <FormControl className='enterUsername' onChange={(e)=>setUserReg(e.target.value)} placeholder='Въведете никнейм'/>
+                <FormControl className='enterUsername' onChange={(e)=>setEmailReg(e.target.value)} placeholder='Въведете имейл'/>
+
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassReg(e.target.value)} type='password' placeholder='Въведете парола'/>
                 <Button className='submitLoginForm' onClick ={register}><FaKey/> Завърши регистрация </Button>
                 <br></br>

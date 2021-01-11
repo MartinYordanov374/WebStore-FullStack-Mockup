@@ -18,6 +18,8 @@ db = mysql.createConnection({
 app.post('/register', (req, res)=>{
     const username = req.body.username;
     const password = req.body.password;
+    const email = req.body.email;
+
     const saltRounds = 10;
     db.query('SELECT 1 FROM users WHERE username=?', username, (err, result)=>{
         if(result.length>0)
@@ -31,7 +33,7 @@ app.post('/register', (req, res)=>{
                 {
                     console.log(err)
                 } 
-                db.query('INSERT INTO users (username, password) VALUES (?,?)', [username, hash], (err,res)=>{
+                db.query('INSERT INTO users (username, password, email) VALUES (?,?,?)', [username, hash, email], (err,res)=>{
                     console.log(res)
             })
             });
