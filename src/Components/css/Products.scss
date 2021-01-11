@@ -16,17 +16,17 @@ body, html{
     // background-color: #687477;
     // background-color: #403234;
     
-    background-color:#d8d8d8;
+    background-color:#d9e6f5;
 
     .products{
         // background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
-        background-color:#d8d8d8;
+        background-color:#d9e6f5;
     }
     //c5d5db
     //9fa8a3
     //e3e0cf
     // background-color:  #9fa8a3;
-    background-color:#d8d8d8;
+    background-color:#d9e6f5;
 }
 @mixin CategoriesBackground{
     
@@ -122,9 +122,13 @@ body, html{
 }
 .goToCategoryLink{
     // margin-left: 5%;
+    color: #ffa500;
+    font-size: 25px;
     text-decoration: none;
     &:hover{
         text-decoration: none;
+        color: #ffbd42;
+
     }
 }
 
@@ -145,7 +149,7 @@ body, html{
 .featured{
     font-family: 'Lato', sans-serif;
     font-size: 35px;
-    color: rgb(223, 0, 0);
+    color: #ff8c00;
 }
 .Categories{
     // display: inline-flex;
@@ -179,7 +183,7 @@ body, html{
 .categoryName{
     font-family: 'Lato', 'sans-serif';
     font-size: 35px;
-    color: #df0000;
+    color: #ff8c00;
 }
 .caption{
     background-color: white;

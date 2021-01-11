@@ -130,7 +130,7 @@ class Products extends Component {
                         </div>
                     </div>)}
                 </div>
-                <a className='goToCategoryLink' href='/Men'>Вижте още от тази категория</a>
+                <a className='goToCategoryLink' href='/Men'><strong>Вижте още от тази категория</strong></a>
                 <hr></hr>
                 <div className='WomenHoodies' id='goToWomen'> 
                     <h1  className='categoryName'>Жени</h1>
@@ -150,7 +150,7 @@ class Products extends Component {
                         </div>
                     </div>)}
                 </div>
-                <a className='goToCategoryLink' href='/Women'>Вижте още от тази категория</a>
+                <a className='goToCategoryLink' href='/Women'><strong>Вижте още от тази категория</strong></a>
                 <hr></hr>
                 <Footer></Footer>
             </div>
