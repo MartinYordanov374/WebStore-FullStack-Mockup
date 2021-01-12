@@ -8,7 +8,7 @@ $backgroundColor:  rgb(255, 255, 255);
     background-color: $backgroundColor;
 }
 .removeProduct{
-    margin-left: 15px;
+    float: right;
     &:hover{
         color: red;
     }
@@ -27,6 +27,9 @@ $backgroundColor:  rgb(255, 255, 255);
     .addProductIcon{
         color: green;
     }
+}
+.productName{
+    margin-left: 35px;
 }
 .promocode{
     width: 20%;

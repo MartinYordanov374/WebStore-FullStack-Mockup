@@ -79,11 +79,13 @@ body, html {
 .exhibitionHoodiesWrapper .buyOnExhibition {
   margin-left: 2%;
   width: 50%;
+  background-color: orange;
   -webkit-animation: wiggle 1.5s infinite;
           animation: wiggle 1.5s infinite;
 }
 
 .exhibitionHoodiesWrapper .buyOnExhibition:hover {
+  background-color: #ffa013;
   -webkit-animation: wiggle 1s infinite;
           animation: wiggle 1s infinite;
 }

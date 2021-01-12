@@ -8,7 +8,7 @@
 }
 
 .removeProduct {
-  margin-left: 15px;
+  float: right;
 }
 
 .removeProduct:hover {
@@ -32,6 +32,10 @@
 
 .addProductButton .addProductIcon {
   color: green;
+}
+
+.productName {
+  margin-left: 35px;
 }
 
 .promocode {

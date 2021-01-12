@@ -20,14 +20,14 @@ class HoodiesPage extends Component {
     let isLoggedIn = document.cookie;
     const hoodiesList=[
         {
-            name: 'Hoodie - Green',
+            name: 'Hoodie - Orange',
             image: GreenHoodie,
             price: 36.96,
             quantity: 1,
             id: v4()
         },
         {
-            name: 'Hoodie - Orange',
+            name: 'Hoodie - Green',
             image: OrangeHoodie,
             price: 39.94,
             quantity: 1,
