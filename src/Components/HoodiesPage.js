@@ -34,7 +34,7 @@ class HoodiesPage extends Component {
             id:v4()
         },
     ]
-    const addToWishlist=(id, product)=>{
+    const addToWishlist=(product, id)=>{
         store.dispatch({type: 'addToFavorites', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
         $('#'+id).css('color', 'purple')        
     }

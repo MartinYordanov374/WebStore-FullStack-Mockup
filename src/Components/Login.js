@@ -94,7 +94,7 @@ export default function Login() {
                 <Alert className='alert-success' onClick={hideAlertSuccess}> <strong> Успешно влязохте в профила си, <span className='usernameField'/>! </strong></Alert>
                 <Alert className='alert-warning' onClick={hideWrongPassAlert}> <strong>Грешно име или парола! </strong></Alert>
 
-                <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм'/>
+                <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм или имейл'/>
                 {/* <FormControl className='enterEmail' onChange={(e)=>setEmailLog(e.target.value)} placeholder='Въведете имейл адрес'/> */}
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
                 <Button className='submitLoginForm' onClick ={login}> <strong><AiOutlineLogin size={20}/> Влезте в профила си</strong> </Button>
