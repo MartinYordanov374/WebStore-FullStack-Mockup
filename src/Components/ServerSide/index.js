@@ -50,7 +50,7 @@ app.post('/check', (req, res)=>{
 app.post('/login', (req,res)=>{
     const username = req.body.usernameLogin;
     const password = req.body.passwordLogin;
-    db.query('SELECT * FROM users WHERE username=?', username, (err,result)=>{
+    db.query('SELECT * FROM users WHERE username=? OR email=?', [username, username], (err,result)=>{
         if(err)
         {
             res.send({err: err})
