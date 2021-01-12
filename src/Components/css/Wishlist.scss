@@ -1,17 +1,39 @@
 $backgroundColor:  rgb(255, 255, 255);
+
+.wishlistWrapper{
+    background-color: #d9e6f5;
+    border-style: solid;
+    border-color: black;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
 .productsWishListWrapper{
     width: 30%;
     display: inline-block;
     float: left;
     margin-left: 2%;
     margin-top: 10px;
-    background-color: $backgroundColor;
 }
 .removeProduct{
     float: right;
     &:hover{
         color: red;
     }
+}
+.productImage{
+    margin-top: 1.5%;
+        margin-left: 25%;
+        display: block;
+        background-color: #e2e2e2;
+        position: relative;
+        // box-shadow: 2px 2px 2px 2px black;
+        filter: drop-shadow(1px 0px 1px black);
+        box-shadow: 1px 1px 1px  black;
+        &:hover{
+            transform: scale(1.03,1.03)
+        }
 }
 .addProductButton{
     background-color: white;
