@@ -1,18 +1,20 @@
 $backgroundColor:  rgb(255, 255, 255);
 
 .wishlistWrapper{
-    background-color: #d9e6f5;
+    background-color: white;
     border-style: solid;
-    border-color: black;
+    border-width: 2px;
+    box-shadow: 2px 2px 2px black;
+    float: left;
     width: 90%;
     margin-left: 5%;
     margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .productsWishListWrapper{
     width: 30%;
-    display: inline-block;
-    float: left;
+    display: inline-grid;
     margin-left: 2%;
     margin-top: 10px;
 }
