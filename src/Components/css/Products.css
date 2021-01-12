@@ -35,6 +35,7 @@ body, html {
 }
 
 .exhibitionHoodiesWrapper {
+  margin-top: 1%;
   width: 40%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -91,6 +92,11 @@ body, html {
   margin-top: 1%;
   margin-left: 2%;
   width: 50%;
+}
+
+.hoodieName {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
 }
 
 .hoodiePrice {

@@ -19,22 +19,25 @@ class Wishlist extends Component {
         return (
             <div>
                 <Navbar/>
-                {productsInWishList.length===0 ?
-                <p>Вашият лист с любими е празен.</p> :
-                ""}
-                {productsInWishList.map(product=>    
-                <div className='productsWishListWrapper'>
-                    <p className='productName'> <strong>{product.name}</strong>
-                        <span>
-                            <BsX className='removeProduct' size={25} onClick={()=>removeFromWishList(product)}/>
-                        </span>
-                    </p>
-                    <img className='productImage' src={product.image}/>
-                    <p className='productPrice'> <strong>{product.price} лв.</strong> </p>
-                    <Button className='addProductButton'><FaShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
+                <div className='wishlistWrapper'>
+                    {productsInWishList.length===0 ?
+                    <p>Вашият лист с любими е празен.</p> :
+                    ""}
+                    {productsInWishList.map(product=>    
+                    <div className='productsWishListWrapper'>
+                        <p className='productName'> <strong>{product.name}</strong>
+                            <span>
+                                <BsX className='removeProduct' size={25} onClick={()=>removeFromWishList(product)}/>
+                            </span>
+                        </p>
+                        <img className='productImage' src={product.image}/>
+                        <p className='productPrice'> <strong>{product.price} лв.</strong> </p>
+                        <Button className='addProductButton'><FaShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
 
-                </div>)
-                }
+                    </div>)
+                    }
+                </div>
+
             
             </div>
         )

@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import Navbar from './Header'
 import Footer from './Footer'
 
-import GreenHoodie from './Images/Hoodie_2.png'
-import OrangeHoodie from './Images/Orange_Hoodie.png'
+import GreenHoodie from './Images/Hoodie_1.png'
+import OrangeHoodie from './Images/Hoodie_2.png'
 import './css/HoodiesStyle.css'
 import {Button} from 'react-bootstrap'
 import $ from 'jquery'
@@ -12,6 +12,7 @@ import {store} from './store'
 import {connect} from 'react-redux'
 import {v4} from 'uuid'
 import {Redirect} from 'react-router-dom'
+import {AiOutlineShoppingCart, AiOutlineUser} from 'react-icons/ai'
 class HoodiesPage extends Component {
     render(){
     let {productsInWishList} = this.props;
@@ -19,14 +20,14 @@ class HoodiesPage extends Component {
     let isLoggedIn = document.cookie;
     const hoodiesList=[
         {
-            name: 'Neon Hoodie - зелено',
+            name: 'Hoodie - Green',
             image: GreenHoodie,
             price: 36.96,
             quantity: 1,
             id: v4()
         },
         {
-            name: 'Neon Hoodie - оранжево',
+            name: 'Hoodie - Orange',
             image: OrangeHoodie,
             price: 39.94,
             quantity: 1,
@@ -50,22 +51,22 @@ class HoodiesPage extends Component {
         <div>
             <Navbar></Navbar>
             <div className='products'>
-                {hoodiesList.map((hoodie, index)=>
-                <div className='hoodieWrapper'>
-                    <p className='hoodieName'><FaHeart id={index} className='addFaves' onClick={()=>addToWishlist(index, hoodie)}size={25}/><strong>{hoodie.name}</strong> </p>     
-                    <img className='hoodieImage' src={hoodie.image}></img>
-                    {isLoggedIn.length>3 ?
-                    <div className='purchaseField'>
-                        <p><strong>{hoodie.price} лв.</strong></p>
-                        <Button className='buyHoodieButtonActive' variant='warning' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Купи</strong></Button>
-                    </div> 
-                    :
-                    <div className='purchaseField'>
-                        <p><strong>{hoodie.price} лв.</strong></p>
-                        <Button className='buyHoodieButtonDisabled' variant='warning' disabled='disabled' onClick={()=>addToCart(hoodie)}><span className='buyIcon'><FaShoppingCart></FaShoppingCart></span> <strong>Не сте регистриран</strong></Button>
-                    </div> 
-                }
-                </div>)}
+            {hoodiesList.map((hoodie, index)=>
+                    <div className='exhibitionHoodiesWrapper'>
+                        <div className='exhibitionImageWrapper'>
+                            <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
+                            <br></br>
+                            <img className='exhibitionHoodieImage' src={hoodie.image}/>
+                            <p className='hoodieName'>{hoodie.name}</p>
+                            <p className='hoodiePrice'>{hoodie.price} лв.</p>
+                            {isLoggedIn.length>3
+                            ?
+                            <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
+                            :
+                            <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
+                            }
+                        </div>
+                    </div>)}
             </div>
             <Footer></Footer>
         </div>
