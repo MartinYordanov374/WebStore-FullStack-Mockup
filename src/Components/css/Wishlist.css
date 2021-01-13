@@ -30,6 +30,10 @@
   font-family: 'Lato', sans-serif;
 }
 
+.hideProducts {
+  display: none;
+}
+
 .wishlistHeading {
   text-align: left;
   margin-left: 2.5%;

@@ -55,6 +55,7 @@ class ProfilePage extends Component {
     const logout=()=>{
         document.cookie=`${cookieUsername}; expires=Thu, 01 Jan 1970 00:00:00 GMT;`;
         store.dispatch({type: 'clearOrderHistory'})
+        store.dispatch({type: 'clearCart'})
         window.location='/login'
     }
     const deleteProfile=()=>{

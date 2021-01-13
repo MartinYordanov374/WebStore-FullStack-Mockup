@@ -17,6 +17,9 @@ class Wishlist extends Component {
             store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
 
         }
+        const notLoggedIn=()=>{
+            alert('За да добавяте в количката, трябва да сте регистриран')
+        }
         const removeFromWishList=(product)=>{
             store.dispatch({type:'removeFromWishList', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
         }
@@ -41,7 +44,7 @@ class Wishlist extends Component {
                                     </p>
                                     <img className='productImageWishlist' src={product.image}/>
                                     <p className='productPrice'> <strong>{product.price} лв.</strong> </p>
-                                    <Button className='btn-warning addProductButton'><AiOutlineShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
+                                    <Button className={isLoggedIn ? 'btn-warning addProductButton' : 'btn-danger'} onClick={isLoggedIn ? ()=>addToCart(product) : ()=>notLoggedIn()}><AiOutlineShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>{isLoggedIn ?"Добави в количката" : "Не сте влезли в профила си"}</strong></Button>
                                 </div>)}
                         </div>}
                 </div>

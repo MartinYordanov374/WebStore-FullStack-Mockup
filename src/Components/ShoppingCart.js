@@ -16,11 +16,11 @@ class ShoppingCart extends Component {
         const {productsInCart} = this.props;
         let totalSumDollars = 0;
         let isLoggedIn = document.cookie;
+        
         const removeFromCart=(product)=>{
             store.dispatch({type:'removeFromCart', name: product.name, image: product.image, price: product.price, cents: product.cents, id: product.id})
         }
         const increaseQuantity=(product)=>{
-            console.log('product id: '+product.id)
             store.dispatch({type:'increase', id: product.id})
 
         }
@@ -60,12 +60,16 @@ class ShoppingCart extends Component {
 
             
         }
+        
 
 
             
         }
+        const checkLogin=()=>{
+            store.dispatch({type: 'clearCart'})
+        }
         return (
-            <div className='cartWrapper'>
+            <div className='cartWrapper' onLoad={()=>checkLogin()}>
                 <Navbar></Navbar>
                 <div className='actualCartWrapper'>
                         {productsInCart.length==0 && isLoggedIn.length>3 ?
@@ -76,7 +80,7 @@ class ShoppingCart extends Component {
                             :
                             ""
                         }
-                    {productsInCart.map(product=>  
+                        {productsInCart.map(product=>  
                             <div className='productsWrapper'>
                                 <p className='productName'>{product.name}</p>
                                 <img className='productImage' src={product.image}/>
@@ -92,9 +96,9 @@ class ShoppingCart extends Component {
                                 <hr></hr>
                                 <span className='calculateTotal'>{totalSumDollars+=product.price*product.quantity}</span>       
                             </div>)    
-                    }  
+                        }  
                 </div>
-                {productsInCart.length>0
+                {productsInCart.length>0 && isLoggedIn.length>3
                         ?
                 <div className='finishOrderDiv'>
 
