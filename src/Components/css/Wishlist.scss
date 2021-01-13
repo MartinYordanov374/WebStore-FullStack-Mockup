@@ -21,7 +21,11 @@ $backgroundColor:  rgb(255, 255, 255);
     margin-left: 2%;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    .productPrice{
+        margin-top: 10px;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+    }
 }
 .removeProduct{
     float: right;
@@ -56,8 +60,11 @@ $backgroundColor:  rgb(255, 255, 255);
     font-family: 'Lato', sans-serif;
 }
 .productName{
-    margin-left: 35px;
+    margin-left: 7%;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
 }
+
 .promocode{
     width: 20%;
     margin-left: 75%;

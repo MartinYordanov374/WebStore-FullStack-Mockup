@@ -36,11 +36,9 @@ class Wishlist extends Component {
                                             <BsX className='removeProduct' size={25} onClick={()=>removeFromWishList(product)}/>
                                         </span>
                                     </p>
-                                    <div>
-                                        <img className='productImageWishlist' src={product.image}/>
-                                        <p className='productPrice'> <strong>{product.price} лв.</strong> </p>
-                                        <Button className='btn-warning addProductButton'><AiOutlineShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
-                                    </div>
+                                    <img className='productImageWishlist' src={product.image}/>
+                                    <p className='productPrice'> <strong>{product.price} лв.</strong> </p>
+                                    <Button className='btn-warning addProductButton'><AiOutlineShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
                                 </div>)}
                         </div>}
                 </div>
