@@ -66,7 +66,9 @@ class ShoppingCart extends Component {
             
         }
         const checkLogin=()=>{
+            if(isLoggedIn.length<3){
             store.dispatch({type: 'clearCart'})
+        }
         }
         return (
             <div className='cartWrapper' onLoad={()=>checkLogin()}>
