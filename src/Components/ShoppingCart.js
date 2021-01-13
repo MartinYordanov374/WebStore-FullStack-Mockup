@@ -67,8 +67,7 @@ class ShoppingCart extends Component {
         }
         const checkLogin=()=>{
             if(isLoggedIn.length<3){
-            store.dispatch({type: 'clearCart'})
-        }
+            store.dispatch({type: 'clearCart'})}
         }
         return (
             <div className='cartWrapper' onLoad={()=>checkLogin()}>
@@ -82,8 +81,14 @@ class ShoppingCart extends Component {
                             :
                             ""
                         }
+                        <div className='productGuideWrapper col-sm-12 col-md-12 col-lg-12 col-xs-12'>
+                            <p className='productIndexGuide'>Продукт</p>
+                            <p className='productQuantityGuide'>Количество</p>
+                            <p className='productPriceGuide'>Цена</p>
+
+                        </div>
                         {productsInCart.map(product=>  
-                            <div className='productsWrapper'>
+                            <div className='productsWrapper col-sm-12 col-md-12 col-lg-12 col-xs-12'>
                                 <p className='productName'>{product.name}</p>
                                 <img className='productImage' src={product.image}/>
                                 <p className='productPrice'>
@@ -93,8 +98,9 @@ class ShoppingCart extends Component {
                                                 {product.quantity}
                                             </span>
                                         <FaArrowRight className='increaseQuantity' size={20} onClick={()=>increaseQuantity(product)}/>
-                                    </span> Цена: {Math.round(product.price*product.quantity*100)/100} лв.</p>
-                                <FaTrash className='removeProduct' size={25} onClick={()=>removeFromCart(product)}></FaTrash>
+                                    </span> {Math.round(product.price*product.quantity*100)/100} лв.</p>
+                                    
+                                    <span><FaTrash className='removeProduct' size={25} onClick={()=>removeFromCart(product)}></FaTrash></span>                                
                                 <hr></hr>
                                 <span className='calculateTotal'>{totalSumDollars+=product.price*product.quantity}</span>       
                             </div>)    
