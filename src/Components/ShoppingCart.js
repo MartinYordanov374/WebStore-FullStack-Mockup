@@ -101,7 +101,7 @@ class ShoppingCart extends Component {
                                     <span className='productQuantity'>
                                         <FaArrowLeft className='decreaseQuantity' size={20} onClick={()=>decreaseQuantity(product)}/>
                                             <span className='quantity'>
-                                                {product.quantity}
+                                                {product.quantity}                                               
                                             </span>
                                         <FaArrowRight className='increaseQuantity' size={20} onClick={()=>increaseQuantity(product)}/>
                                     </span> {Math.round(product.price*product.quantity*100)/100} лв.</p>

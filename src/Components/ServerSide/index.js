@@ -117,7 +117,7 @@ app.post('/finishOrder', (req,res)=>{
     })
 })
 app.post('/orderHistory', (req,res)=>{
-    const username = " "+ req.body.username;
+    const username = req.body.username;
 
      db.query('SELECT username, COUNT(*) AS occurences FROM orders WHERE username=?', username, (err, result)=>{
          if(err){
@@ -130,7 +130,7 @@ app.post('/orderHistory', (req,res)=>{
 })
 
 app.post('/seeOrders', (req,res)=>{
-    const username = " " + req.body.username;
+    const username = req.body.username;
     db.query('SELECT * FROM orders WHERE username=?', username, (err, result)=>{
         if(err){
             res.send({err: err})
