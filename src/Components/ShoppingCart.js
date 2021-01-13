@@ -81,16 +81,18 @@ class ShoppingCart extends Component {
                             :
                             ""
                         }
-                        <div className='cartHeadingWrapper'>
+                        
+                        <div className={isLoggedIn.length>3 && productsInCart.length>0 ? 'cartHeadingWrapper' : 'hideObject'}>
                             <h1 className='cartHeadingText'>Вашата количка</h1>
                             <hr></hr>
                         </div>
-                        <div className='productGuideWrapper col-sm-12 col-md-12 col-lg-12 col-xs-12'>
+                        <div className={isLoggedIn.length>3 && productsInCart.length>0 ? 'productGuideWrapper col-sm-12 col-md-12 col-lg-12 col-xs-12' : 'hideObject'}>
                             <p className='productIndexGuide'>Продукт</p>
                             <p className='productQuantityGuide'>Количество</p>
                             <p className='productPriceGuide'>Цена</p>
                         </div>
-                        <hr></hr>
+                        <hr className={isLoggedIn.length>3 && productsInCart.length>0 ? '' : 'hideObject'}></hr>
+
                         {productsInCart.map(product=>  
                             <div className='productsWrapper col-sm-12 col-md-12 col-lg-12 col-xs-12'>
                                 <p className='productName'>{product.name}</p>
