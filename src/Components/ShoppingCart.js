@@ -81,12 +81,16 @@ class ShoppingCart extends Component {
                             :
                             ""
                         }
+                        <div className='cartHeadingWrapper'>
+                            <h1 className='cartHeadingText'>Вашата количка</h1>
+                            <hr></hr>
+                        </div>
                         <div className='productGuideWrapper col-sm-12 col-md-12 col-lg-12 col-xs-12'>
                             <p className='productIndexGuide'>Продукт</p>
                             <p className='productQuantityGuide'>Количество</p>
                             <p className='productPriceGuide'>Цена</p>
-
                         </div>
+                        <hr></hr>
                         {productsInCart.map(product=>  
                             <div className='productsWrapper col-sm-12 col-md-12 col-lg-12 col-xs-12'>
                                 <p className='productName'>{product.name}</p>

@@ -105,6 +105,14 @@
     }
     
 }
+.cartHeadingWrapper{
+    margin-top: 1%;
+    text-align: left;
+    .cartHeadingText{
+        margin-left: 2%;
+        color: black;
+    }
+}
 .finishOrderButton{
     color: black;
     animation: wiggle 2.5s infinite;
