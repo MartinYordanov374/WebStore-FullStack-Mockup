@@ -11,6 +11,7 @@ import {store} from './store'
 
 class Wishlist extends Component {
     render(){
+        let isLoggedIn = document.cookie;
         const {productsInWishList} = this.props;
         const addToCart=(product)=>{
             store.dispatch({type: 'addToCart', name: product.name, image: product.image, price: product.price, id: product.id, quantity: product.quantity})
@@ -29,6 +30,8 @@ class Wishlist extends Component {
                         <p className='emptyWishlist'>Вашият лист с любими е празен.</p> 
                         :
                         <div className='wishlistContainer'>
+                            <p className='wishlistHeading'>Любими продукти</p>
+                            <hr/>
                             {productsInWishList.map((product)=>    
                                 <div className='productsWishListWrapper'>
                                     <p className='productName'> <strong>{product.name}</strong>
