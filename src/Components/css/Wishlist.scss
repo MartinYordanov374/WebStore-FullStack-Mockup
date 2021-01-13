@@ -1,10 +1,11 @@
 $backgroundColor:  rgb(255, 255, 255);
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .wishlistWrapper{
     background-color: white;
     border-style: solid;
     border-width: 2px;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px rgb(218, 218, 218);
     float: left;
     width: 90%;
     margin-left: 5%;
@@ -14,9 +15,13 @@ $backgroundColor:  rgb(255, 255, 255);
 
 .productsWishListWrapper{
     width: 30%;
+    float: left;
     display: inline-grid;
+    box-shadow: 1px 1px 2px 1px rgb(189, 189, 189);
     margin-left: 2%;
     margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 .removeProduct{
     float: right;
@@ -24,7 +29,7 @@ $backgroundColor:  rgb(255, 255, 255);
         color: red;
     }
 }
-.productImage{
+.productImageWishlist{
     margin-top: 1.5%;
         margin-left: 25%;
         display: block;
@@ -33,24 +38,22 @@ $backgroundColor:  rgb(255, 255, 255);
         // box-shadow: 2px 2px 2px 2px black;
         filter: drop-shadow(1px 0px 1px black);
         box-shadow: 1px 1px 1px  black;
-        &:hover{
-            transform: scale(1.03,1.03)
-        }
+
 }
 .addProductButton{
-    background-color: white;
-    border-color: black;
-    color: black;
+    background-color: orange;
     margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
     &:hover{
-        background-color: $backgroundColor;
-        border-color: black;
-        box-shadow: 2px 2px 0px black;
         color: black;
+        background-color: rgb(255, 160, 19);
     }
     .addProductIcon{
-        color: green;
     }
+}
+.emptyWishlist{
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
 }
 .productName{
     margin-left: 35px;

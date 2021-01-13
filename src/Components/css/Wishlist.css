@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 .wishlistWrapper {
   background-color: white;
   border-style: solid;
   border-width: 2px;
-  -webkit-box-shadow: 2px 2px 2px black;
-          box-shadow: 2px 2px 2px black;
+  -webkit-box-shadow: 2px 2px 2px #dadada;
+          box-shadow: 2px 2px 2px #dadada;
   float: left;
   width: 90%;
   margin-left: 5%;
@@ -13,10 +14,14 @@
 
 .productsWishListWrapper {
   width: 30%;
+  float: left;
   display: -ms-inline-grid;
   display: inline-grid;
+  -webkit-box-shadow: 1px 1px 2px 1px #bdbdbd;
+          box-shadow: 1px 1px 2px 1px #bdbdbd;
   margin-left: 2%;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .removeProduct {
@@ -27,7 +32,7 @@
   color: red;
 }
 
-.productImage {
+.productImageWishlist {
   margin-top: 1.5%;
   margin-left: 25%;
   display: block;
@@ -39,28 +44,20 @@
           box-shadow: 1px 1px 1px  black;
 }
 
-.productImage:hover {
-  -webkit-transform: scale(1.03, 1.03);
-          transform: scale(1.03, 1.03);
-}
-
 .addProductButton {
-  background-color: white;
-  border-color: black;
-  color: black;
+  background-color: orange;
   margin-bottom: 5px;
+  font-family: 'Lato', sans-serif;
 }
 
 .addProductButton:hover {
-  background-color: white;
-  border-color: black;
-  -webkit-box-shadow: 2px 2px 0px black;
-          box-shadow: 2px 2px 0px black;
   color: black;
+  background-color: #ffa013;
 }
 
-.addProductButton .addProductIcon {
-  color: green;
+.emptyWishlist {
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
 }
 
 .productName {

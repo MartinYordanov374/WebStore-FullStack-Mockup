@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import Navbar from './Header'
 import {Button} from 'react-bootstrap'
 import {FaShoppingCart, FaTrash} from 'react-icons/fa'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
+
 import {BsX} from 'react-icons/bs'
 import {connect} from 'react-redux'
 import './css/Wishlist.css'
 import {store} from './store'
+
 class Wishlist extends Component {
     render(){
         const {productsInWishList} = this.props;
@@ -23,7 +26,7 @@ class Wishlist extends Component {
                 <div className={productsInWishList.length<=0 ? '' : 'wishlistWrapper'}>
                         {productsInWishList.length<=0 ?
                         
-                        <p>Вашият лист с любими е празен.</p> 
+                        <p className='emptyWishlist'>Вашият лист с любими е празен.</p> 
                         :
                         <div className='wishlistContainer'>
                             {productsInWishList.map((product)=>    
@@ -33,9 +36,11 @@ class Wishlist extends Component {
                                             <BsX className='removeProduct' size={25} onClick={()=>removeFromWishList(product)}/>
                                         </span>
                                     </p>
-                                    <img className='productImage' src={product.image}/>
-                                    <p className='productPrice'> <strong>{product.price} лв.</strong> </p>
-                                    <Button className='addProductButton'><FaShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
+                                    <div>
+                                        <img className='productImageWishlist' src={product.image}/>
+                                        <p className='productPrice'> <strong>{product.price} лв.</strong> </p>
+                                        <Button className='btn-warning addProductButton'><AiOutlineShoppingCart className='addProductIcon' size={25} onClick={()=>addToCart(product)}/> <strong>Добави в количката</strong></Button>
+                                    </div>
                                 </div>)}
                         </div>}
                 </div>
