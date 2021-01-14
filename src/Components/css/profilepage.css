@@ -80,6 +80,10 @@
   margin-left: 10%;
 }
 
+.profilePageWrapper .dashboard .ordersBox .orderStatus {
+  margin-left: 10%;
+}
+
 .profilePageWrapper .dashboard .orderHistoryTitle {
   font-size: 20px;
   margin-left: 1%;
@@ -105,6 +109,10 @@
 .historyIndexes .productPrice {
   margin-left: 9%;
   font-size: 20px;
+}
+
+.historyIndexes .productOrderStatus {
+  margin-left: 10%;
 }
 
 .profileMenu {

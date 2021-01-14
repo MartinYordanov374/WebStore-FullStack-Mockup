@@ -39,9 +39,14 @@ class ProfilePage extends Component {
                                 quantity:
                                     response.data.message[i].quantity,
                                 price:
-                                    response.data.message[i].price})
+                                    response.data.message[i].price,
+                                orderStatus:
+                                    response.data.message[i].orderStatus})
                          }
+                         console.log(response)
+
                      })
+
                 })
         
             
@@ -158,6 +163,8 @@ class ProfilePage extends Component {
                                 <p className='productIndex'><strong>Продукт</strong></p>
                                 <p className='productQuantity'><strong>Количество</strong></p>
                                 <p className='productPrice'><strong>Цена</strong></p>
+                                <p className='productOrderStatus'><strong>Статус на поръчка</strong></p>
+
 
                             </div>
                             {orderHistory.map(order=>
@@ -166,6 +173,8 @@ class ProfilePage extends Component {
                                     <div className='orderProduct'>{order.products}</div>
                                     <div className='orderQuantity'>{order.quantity}</div>
                                     <div className='orderPrice'>{order.price} лв.</div>
+                                    <div className='orderStatus'>{order.orderStatus}</div>
+
 
                                 </div>)}
                         </div>

@@ -106,7 +106,8 @@ app.post('/finishOrder', (req,res)=>{
     const products = req.body.products;
     const quantity = req.body.quantity;
     const price = req.body.price;
-    db.query('INSERT INTO orders (username, name, phone, address, products, quantity, price) VALUES(?,?,?,?,?,?,?)', [username, name, phone, address, products, quantity,price], (err,result)=>{
+    const orderStatus = 'Направена поръчка'
+    db.query('INSERT INTO orders (username, name, phone, address, products, quantity, price, orderStatus) VALUES(?,?,?,?,?,?,?,?)', [username, name, phone, address, products, quantity,price, orderStatus], (err,result)=>{
         if(err){
             res.send({err: err})
         }

@@ -4,7 +4,7 @@ const reducer=(state={productsInWishList:[{}], productsInCart:[{}], productsOrde
         case 'showOrderHistory': 
             return{
                 ...state,
-                orderHistory: [...state.orderHistory, {products: action.products, quantity: action.quantity, price: action.price}]
+                orderHistory: [...state.orderHistory, {products: action.products, quantity: action.quantity, price: action.price, orderStatus: action.orderStatus}]
             }
         case 'clearOrderHistory': 
             return{
