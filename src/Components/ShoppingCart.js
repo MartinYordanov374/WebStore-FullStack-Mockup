@@ -41,7 +41,7 @@ class ShoppingCart extends Component {
                        address: $('.enterAddress').val(),
                        products: productsInCart[i].name,
                        quantity: productsInCart[i].quantity,
-                       price: productsInCart[i].price
+                       price: totalSumDollars
                    }).then((response)=>{
                        console.log(response)
                 })

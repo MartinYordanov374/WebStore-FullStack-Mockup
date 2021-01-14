@@ -155,17 +155,18 @@ class ProfilePage extends Component {
                                 <Button className='showHistoryButton'onClick={showOrderHistory}>Покажи историята</Button> 
                             </div>
                             <div className='historyIndexes'>
-                                <p className='productIndex'>Продукт</p>
-                                <p className='productQuantity'>Количество</p>
-                                <p className='productPrice'>Цена</p>
+                                <p className='productIndex'><strong>Продукт</strong></p>
+                                <p className='productQuantity'><strong>Количество</strong></p>
+                                <p className='productPrice'><strong>Цена</strong></p>
+
                             </div>
-                            
                             {orderHistory.map(order=>
                                 
                                 <div className='ordersBox'>
                                     <div className='orderProduct'>{order.products}</div>
                                     <div className='orderQuantity'>{order.quantity}</div>
                                     <div className='orderPrice'>{order.price} лв.</div>
+
                                 </div>)}
                         </div>
             </div>
