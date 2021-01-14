@@ -53,7 +53,8 @@
         font-family: 'Lato', sans-serif;
 
         .orderHistory{
-
+            overflow-y: scroll;
+            height: 180px;
             width: 100%;
             text-align: left;
             border-left: 2px;
