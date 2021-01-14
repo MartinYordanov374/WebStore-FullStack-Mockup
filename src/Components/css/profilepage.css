@@ -104,4 +104,59 @@
   margin-left: 9%;
   font-size: 20px;
 }
+
+.profileMenu {
+  border-style: solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1;
+  border-width: 2px;
+  font-size: 25px;
+  margin-top: 1%;
+}
+
+.profileMenu .optionsTitle {
+  margin-top: 1%;
+  width: 18.5%;
+}
+
+.profileMenu .orderHistoryTitle {
+  margin: 1%;
+  margin-left: 7%;
+}
+
+.orderButtons {
+  margin-left: 10%;
+}
+
+.orderButtons .showHistoryButton {
+  margin-left: 1%;
+}
+
+.optionsMenu {
+  border-style: solid;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  margin-right: 2%;
+}
+
+.optionsMenu .optionsButtons {
+  margin: 1%;
+}
+
+.optionsMenu .logOutButton {
+  padding: 20px;
+}
+
+.optionsMenu .changePassButton {
+  padding: 20px;
+}
+
+.optionsMenu .deleteAccButton {
+  padding: 20px;
+}
 /*# sourceMappingURL=profilepage.css.map */
