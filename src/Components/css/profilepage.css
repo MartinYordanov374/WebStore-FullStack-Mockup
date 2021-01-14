@@ -60,8 +60,21 @@
   font-size: 20px;
 }
 
-.profilePageWrapper .dashboard .ordersBox .orderInfo {
-  display: inline;
+.profilePageWrapper .dashboard .ordersBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profilePageWrapper .dashboard .ordersBox .orderProduct {
+  margin-left: 10%;
+}
+
+.profilePageWrapper .dashboard .ordersBox .orderQuantity {
+  margin-left: 10%;
+}
+
+.profilePageWrapper .dashboard .ordersBox .orderPrice {
   margin-left: 10%;
 }
 

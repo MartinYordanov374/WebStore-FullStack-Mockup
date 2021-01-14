@@ -157,9 +157,9 @@ class ProfilePage extends Component {
                             {orderHistory.map(order=>
                                 
                                 <div className='ordersBox'>
-                                    <div className='orderInfo'>{order.products}</div>
-                                    <div className='orderInfo'>{order.quantity}</div>
-                                    <div className='orderInfo'>{order.price} лв.</div>
+                                    <div className='orderProduct'>{order.products}</div>
+                                    <div className='orderQuantity'>{order.quantity}</div>
+                                    <div className='orderPrice'>{order.price} лв.</div>
                                 </div>)}
                         </div>
             </div>

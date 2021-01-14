@@ -64,11 +64,19 @@
 
         }
         .ordersBox{
-            .orderInfo{
+            display: flex;
+            .orderProduct{
 
-                display: inline;
                 margin-left: 10%;
             }
+            .orderQuantity{
+
+             margin-left: 10% ;
+            }
+            .orderPrice{
+
+                margin-left: 10% ;
+               }
             
         }
         .orderHistoryTitle{
