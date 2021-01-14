@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 .profilePageWrapper .profileWrapper {
   width: 80%;
   margin-left: 10%;
@@ -46,6 +47,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: 'Lato', sans-serif;
 }
 
 .profilePageWrapper .dashboard .orderHistory {
@@ -55,6 +57,7 @@
   border-right: 0px;
   border-top: 0px;
   border-bottom: 0px;
+  font-size: 20px;
 }
 
 .profilePageWrapper .dashboard .ordersBox .orderInfo {
@@ -65,5 +68,27 @@
 .profilePageWrapper .dashboard .orderHistoryTitle {
   font-size: 20px;
   margin-left: 1%;
+}
+
+.historyIndexes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+}
+
+.historyIndexes .productIndex {
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.historyIndexes .productQuantity {
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.historyIndexes .productPrice {
+  margin-left: 9%;
+  font-size: 20px;
 }
 /*# sourceMappingURL=profilepage.css.map */

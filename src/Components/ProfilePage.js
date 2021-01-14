@@ -13,7 +13,9 @@ import $ from 'jquery'
 import './css/profilepage.css'
 
 class ProfilePage extends Component {
-    
+    componentDidMount(){
+        console.log('updated order history')
+    }
     render(){
     let cookieUsername = document.cookie;
     const {orderHistory} = this.props; 
@@ -21,9 +23,9 @@ class ProfilePage extends Component {
     const showOrderHistory=()=>{
 
         $('.showHistoryButton').fadeOut()
+        $('.historyIndexes').fadeIn()
         $('.clearHistoryButton').fadeIn()
-
-
+            console.log('order history updated')
             Axios.post('http://localhost:3307/orderHistory', {
                 username: cookieUsername
                 }).then((response)=>{
@@ -49,6 +51,7 @@ class ProfilePage extends Component {
     const clearOrderHistory=()=>{
         
         $('.showHistoryButton').fadeIn()
+        $('.historyIndexes').fadeOut()
         $('.clearHistoryButton').fadeOut()
         store.dispatch({type: 'clearOrderHistory'})
     }
@@ -142,14 +145,20 @@ class ProfilePage extends Component {
                             </span>
                             <hr className='borderLine'></hr>
                             
-                            <Button className='clearHistoryButton' onClick={clearOrderHistory}>Clear history</Button>
-                            <Button className='showHistoryButton'onClick={showOrderHistory}>Show history</Button>
+                            <Button className='clearHistoryButton' onClick={clearOrderHistory}>Скрий историята</Button>
+                            <Button className='showHistoryButton'onClick={showOrderHistory}>Покажи историята</Button> 
 
+                            <div className='historyIndexes'>
+                                <p className='productIndex'>Продукт</p>
+                                <p className='productQuantity'>Количество</p>
+                                <p className='productPrice'>Цена</p>
+                            </div>
+                            
                             {orderHistory.map(order=>
-
+                                
                                 <div className='ordersBox'>
-                                    <div className='orderInfo'>{order.products+" "}</div>
-                                    <div className='orderInfo'>{order.quantity+" "}</div>
+                                    <div className='orderInfo'>{order.products}</div>
+                                    <div className='orderInfo'>{order.quantity}</div>
                                     <div className='orderInfo'>{order.price} лв.</div>
                                 </div>)}
                         </div>
@@ -159,10 +168,12 @@ class ProfilePage extends Component {
             <Footer/>
         </div>
     )
+    
 }
 
 
 }
+
 const mapStateToProps=(state={orderHistory: [{}] })=>{
     return{
         orderHistory: state.orderHistory

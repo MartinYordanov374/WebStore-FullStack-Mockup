@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 @mixin notActiveButtons
 {
     opacity: 0.3;
@@ -46,8 +48,10 @@
     @include notActiveButtons()
 }
     
-    .dashboard {
+    .dashboard {        
         display: flex;
+        font-family: 'Lato', sans-serif;
+
         .orderHistory{
 
             width: 100%;
@@ -56,6 +60,8 @@
             border-right: 0px;
             border-top: 0px;
             border-bottom: 0px;
+            font-size: 20px;
+
         }
         .ordersBox{
             .orderInfo{
@@ -73,4 +79,23 @@
     }
     
 
+}
+.historyIndexes{
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    .productIndex{
+        margin-left: 10%;
+        font-size: 20px;
+    }
+    .productQuantity{
+        margin-left: 10%;
+        font-size: 20px;
+
+    }
+    .productPrice{
+         margin-left: 9%;
+        // margin-right: 6%;
+        font-size: 20px;
+
+    }
 }
