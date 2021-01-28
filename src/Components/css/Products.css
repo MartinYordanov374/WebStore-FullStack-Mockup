@@ -48,10 +48,8 @@ body, html {
   display: block;
   background-color: #e2e2e2;
   position: relative;
-  -webkit-filter: drop-shadow(1px 0px 1px black);
-          filter: drop-shadow(1px 0px 1px black);
-  -webkit-box-shadow: 1px 1px 1px  black;
-          box-shadow: 1px 1px 1px  black;
+  -webkit-filter: drop-shadow(1px 1px 1px black);
+          filter: drop-shadow(1px 1px 1px black);
 }
 
 .exhibitionHoodiesWrapper .exhibitionHoodieImage:hover {

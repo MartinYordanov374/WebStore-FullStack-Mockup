@@ -78,8 +78,7 @@ body, html{
         background-color: #e2e2e2;
         position: relative;
         // box-shadow: 2px 2px 2px 2px black;
-        filter: drop-shadow(1px 0px 1px black);
-        box-shadow: 1px 1px 1px  black;
+        filter: drop-shadow(1px 1px 1px black);
         &:hover{
             transform: scale(1.03,1.03)
         }
