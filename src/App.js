@@ -14,6 +14,7 @@ import NotFoundPage from './Components/NotFoundPage';
 import ChangePass from './Components/ChangePass' 
 import orderFinished from './Components/orderFinished'
 import New from './Components/New'
+import Sale from './Components/Sale'
 import {store} from './Components/store'
 import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom'
 import {Provider} from 'react-redux'
@@ -52,6 +53,7 @@ function App () {
                 <Route path='/ChangePass' component={ChangePass}/>
                 <Route path='/orderFinished' component={orderFinished}/>
                 <Route path='/New' component={New}/>
+                <Route path ='/Sale' component={Sale}/>
 
 
 

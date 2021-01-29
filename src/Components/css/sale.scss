@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@mixin guidePromotionStyle(){
+    font-size: 30px;
+}
+@mixin PromotionStyle(){
+    font-size: 25px;
+}
+@mixin containerStyle(){
+    font-family: 'Lato', sans-serif;
+}
+.promotionsContainer{
+    @include containerStyle();
+    .promotionsHeader{
+        margin-top: 1%;
+        margin-right: 72%;
+    }
+    .promotionsGuideWrapper{
+        .promotionNameGuide{
+            float: left;
+            margin-left: 5%;
+            @include guidePromotionStyle()
+        }
+        .promotionDurationGuide{
+            margin-right: 45%;
+            @include guidePromotionStyle()
+        }
+    }
+    .promotionsWrapper{
+        margin-bottom: 20%;
+        .promotionName{
+            float: left;
+            margin-left: 6%;
+            @include PromotionStyle()
+
+        }
+        .promotionDuration{
+            float: right;
+            margin-right: 64%;
+            @include PromotionStyle()
+
+        }
+
+    }
+    
+}
