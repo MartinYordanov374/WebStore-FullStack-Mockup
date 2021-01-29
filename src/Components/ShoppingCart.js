@@ -136,12 +136,14 @@ class ShoppingCart extends Component {
                                     <span className='deliveryIcon'> <FaTruck size={20}/> Завърши поръчката </span>
                                 </strong>
                             </Button>
+
                         </div>
-                        
                     </div>
                     :
                     ""}
+
             </div>
+            
             
         );
     }
