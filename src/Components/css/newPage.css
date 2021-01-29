@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.newItemsWrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 80%;
+  margin-top: 2%;
+}
+
+.newItemsWrapper .productName {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.newItemsWrapper .newItemImageWrapper .productImage {
+  margin-top: 1.5%;
+  margin-left: 25%;
+  display: block;
+  background-color: #e2e2e2;
+  position: relative;
+  -webkit-filter: drop-shadow(1px 1px 1px black);
+          filter: drop-shadow(1px 1px 1px black);
+}
+
+.newItemsWrapper .newItemImageWrapper .productImage:hover {
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+}
+
+.newItemsWrapper .productPrice {
+  margin-top: 1%;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+
+.newItemsWrapper .actionButtonsWrapper {
+  display: block;
+}
+
+.newItemsWrapper .actionButtonsWrapper .addToWishListButton {
+  width: 50%;
+  margin-left: 2%;
+  margin-top: 3%;
+  background-color: orange;
+}
+
+.newItemsWrapper .actionButtonsWrapper .addToWishListButton:hover {
+  background-color: #ffa013;
+}
+
+.newItemsWrapper .actionButtonsWrapper .buyOnExhibition {
+  margin-left: 2%;
+  width: 50%;
+  background-color: orange;
+  -webkit-animation: wiggle 1.5s infinite;
+          animation: wiggle 1.5s infinite;
+}
+
+.newItemsWrapper .actionButtonsWrapper .buyOnExhibition:hover {
+  background-color: #ffa013;
+  -webkit-animation: wiggle 1s infinite;
+          animation: wiggle 1s infinite;
+}
+
+.newItemsWrapper .noNewItemsAlert {
+  margin-top: 5%;
+  font-size: 50px;
+  font-family: 'Lato', sans-serif;
+}
+/*# sourceMappingURL=newPage.css.map */
