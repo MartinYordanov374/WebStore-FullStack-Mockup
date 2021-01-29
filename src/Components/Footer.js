@@ -52,7 +52,7 @@ export default function Footer() {
                             <a className='footerNavigationLink' href='/Contact'><strong>Контакт</strong> <RiArrowDropRightLine/></a>
                         </div>
                         <div className='footerNavigationLinkContainer col-sm-2 col-lg-2 col-xs-2'>
-                            <a className='footerNavigationLink' href='/Promotions'><strong>Промоции</strong> <RiArrowDropRightLine/></a>
+                            <a className='footerNavigationLink' href='/Sale'><strong>Промоции</strong> <RiArrowDropRightLine/></a>
                         </div>
 
                     </div>
