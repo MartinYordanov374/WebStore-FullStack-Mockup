@@ -19,7 +19,6 @@ app.post('/register', (req, res)=>{
     const username = req.body.username;
     const password = req.body.password;
     const email = req.body.email;
-
     const saltRounds = 10;
     db.query('SELECT 1 FROM users WHERE email=? OR username=?', [email, username], (err, result)=>{
         if(result.length>0)

@@ -15,17 +15,17 @@ body, html{
     // background-color: #687477;
     // background-color: #403234;
     
-    background-color:#d9e6f5;
+    background-color:#d3deee;
 
     .products{
         // background-image: linear-gradient(180deg, #e3e0cf, #c5d5db, #9fa8a3,);
-        background-color:#d9e6f5;
+        background-color:#d3deee;
     }
     //c5d5db
     //9fa8a3
     //e3e0cf
     // background-color:  #9fa8a3;
-    background-color:#d9e6f5;
+    background-color:#dddee8;
 }
 @mixin CategoriesBackground{
     
@@ -85,6 +85,7 @@ body, html{
     }
     .exhibitionImageWrapper{
         text-align: center;
+        
         // margin-left: 10%;
     }
     .addFaves{
@@ -117,11 +118,31 @@ body, html{
     }
 
 }
+.actionButtonsWrapper{
+    display: block;
+    .addToWishListButton{
+        width: 50%;
+        margin-left: 2%;
+        margin-top: 3%;
+        background-color: orange;
+        &:hover{
+            background-color:  rgb(255, 160, 19);
+        }
+    }
+    .addToWishListButtonIcon{
+        
+        
+    }
+
+}
+.hoodieWrapper{
+}
 .hoodieName{
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
 .hoodiePrice{
+    margin-top: 1%;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
@@ -154,7 +175,7 @@ body, html{
 .featured{
     font-family: 'Lato', sans-serif;
     font-size: 35px;
-    color: #ff8c00;
+    color: black;
 }
 .Categories{
     // display: inline-flex;
@@ -188,7 +209,7 @@ body, html{
 .categoryName{
     font-family: 'Lato', sans-serif;
     font-size: 35px;
-    color: #ff8c00;
+    color: black;
 }
 .caption{
     background-color: white;

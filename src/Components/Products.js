@@ -21,7 +21,7 @@ import Hoodie_2 from '../Components/Images/Hoodie_Featured_2.png'
 import Hoodie_4 from '../Components/Images/Hoodie_Featured_1.png'
 import {store} from './store'
 import {FaHeart} from 'react-icons/fa'
-import {AiOutlineShoppingCart, AiOutlineUser} from 'react-icons/ai'
+import {AiOutlineShoppingCart, AiOutlineUser, AiOutlineHeart} from 'react-icons/ai'
 import {v4} from 'uuid'
 
 class Products extends Component {
@@ -79,7 +79,6 @@ class Products extends Component {
                         <img className='carouselImage' src={Sales}/>
                     </Carousel.Item>
                 </Carousel>
-                <hr></hr>
 
                 <div className='Categories col-sm-12 col-md-12 col-lg-12 col-xs-12'>
                     <h1 className='featured'>Примерни цветове</h1>
@@ -118,14 +117,21 @@ class Products extends Component {
                     {menHoodiesList.map((hoodie, index)=>
                     <div className='exhibitionHoodiesWrapper'>
                         <div className='exhibitionImageWrapper'>
-                            <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
+                            <p className='hoodieName'>{hoodie.name}</p>
                             <img className='exhibitionHoodieImage' src={hoodie.image}/>
                             <p className='hoodiePrice'>{hoodie.price} лв.</p>
                             {isLoggedIn.length>3
                             ?
-                            <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
+                            <div className='actionButtonsWrapper'>
+                                <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
+                                <Button className='btn-warning addToWishListButton' onClick={()=>addToWishlist(hoodie, index)}><strong><AiOutlineHeart className='addToWishListButtonIcon' size={25}/>  Добави в любими</strong></Button>
+                            </div>
                             :
-                            <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
+                            <div className='actionButtonsWrapper'>
+
+                                <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
+                                <Button className='btn-warning addToWishListButton' onClick={()=>addToWishlist(hoodie, index)}><strong><AiOutlineHeart className='addToWishListButtonIcon' size={25}/>  Добави в любими</strong></Button>
+                            </div>
                             }
                         </div>
                     </div>)}
@@ -138,15 +144,28 @@ class Products extends Component {
                     {womenHoodiesList.map((hoodie, index)=>
                     <div className='exhibitionHoodiesWrapper'>
                         <div className='exhibitionImageWrapper'>
-                            <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
-                            <img className='exhibitionHoodieImage' src={hoodie.image}/>
-                            <p className='hoodiePrice'>{hoodie.price} лв.</p>
-                            {isLoggedIn.length>3
-                            ?
-                            <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
-                            :
-                            <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
-                            }
+                            {/* <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p> */}
+                            <div className='hoodieWrapper'>
+                                <p className='hoodieName'>{hoodie.name}</p>
+                                
+                                <img className='exhibitionHoodieImage' src={hoodie.image}/>
+                                <p className='hoodiePrice'>{hoodie.price} лв.</p>
+                            
+
+                                {isLoggedIn.length>3
+                                ?
+                                <div className='actionButtonsWrapper'>
+
+                                <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
+                                <Button className='btn-warning addToWishListButton' onClick={()=>addToWishlist(hoodie, index)}><strong><AiOutlineHeart className='addToWishListButtonIcon' size={25}/>  Добави в любими</strong></Button>
+                                </div>
+                                :
+                                <div className='actionButtonsWrapper'>
+                                <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
+                                <Button className='btn-warning addToWishListButton' onClick={()=>addToWishlist(hoodie, index)}><strong><AiOutlineHeart className='addToWishListButtonIcon' size={25}/>  Добави в любими</strong></Button>
+                                </div>
+                                }
+                            </div>
                         </div>
                     </div>)}
                 </div>

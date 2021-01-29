@@ -12,7 +12,7 @@ import {store} from './store'
 import {connect} from 'react-redux'
 import {v4} from 'uuid'
 import {Redirect} from 'react-router-dom'
-import {AiOutlineShoppingCart, AiOutlineUser} from 'react-icons/ai'
+import {AiOutlineShoppingCart, AiOutlineUser, AiOutlineHeart} from 'react-icons/ai'
 class HoodiesPage extends Component {
     render(){
     let {productsInWishList} = this.props;
@@ -54,17 +54,20 @@ class HoodiesPage extends Component {
             {hoodiesList.map((hoodie, index)=>
                     <div className='exhibitionHoodiesWrapper'>
                         <div className='exhibitionImageWrapper'>
-                            <p className='addFaves'><FaHeart onClick={()=>addToWishlist(hoodie, index)} id={index} size={25}/></p>
-                            <br></br>
-                            <img className='exhibitionHoodieImage' src={hoodie.image}/>
                             <p className='hoodieName'>{hoodie.name}</p>
+                            <img className='exhibitionHoodieImage' src={hoodie.image}/>
                             <p className='hoodiePrice'>{hoodie.price} лв.</p>
                             {isLoggedIn.length>3
                             ?
-                            <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
+                            <div className='actionButtonsWrapper'>                            
+                                <Button className='btn-warning buyOnExhibition' onClick={()=>addToCart(hoodie)}><strong><AiOutlineShoppingCart size={25}/> Купи</strong></Button>
+                                <Button className='btn-warning addToWishListButton' onClick={()=>addToWishlist(hoodie, index)}><strong><AiOutlineHeart className='addToWishListButtonIcon' size={25}/>  Добави в любими</strong></Button>
+                            </div>                         
                             :
-                            <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
-                            }
+                            <div className='actionButtonsWrapper'>                            
+                                <Button className='btn-danger buyOnExhibitionDisabled disabled'><strong><AiOutlineUser size={25}/> Не сте регистриран! </strong></Button>
+                                <Button className='btn-warning addToWishListButton' onClick={()=>addToWishlist(hoodie, index)}><strong><AiOutlineHeart className='addToWishListButtonIcon' size={25}/>  Добави в любими</strong></Button>
+                            </div>                            }
                         </div>
                     </div>)}
             </div>
