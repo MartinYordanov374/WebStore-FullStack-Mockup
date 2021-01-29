@@ -96,10 +96,19 @@ export default function Register() {
                 <FormControl className='enterEmail' onChange={(e)=>setEmailReg(e.target.value)} placeholder='Въведете имейл'/>
 
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassReg(e.target.value)} type='password' placeholder='Въведете парола'/>
+                
+                
+
                 <Button className='submitLoginForm' onClick ={register}><FaKey/> Завърши регистрация </Button>
                 <br></br>
                 <br></br>
-                <a href='/login'>Вече имате профил? Влезте тук.</a>
+                <a href='/login'>Вече имате профил? Влезте от тук.</a>
+                
+                <p className='agreementAlert'>
+                    Със завършването на регистрацията, Вие се съгласявате с нашата 
+                    <a href='/privacyPolicy'> политика за поверителността</a> и 
+                    <a href='/termsOfUse'> условия за ползване</a>
+                </p>
                 </div>
                 }
                 

@@ -65,10 +65,10 @@ export default function Footer() {
             </div>
             <div className='privacyDetails'>
                 <div className='privacyPolicy'>
-                    <p><a href='/privacyPolicy' className='privacyPolicyLink'><strong>Поверителност</strong></a></p>
+                    <p><a href='/privacyPolicy' className='privacyPolicyLink'><strong>Политика за поверителността</strong></a></p>
                 </div>
                 <div className='termsOfUse'>
-                    <p ><a href='/privacyPolicy' className='termsOfUseLink'><strong>Условия за ползване</strong></a></p>
+                    <p ><a href='/termsOfUse' className='termsOfUseLink'><strong>Условия за ползване</strong></a></p>
                 </div>
             </div>
         </div>

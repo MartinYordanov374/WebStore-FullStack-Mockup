@@ -77,4 +77,11 @@
 .loginFormWrapper {
   background-color: #d9e6f5;
 }
+
+.agreementAlert {
+  width: 50%;
+  margin-left: 25%;
+  font-family: 'Lato', sans-serif;
+  margin-top: 2%;
+}
 /*# sourceMappingURL=login.css.map */
