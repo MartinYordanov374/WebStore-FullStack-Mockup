@@ -44,7 +44,7 @@ function PrivacyPolicy() {
         },
         {
             name: 'whoWeShareYourDataWith',
-            summary: 'We share your data with our service providers, such a courier firms, hosting platforms etc.'
+            summary: 'We share your data with our service providers - the courier services and the hosting platform we use.'
         }
 
     ]
