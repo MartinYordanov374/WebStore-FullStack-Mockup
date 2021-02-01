@@ -8,10 +8,7 @@
 }
 
 .privacyPolicyWrapper .showSummaryContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 40%;
+  text-align: center;
 }
 
 .privacyPolicyWrapper .privacySummary {

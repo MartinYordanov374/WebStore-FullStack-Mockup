@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACI,AAAA,oBAAoB,CAAA;EAChB,gBAAgB,EAAE,KAAK;CAmB1B;;AApBD,AAGI,oBAHgB,CAGhB,kBAAkB,CAAA;EACd,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,EAAE;EACf,OAAO,EAAE,OAAO;CAanB;;AAnBL,AAOQ,oBAPY,CAGhB,kBAAkB,CAId,MAAM,CAAA;EACF,OAAO,EAAE,MAAM;CAClB",
+    "sources": [
+        "termsOfUse.scss"
+    ],
+    "names": [],
+    "file": "termsOfUse.css"
+}

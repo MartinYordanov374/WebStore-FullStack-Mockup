@@ -12,8 +12,9 @@
 .privacyPolicyWrapper{
     background-color: white;
     .showSummaryContainer{
-        display: flex;
-        margin-left: 40%;
+        // display: flex;
+        // margin-left: 40%;
+        text-align: center;
     }
     .privacySummary{
        @include privacyText()

@@ -28,7 +28,7 @@ function PrivacyPolicy() {
         },
         {
             name: 'whyDoWeCollectYourData',
-            summary: "Събираме данните ви, за да подобрим вашето преживяване в нашия магазин и за да подобрим функционалността на уебсайтът ни."
+            summary: "Събираме данните ви, за да подобрим вашето преживяване в нашия магазин и за да подобрим функционалността на уебсайа ни."
         },
         {
             name: 'howDoWeUseYourData',
@@ -124,7 +124,7 @@ function PrivacyPolicy() {
                         </div>
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showDataCollectionInformation()}/>
-                            <p><strong>Защо събираме даннит ви?</strong></p>
+                            <p><strong>Защо събираме данните ви?</strong></p>
                         </div>
                         <div className='whyDoWeCollectYourData'>
                             {policies.map(policy=>
@@ -136,7 +136,7 @@ function PrivacyPolicy() {
                         </div>
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showDataSharingInformation()}/>
-                            <p><strong>С кой споделяме данните ви?</strong></p>
+                            <p><strong>С кого споделяме данните ви?</strong></p>
                         </div>
                         <div className='whoWeShareYourDataWith'>
                             {policies.map(policy=>

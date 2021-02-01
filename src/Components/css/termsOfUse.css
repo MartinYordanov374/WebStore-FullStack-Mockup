@@ -1,0 +1,14 @@
+.termsOfUseContainer {
+  background-color: white;
+}
+
+.termsOfUseContainer .termsOfUseWrapper {
+  width: 85%;
+  margin-left: 7%;
+  display: flexbox;
+}
+
+.termsOfUseContainer .termsOfUseWrapper .terms {
+  display: flebox;
+}
+/*# sourceMappingURL=termsOfUse.css.map */
