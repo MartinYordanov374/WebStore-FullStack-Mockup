@@ -21,6 +21,8 @@ function PrivacyPolicy() {
             thirdInfo: "Names and addresses you've provided us with",
             fourthInfo: "Any orders that you make throguh our website",
             fifthInfo: "The state of the orders through our website",
+            sixthInfo: "Additionally we also automatically create cookies on your browser that keep you logged in and keep products in your cart, so that when you come back to our website, everything remains as you've left it"
+
 
 
         },
@@ -89,6 +91,18 @@ function PrivacyPolicy() {
                             </div>)}
                         </div>  
                         <div className='showSummaryContainer'>
+                        <IoMdArrowDropdownCircle size={25} onClick={()=>showCookiesInformation()}/>
+                            <p><strong>Cookies and Trackers</strong></p>
+                        </div>
+
+                        <div className='cookiesAndTrackers'>
+                            {policies.map(policy=>
+                            <div>
+                                <p>{policy.name===$('.cookiesAndTrackers').attr('class') ? policy.summary : ""}</p>
+                            </div>)}
+                            
+                        </div>
+                        <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showCustomersInformation()}/>
                             <p><strong>What data do we collect?</strong></p>
                         </div>
@@ -104,6 +118,8 @@ function PrivacyPolicy() {
                                 <p>{policy.thirdInfo}</p>
                                 <p>{policy.fourthInfo}</p>
                                 <p>{policy.fifthInfo}</p>
+                                <p>{policy.sixthInfo}</p>
+
                             </div>)}
                         </div>
                         <div className='showSummaryContainer'>
@@ -134,18 +150,7 @@ function PrivacyPolicy() {
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showDataUsageInformation()}/>
                             <p><strong>What do we use your data for?</strong></p>
                         </div>
-                        <div className='showSummaryContainer'>
-                        <IoMdArrowDropdownCircle size={25} onClick={()=>showCookiesInformation()}/>
-                            <p><strong>Cookies and Trackers</strong></p>
-                        </div>
-
-                        <div className='cookiesAndTrackers'>
-                            {policies.map(policy=>
-                            <div>
-                                <p>{policy.name===$('.cookiesAndTrackers').attr('class') ? policy.summary : ""}</p>
-                            </div>)}
-                            
-                        </div>
+                       
                         <div className='howDoWeUseYourData'>
                             {policies.map(policy=>
                             <div>
