@@ -99,7 +99,7 @@ export default function Register() {
                 
                 
 
-                <Button className='submitLoginForm btn-warning' onClick ={register}><FaKey/> Завърши регистрация </Button>
+                <Button className='submitLoginForm' onClick ={register}><FaKey/> Завърши регистрацията си </Button>
                 <br></br>
                 <br></br>
                 <a href='/login'>Вече имате профил? Влезте от тук.</a>

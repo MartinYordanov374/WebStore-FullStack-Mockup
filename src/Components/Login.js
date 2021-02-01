@@ -97,7 +97,7 @@ export default function Login() {
                 <FormControl className='enterUsername' onChange={(e)=>setUserLog(e.target.value)} placeholder='Въведете никнейм или имейл'/>
                 {/* <FormControl className='enterEmail' onChange={(e)=>setEmailLog(e.target.value)} placeholder='Въведете имейл адрес'/> */}
                 <FormControl className='enterPassword'  onChange = {(e)=>setPassLog(e.target.value)} type='password' placeholder='Въведете парола'/>
-                <Button className='submitLoginForm btn-warning' onClick ={login}> <strong><AiOutlineLogin size={20}/> Влезте в профила си</strong> </Button>
+                <Button className='submitLoginForm' onClick ={login}> <strong><AiOutlineLogin size={20}/> Влезте в профила си</strong> </Button>
                 <br></br>
                 <br></br>
                 <a href='/register'>Нямате профил? Регистрирайте се, безплатно тук!</a>
