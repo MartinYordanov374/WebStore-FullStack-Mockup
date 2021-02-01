@@ -112,10 +112,6 @@ class ProfilePage extends Component {
                     <div className='dashboard'>
                          <div className='options'>
 
-                        {/* <span className='optionsTitle'><strong><FaCog size={25}/> Настройки</strong>
-                        </span>
-                        <hr className='borderLine'></hr> */}
-
                         {cookieUsername.length>0?
                         <div className='optionsMenu'>
                           <div className='optionsButtons'>
@@ -151,10 +147,7 @@ class ProfilePage extends Component {
 
                     </div>
                         <div className='orderHistory'>
-                            {/* <span className='orderHistoryTitle'>
-                                <FaPaperPlane size={20}/> <strong>История на поръчките</strong>
-                            </span> */}
-                            {/* <hr className='borderLine'></hr> */}
+                           
                             <div className='orderButtons'>
                                 <Button className='clearHistoryButton' onClick={clearOrderHistory}>Скрий историята</Button>
                                 <Button className='showHistoryButton'onClick={showOrderHistory}>Покажи историята</Button> 

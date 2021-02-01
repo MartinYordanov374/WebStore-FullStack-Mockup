@@ -14,7 +14,12 @@ db = mysql.createConnection({
     password: 'password',
     database: 'loginsystem'
 })
-
+app.post('/getEmail', (req,res)=>{
+    const username = req.body.username;
+    db.query('SELECT email FROM users WHERE username=?', username, (err,result)=>{
+        res.send({result})
+    });
+})
 app.post('/register', (req, res)=>{
     const username = req.body.username;
     const password = req.body.password;
