@@ -11,42 +11,42 @@ function PrivacyPolicy() {
         {
             name: 'privacySummary',
             title: 'Summary',
-            summary: "We use your personal information as this Privacy Statement describes. No matter where you are, where you live, or what your citizenship is, we provide the same high standard of privacy protection to all our users around the world, regardless of their country of origin or location.Of course, the short version and the Summary below don't tell you everything, so please read on for more details."
+            summary: "Използваме личните ви данни, както е обяснено в тези условията за поверителност. Без значение къде сте, къде живеете или какво гражданство имате, ние предлагаме еднаквия висок стандарт на сигурност на поверителността за всички наши потребители около света, без значение от страната на произход или местонахождение. Разбира се, краткото обощение тук няма да ви каже всичко, така че продължете да четете за повече детайли            "
         },
         {
             name: 'dataWeCollect',
-            summary: "We collect various information about our customers, such as:",
-            firstInfo: "Telephone numbers that you've provided us with",
-            secondInfo: "Email addresses that you've provided us with",
-            thirdInfo: "Names and addresses you've provided us with",
-            fourthInfo: "Any orders that you make throguh our website",
-            fifthInfo: "The state of the orders through our website",
-            sixthInfo: "Additionally we also automatically create cookies on your browser that keep you logged in and keep products in your cart, so that when you come back to our website, everything remains as you've left it"
+            summary: "Събираме информация за нашите потребители, като: ",
+            firstInfo: "Телефонните номера, които ни предоставяте",
+            secondInfo: "Имейл адресите, които ни предоставяте",
+            thirdInfo: "Имена и адреси, които ни предоставяте",
+            fourthInfo: "Всякакви поръчки, които правите през нашия уебсайт",
+            fifthInfo: "Състоянието на поръчките, които са направени през нашия уебсайт(направена, в куриер, доставена)",
+            sixthInfo: "Също така, автоматично създаваме бисквитки на вашия браузър, които ви запазват логнати и пазят продуктите ви в кошницата."
 
 
 
         },
         {
             name: 'whyDoWeCollectYourData',
-            summary: "We collect your data in order to improve our website functionality and your overall experience on our website."
+            summary: "Събираме данните ви, за да подобрим вашето преживяване в нашия магазин и за да подобрим функционалността на уебсайтът ни."
         },
         {
             name: 'howDoWeUseYourData',
-            summary: 'We use the data you provide us with in order to: ',
-            pointOne: 'Process and accomplish your orders',
-            pointTwo: 'Send you e-mails about our offers and promotions',
-            pointThree: 'Keep you informed regarding your orders',
-            pointFour: "Improve our website and it's functionality",
+            summary: 'Използваме данните, които ни предоставяте с цел да: ',
+            pointOne: 'Обработим и завършим поръчките ви',
+            pointTwo: 'Ви изпращаме имейли относно поръчките ви и известия за промоции',
+            pointThree: 'Ви държим в течение относно поръчките ви',
+            pointFour: "Подобрим нашия сайт и неговата функционалност",
 
         },
         {
             name: 'cookiesAndTrackers',
-            summary: "As further described below, we automatically collect information from cookies (such as cookie ID and settings) to keep you logged in, to remember your preferences, to identify you and your device and to analyze your use of our service."
+            summary: "Както е обяснено по-долу, ние автоматично събираме информация от бисквитки(като ID на бисквитките и настройки),за да останете логнати, за да може сайтът да запомни предпочитанията ви, да ви идентифицира, както и вашето устройство и да анализираме употребата ви на нашите услуги."
             
         },
         {
             name: 'whoWeShareYourDataWith',
-            summary: 'We share your data with our service providers - the courier services and the hosting platform we use.'
+            summary: 'Споделяме данните ви с нашите доставчици на услуги - Куриерските ни услуги и хостинг платформата, която използваме.'
         }
 
     ]
