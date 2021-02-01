@@ -80,7 +80,7 @@ function PrivacyPolicy() {
                     <div className='privacyPolicyWrapper'>
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle className='showDiv' size={25} onClick={()=>showSummary()}/>
-                            <p><strong>Privacy Policy Summary</strong></p>
+                            <p><strong>Обобщение на условията за поверителността</strong></p>
                         </div>
 
                         <div className='privacySummary'>
@@ -92,7 +92,7 @@ function PrivacyPolicy() {
                         </div>  
                         <div className='showSummaryContainer'>
                         <IoMdArrowDropdownCircle size={25} onClick={()=>showCookiesInformation()}/>
-                            <p><strong>Cookies and Trackers</strong></p>
+                            <p><strong>Бисквитки и тракери</strong></p>
                         </div>
 
                         <div className='cookiesAndTrackers'>
@@ -104,7 +104,7 @@ function PrivacyPolicy() {
                         </div>
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showCustomersInformation()}/>
-                            <p><strong>What data do we collect?</strong></p>
+                            <p><strong>Какви данни събираме?</strong></p>
                         </div>
                         <div className='dataWeCollect'>
                             {policies.map(policy=>
@@ -124,7 +124,7 @@ function PrivacyPolicy() {
                         </div>
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showDataCollectionInformation()}/>
-                            <p><strong>Why do we collect your data?</strong></p>
+                            <p><strong>Защо събираме даннит ви?</strong></p>
                         </div>
                         <div className='whyDoWeCollectYourData'>
                             {policies.map(policy=>
@@ -136,7 +136,7 @@ function PrivacyPolicy() {
                         </div>
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showDataSharingInformation()}/>
-                            <p><strong>Who we share your data with?</strong></p>
+                            <p><strong>С кой споделяме данните ви?</strong></p>
                         </div>
                         <div className='whoWeShareYourDataWith'>
                             {policies.map(policy=>
@@ -148,7 +148,7 @@ function PrivacyPolicy() {
                         </div>
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showDataUsageInformation()}/>
-                            <p><strong>What do we use your data for?</strong></p>
+                            <p><strong>За какво изпозлваме данните ви?</strong></p>
                         </div>
                        
                         <div className='howDoWeUseYourData'>
