@@ -1,0 +1,17 @@
+.privacyPolicyContainer .footerWrapper {
+  margin-top: 0;
+  padding: 10px;
+}
+
+.privacyPolicyWrapper {
+  background-color: white;
+  border-style: solid;
+}
+
+.privacyPolicyWrapper .showSummaryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 40%;
+}
+/*# sourceMappingURL=privacyPolicy.css.map */

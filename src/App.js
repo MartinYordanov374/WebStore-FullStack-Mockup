@@ -16,6 +16,8 @@ import orderFinished from './Components/orderFinished'
 import New from './Components/New'
 import Sale from './Components/Sale'
 import {store} from './Components/store'
+import PrivacyPolicy from './Components/PrivacyPolicy'
+
 import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import {useState, useEffect} from 'react'
@@ -54,6 +56,8 @@ function App () {
                 <Route path='/orderFinished' component={orderFinished}/>
                 <Route path='/New' component={New}/>
                 <Route path ='/Sale' component={Sale}/>
+                <Route path ='/privacyPolicy' component={PrivacyPolicy}/>
+
 
 
 
