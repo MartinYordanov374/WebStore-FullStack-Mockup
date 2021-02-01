@@ -38,7 +38,7 @@ function PrivacyPolicy() {
 
         },
         {
-            name: 'cookiesAndTracking',
+            name: 'cookiesAndTrackers',
             summary: "As further described below, we automatically collect information from cookies (such as cookie ID and settings) to keep you logged in, to remember your preferences, to identify you and your device and to analyze your use of our service."
             
         },
@@ -65,6 +65,10 @@ function PrivacyPolicy() {
     }
     const showDataUsageInformation=()=>{
         $('.howDoWeUseYourData').toggle("slow")
+
+    }
+    const showCookiesInformation=()=>{
+        $('.cookiesAndTrackers').toggle("slow")
 
     }
     return (
@@ -129,6 +133,18 @@ function PrivacyPolicy() {
                         <div className='showSummaryContainer'>
                             <IoMdArrowDropdownCircle size={25} onClick={()=>showDataUsageInformation()}/>
                             <p><strong>What do we use your data for?</strong></p>
+                        </div>
+                        <div className='showSummaryContainer'>
+                        <IoMdArrowDropdownCircle size={25} onClick={()=>showCookiesInformation()}/>
+                            <p><strong>Cookies and Trackers</strong></p>
+                        </div>
+
+                        <div className='cookiesAndTrackers'>
+                            {policies.map(policy=>
+                            <div>
+                                <p>{policy.name===$('.cookiesAndTrackers').attr('class') ? policy.summary : ""}</p>
+                            </div>)}
+                            
                         </div>
                         <div className='howDoWeUseYourData'>
                             {policies.map(policy=>

@@ -1,3 +1,7 @@
+@mixin privacyText(){
+    width: 50%;
+    margin-left: 25%;
+}
 .privacyPolicyContainer{
     .footerWrapper{
         margin-top: 0;
@@ -12,4 +16,28 @@
         display: flex;
         margin-left: 40%;
     }
+    .privacySummary{
+       @include privacyText()
+    }
+    .dataWeCollect{
+        @include privacyText()
+
+    }
+    .whyDoWeCollectYourData{
+        @include privacyText()
+
+    }
+    .whoWeShareYourDataWith{
+        @include privacyText()
+
+    }
+    .howDoWeUseYourData{
+        @include privacyText()
+
+    }
+    .cookiesAndTrackers{
+        @include privacyText()
+
+    }
+    
 }

@@ -14,4 +14,34 @@
   display: flex;
   margin-left: 40%;
 }
+
+.privacyPolicyWrapper .privacySummary {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.privacyPolicyWrapper .dataWeCollect {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.privacyPolicyWrapper .whyDoWeCollectYourData {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.privacyPolicyWrapper .whoWeShareYourDataWith {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.privacyPolicyWrapper .howDoWeUseYourData {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.privacyPolicyWrapper .cookiesAndTrackers {
+  width: 50%;
+  margin-left: 25%;
+}
 /*# sourceMappingURL=privacyPolicy.css.map */
