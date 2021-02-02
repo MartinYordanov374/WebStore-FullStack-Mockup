@@ -16,7 +16,7 @@ export default function Login() {
         $('.alert-danger').fadeOut()
         $('.alert-warning').fadeOut()
     },[])
-    const sendEmail=()=>{
+    const sendEmail=(email)=>{
         
     }
     const login=()=>{
@@ -39,7 +39,7 @@ export default function Login() {
                     showUserFoundAlert()
                     $('.usernameField').text(response.data[0].username)
                     createCookie(response.data[0].username)
-                    // window.location='/profilepage'
+                    window.location='/profilepage'
 
                 }
             })
@@ -49,11 +49,7 @@ export default function Login() {
         let hours = 1
         date.setTime(date.getTime()+(hours*60*60*1000))
         document.cookie=`${username}; expires=${date.toUTCString()}; path=./ProfilePage`;
-        Axios.post('http://localhost:3307/getEmail', {
-            username: username
-        }).then((response)=>{
-            sendEmail(response.data.result[0].email);
-        })
+        
     }
 
 

@@ -3,9 +3,12 @@ const mysql = require('mysql')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
 
+const nodemailer = require('nodemailer')
+
 app = express()
 app.use(express.json())
 app.use(cors())
+
 
 //data removed for security reasons
 db = mysql.createConnection({
@@ -14,12 +17,13 @@ db = mysql.createConnection({
     password: 'password',
     database: 'loginsystem'
 })
-app.post('/getEmail', (req,res)=>{
-    const username = req.body.username;
-    db.query('SELECT email FROM users WHERE username=?', username, (err,result)=>{
-        res.send({result})
-    });
-})
+// app.post('/getEmail', (req,res)=>{
+//     const username = req.body.username;
+//     db.query('SELECT email FROM users WHERE username=?', username, (err,result)=>{
+//         res.send({result})
+// });
+// })
+
 app.post('/register', (req, res)=>{
     const username = req.body.username;
     const password = req.body.password;
@@ -44,7 +48,28 @@ app.post('/register', (req, res)=>{
             res.send({message: 'user successfully registered'})
 
         }
-    })    
+    
+    })  
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'myemail',
+            pass: 'mypass'
+        }
+    });
+    var mailOptions = {
+        from: 'email',
+        to: email.toString(),
+        subject: 'Успешна регистрация в Neon',
+        html: `<div className='emailHolder'><h3>Добре дошли, ${username}, вие успешно завършихте регистрацията си в Neon</h3><hr></hr><h4>Вече можете да изпълнявате поръчки, чрез Neon!</h4></div>`
+      };  
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
 })
 app.post('/check', (req, res)=>{
     const username = req.body.username;

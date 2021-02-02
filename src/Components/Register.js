@@ -16,6 +16,9 @@ export default function Register() {
     useEffect(()=>{
         hideAlerts()
     },[])
+    const sendEmail=(email)=>{
+        console.log(email)
+    }
     const register=()=>{
             let pattern = '[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+'
             let checkEmailRegex = RegExp(pattern)
@@ -29,6 +32,7 @@ export default function Register() {
                      }).then((response)=>{
                          if(response.data.message==='user already registered'){
                             showAlertTaken()
+                            
                          }
                          else{
                             showAlertSuccess()
@@ -36,6 +40,7 @@ export default function Register() {
                         }
 
                 })
+               
 
             }
             else
