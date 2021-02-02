@@ -17,13 +17,6 @@ db = mysql.createConnection({
     password: 'password',
     database: 'loginsystem'
 })
-// app.post('/getEmail', (req,res)=>{
-//     const username = req.body.username;
-//     db.query('SELECT email FROM users WHERE username=?', username, (err,result)=>{
-//         res.send({result})
-// });
-// })
-
 app.post('/register', (req, res)=>{
     const username = req.body.username;
     const password = req.body.password;
@@ -53,8 +46,8 @@ app.post('/register', (req, res)=>{
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'myemail',
-            pass: 'mypass'
+            user: 'email',
+            pass: 'password'
         }
     });
     var mailOptions = {
@@ -136,15 +129,16 @@ app.post('/finishOrder', (req,res)=>{
     const quantity = req.body.quantity;
     const price = req.body.price;
     const orderStatus = 'Направена поръчка'
-    db.query('INSERT INTO orders (username, name, phone, address, products, quantity, price, orderStatus) VALUES(?,?,?,?,?,?,?,?)', [username, name, phone, address, products, quantity,price, orderStatus], (err,result)=>{
-        if(err){
-            res.send({err: err})
-        }
-        else{
-            res.send({message: 'successfully made an order'})
+     db.query('INSERT INTO orders (username, name, phone, address, products, quantity, price, orderStatus) VALUES(?,?,?,?,?,?,?,?)', [username, name, phone, address, products, quantity,price, orderStatus], (err,result)=>{
+         if(err){
+             res.send({err: err})
+         }
+         else{
+             res.send({message: 'successfully made an order'})
             
-        }
+         }
     })
+    
 })
 app.post('/orderHistory', (req,res)=>{
     const username = req.body.username;
@@ -158,7 +152,21 @@ app.post('/orderHistory', (req,res)=>{
          }
      })
 })
+app.post('/getEmail', (req,res)=>{
+    const username = req.body.username;
 
+    db.query('SELECT email FROM users WHERE username=?', username, (err,result)=>{
+        if(err){
+            res.send({err: err})
+        }
+        else{
+            res.send({messageTwo: result})
+        }
+        const email = result;
+        console.log("email is", email)
+
+    })
+})
 app.post('/seeOrders', (req,res)=>{
     const username = req.body.username;
     db.query('SELECT * FROM orders WHERE username=?', username, (err, result)=>{
@@ -169,6 +177,30 @@ app.post('/seeOrders', (req,res)=>{
             res.send({message: result})
         }
     })
+})
+app.post('/sendEmail', (req,res)=>{
+    const email = req.body.email;
+    const username = req.body.username;
+     var transporter = nodemailer.createTransport({
+             service: 'gmail',
+             auth: {
+                 user: 'email',
+                 pass: 'password'
+             }
+         });
+         var mailOptions = {
+          from: 'neonofficial77@gmail.com',
+          to: email.toString(),
+          subject: 'Направена поръчка в Neon',
+          html: `<div className='emailHolder'><h3>${username}, успешно направихте поръчката си в Neon</h3><hr></hr>`
+        };  
+        transporter.sendMail(mailOptions, function(error, info){
+          if (error) {
+            console.log(error);
+          } else {
+            console.log('Order email sent: ' + info.response);
+          }
+    });
 })
 app.listen(3307, ()=>{
     console.log('Running server')

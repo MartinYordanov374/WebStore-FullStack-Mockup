@@ -51,14 +51,24 @@ class ShoppingCart extends Component {
                     store.dispatch({type: 'finishOrder', products: productsInCart[i].name, quantity:productsInCart[i].quantity, price: productsInCart[i].price})
                     store.dispatch({type: 'clearCart'})
                     if(i==productsInCart.length-1){
-                        window.location='/orderfinished'
+                        // window.location='/orderfinished'
                     }
                     addItem=false;
 
                 }
-            }
-
             
+            Axios.post('http://localhost:3307/getEmail',{
+                username: document.cookie.split(';').pop()
+            }).then((response)=>{
+
+                Axios.post('http://localhost:3307/sendEmail',{
+                    username: document.cookie.split(';').pop(),
+                    email: response.data.messageTwo[0].email
+
+
+                })
+            })
+        }
         }
         
 
